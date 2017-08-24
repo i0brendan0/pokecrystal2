@@ -119,7 +119,7 @@ EvolveAfterBattle_MasterLoop
 
 .happiness
 	ld a, [TempMonHappiness]
-	cp 220
+	cp HAPPINESS_TO_EVOLVE ;220
 	jp c, .dont_evolve_2
 
 	call IsMonHoldingEverstone
