@@ -3,7 +3,7 @@
 	db  75,  75,  55,  30, 105,  85
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, GRASS
+	db GRASS, FIRE
 	db 120 ; catch rate
 	db 146 ; base exp
 	db NO_ITEM ; item 1
