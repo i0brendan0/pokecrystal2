@@ -1509,7 +1509,7 @@
 	db 15, RATICATE
 	db 16, GOLBAT
 	db 15, MARILL
-	db 16, GOLBAT
+	db 16, MANKEY
 	db 16, GOLBAT
 
 	map ROUTE_43
