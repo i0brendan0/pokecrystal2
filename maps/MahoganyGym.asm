@@ -204,6 +204,10 @@ UnknownText_0x199d55:
 	line "raise the SPECIAL"
 	cont "stats of #MON."
 
+	para "All #MON you"
+	line "have up to L80"
+	cont "won't disobey."
+
 	para "It also lets your"
 	line "#MON use WHIRL-"
 	cont "POOL to get across"
