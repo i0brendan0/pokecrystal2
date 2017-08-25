@@ -146,9 +146,7 @@ ScriptCommandTable:
 	dw Script_loadmenudata               ; 4f
 	dw Script_closewindow                ; 50
 	dw Script_jumptextfaceplayer         ; 51
-IF _CRYSTAL
 	dw Script_farjumptext                ; 52
-ENDC
 	dw Script_jumptext                   ; 53
 	dw Script_waitbutton                 ; 54
 	dw Script_buttonsound                ; 55
@@ -336,9 +334,6 @@ JumpTextScript:
 	closetext
 	end
 
-
-IF _CRYSTAL
-
 Script_farjumptext:
 ; script command 0x52
 ; parameters:
@@ -353,9 +348,6 @@ Script_farjumptext:
 	ld b, BANK(JumpTextScript)
 	ld hl, JumpTextScript
 	jp ScriptJump
-
-ENDC
-
 
 Script_writetext:
 ; script command 0x4c
