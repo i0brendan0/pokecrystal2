@@ -244,6 +244,9 @@ UnknownText_0x5428b:
 	para "STRENGTH outside"
 	line "of battle."
 
+	para "Now #MON up to"
+	line "L40 will obey."
+
 	para "It also boosts"
 	line "your #MON's"
 	cont "SPEED."
