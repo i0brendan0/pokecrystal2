@@ -143,6 +143,10 @@ UnknownText_0x9c354:
 	line "raises #MON's"
 	cont "DEFENSE."
 
+	para "Since it's yours,"
+	line "#MON up to L70"
+	cont "will listen."
+
 	para "…Um… Please take"
 	line "this too…"
 	done
