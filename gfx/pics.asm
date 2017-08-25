@@ -368,7 +368,7 @@ SailorPic:           INCBIN "gfx/trainers/sailor.2bpp.lz"
 BeautyPic:           INCBIN "gfx/trainers/beauty.2bpp.lz"
 ShellderBackpic:     INCBIN "gfx/pics/shellder/back.2bpp.lz"
 ZubatBackpic:        INCBIN "gfx/pics/zubat/back.2bpp.lz"
-TeddiursaFrontpic:   INCBIN "gfx/pics/teddiursa/front.animated.2bpp.lz"
+;TeddiursaFrontpic:   INCBIN "gfx/pics/teddiursa/front.animated.2bpp.lz"
 CuboneBackpic:       INCBIN "gfx/pics/cubone/back.2bpp.lz"
 GruntmPic:           INCBIN "gfx/trainers/grunt_m.2bpp.lz"
 GloomBackpic:        INCBIN "gfx/pics/gloom/back.2bpp.lz"
@@ -728,10 +728,10 @@ UnownRBackpic:       INCBIN "gfx/pics/unown_r/back.2bpp.lz"
 SECTION "Pics 19", ROMX, BANK[PICS_19]
 
 ; Seems to be an accidental copy of the previous bank
-
-INCBIN "gfx/pics/spinarak/back.2bpp.lz"
-INCBIN "gfx/pics/raikou/back.2bpp.lz"
-INCBIN "gfx/pics/unown_k/front.animated.2bpp.lz"
+TeddiursaFrontpic:   INCBIN "gfx/pics/teddiursa/front.animated.2bpp.lz"
+;INCBIN "gfx/pics/spinarak/back.2bpp.lz"
+;INCBIN "gfx/pics/raikou/back.2bpp.lz"
+;INCBIN "gfx/pics/unown_k/front.animated.2bpp.lz"
 INCBIN "gfx/pics/houndour/back.2bpp.lz"
 INCBIN "gfx/pics/poliwag/back.2bpp.lz"
 INCBIN "gfx/pics/squirtle/back.2bpp.lz"
