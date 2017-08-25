@@ -56,7 +56,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw LinkCableDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -383,8 +383,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+LinkCableDesc:
+	db   "Evolves Certain"
+	next "kinds of #MON.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
