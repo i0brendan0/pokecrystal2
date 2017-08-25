@@ -3,7 +3,7 @@
 	db  55,  81,  60,  97,  50,  70
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL
+	db NORMAL, DARK
 	db 90 ; catch rate
 	db 116 ; base exp
 	db NO_ITEM ; item 1
