@@ -1,43 +1,43 @@
 Marts: ; 160a9
-	dw Mart0
-	dw Mart1
-	dw Mart2
-	dw Mart3
-	dw Mart4
-	dw Mart5
-	dw Mart6
-	dw Mart7
-	dw Mart8
-	dw Mart9
-	dw Mart10
-	dw Mart11
-	dw Mart12
-	dw Mart13
-	dw Mart14
-	dw Mart15
-	dw Mart16
-	dw Mart17
-	dw Mart18
-	dw Mart19
-	dw Mart20
-	dw Mart21
-	dw Mart22
-	dw Mart23
-	dw Mart24
-	dw Mart25
-	dw Mart26
-	dw Mart27
-	dw Mart28
-	dw Mart29
-	dw Mart30
-	dw Mart31
-	dw Mart32
-	dw Mart33
+	dw Mart0  ; MART_CHERRYGROVE
+	dw Mart1  ; MART_CHERRYGROVE_DEX
+	dw Mart2  ; MART_VIOLET
+	dw Mart3  ; MART_AZALEA
+	dw Mart4  ; MART_CIANWOOD
+	dw Mart5  ; MART_GOLDENROD_2F_1
+	dw Mart6  ; MART_GOLDENROD_2F_2
+	dw Mart7  ; MART_GOLDENROD_3F
+	dw Mart8  ; MART_GOLDENROD_4F
+	dw Mart9  ; MART_GOLDENROD_5F_1
+	dw Mart10 ; MART_GOLDENROD_5F_2
+	dw Mart11 ; MART_GOLDENROD_5F_3
+	dw Mart12 ; MART_GOLDENROD_5F_4
+	dw Mart13 ; MART_OLIVINE
+	dw Mart14 ; MART_ECRUTEAK
+	dw Mart15 ; MART_MAHOGANY_1
+	dw Mart16 ; MART_MAHOGANY_2
+	dw Mart17 ; MART_BLACKTHORN
+	dw Mart18 ; MART_VIRIDIAN
+	dw Mart19 ; MART_PEWTER
+	dw Mart20 ; MART_CERULEAN
+	dw Mart21 ; MART_LAVENDER
+	dw Mart22 ; MART_VERMILION
+	dw Mart23 ; MART_CELADON_2F_1
+	dw Mart24 ; MART_CELADON_2F_2
+	dw Mart25 ; MART_CELADON_3F
+	dw Mart26 ; MART_CELADON_4F
+	dw Mart27 ; MART_CELADON_5F_1
+	dw Mart28 ; MART_CELADON_5F_2
+	dw Mart29 ; MART_FUCHSIA
+	dw Mart30 ; MART_SAFFRON
+	dw Mart31 ; MART_MT_MOON
+	dw Mart32 ; MART_INDIGO_PLATEAU
+	dw Mart33 ; MART_UNDERGROUND
 MartsEnd
 ; 160ed
 
 
-Mart0: ; 160ed
+Mart0: ; 160ed - MART_CHERRYGROVE
 	db 4 ; # items
 	db POTION
 	db ANTIDOTE
@@ -46,7 +46,7 @@ Mart0: ; 160ed
 	db $ff
 ; 160f3
 
-Mart1: ; 160f3
+Mart1: ; 160f3 - MART_CHERRYGROVE_DEX
 	db 5 ; # items
 	db POKE_BALL
 	db POTION
@@ -56,7 +56,7 @@ Mart1: ; 160f3
 	db $ff
 ; 160fa
 
-Mart2: ; 160fa
+Mart2: ; 160fa - MART_VIOLET
 	db 10 ; # items
 	db POKE_BALL
 	db POTION
@@ -71,7 +71,7 @@ Mart2: ; 160fa
 	db $ff
 ; 16106
 
-Mart3: ; 16106
+Mart3: ; 16106 - MART_AZALEA
 	db 9 ; # items
 	db CHARCOAL
 	db POKE_BALL
@@ -85,7 +85,7 @@ Mart3: ; 16106
 	db $ff
 ; 16111
 
-Mart4: ; 16111
+Mart4: ; 16111 - MART_CIANWOOD
 	db 5 ; # items
 	db POTION
 	db SUPER_POTION
@@ -95,7 +95,7 @@ Mart4: ; 16111
 	db $ff
 ; 16118
 
-Mart5: ; 16118
+Mart5: ; 16118 - GOLDENROD_2F_1
 	db 7 ; # items
 	db POTION
 	db SUPER_POTION
@@ -107,8 +107,8 @@ Mart5: ; 16118
 	db $ff
 ; 16121
 
-Mart6: ; 16121
-	db 8 ; # items
+Mart6: ; 16121 - GOLDENROD_2F_2
+	db 9 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ESCAPE_ROPE
@@ -117,10 +117,11 @@ Mart6: ; 16121
 	db FULL_HEAL
 	db POKE_DOLL
 	db FLOWER_MAIL
+	db LINK_CABLE
 	db $ff
 ; 1612b
 
-Mart7: ; 1612b
+Mart7: ; 1612b - MART_GOLDENROD_3F
 	db 7 ; # items
 	db X_SPEED
 	db X_SPECIAL
@@ -132,17 +133,18 @@ Mart7: ; 1612b
 	db $ff
 ; 16134
 
-Mart8: ; 16134
-	db 5 ; # items
+Mart8: ; 16134 - MART_GOLDENROD_4F
+	db 6 ; # items
 	db PROTEIN
 	db IRON
 	db CARBOS
 	db CALCIUM
 	db HP_UP
+	db PP_UP
 	db $ff
 ; 1613b
 
-Mart9: ; 1613b
+Mart9: ; 1613b - MART_GOLDENROD_5F_1
 	db 3 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
@@ -150,7 +152,7 @@ Mart9: ; 1613b
 	db $ff
 ; 16140
 
-Mart10: ; 16140
+Mart10: ; 16140 - MART_GOLDENROD_5F_2
 	db 4 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
@@ -159,7 +161,7 @@ Mart10: ; 16140
 	db $ff
 ; 16146
 
-Mart11: ; 16146
+Mart11: ; 16146 - MART_GOLDENROD_5F_3
 	db 4 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
@@ -168,7 +170,7 @@ Mart11: ; 16146
 	db $ff
 ; 1614c
 
-Mart12: ; 1614c
+Mart12: ; 1614c - MART_GOLDENROD_5F_4
 	db 5 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
@@ -178,7 +180,7 @@ Mart12: ; 1614c
 	db $ff
 ; 16153
 
-Mart13: ; 16153
+Mart13: ; 16153 - MART_OLIVINE
 	db 9 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -192,7 +194,7 @@ Mart13: ; 16153
 	db $ff
 ; 1615e
 
-Mart14: ; 1615e
+Mart14: ; 1615e - MART_ECRUTEAK
 	db 10 ; # items
 	db POKE_BALL
 	db GREAT_BALL
@@ -207,7 +209,7 @@ Mart14: ; 1615e
 	db $ff
 ; 1616a
 
-Mart15: ; 1616a
+Mart15: ; 1616a - MART_MAHOGANY_1
 	db 4 ; # items
 	db TINYMUSHROOM
 	db SLOWPOKETAIL
@@ -216,7 +218,7 @@ Mart15: ; 1616a
 	db $ff
 ; 16170
 
-Mart16: ; 16170
+Mart16: ; 16170 - MART_MAHOGANY_2
 	db 9 ; # items
 	db RAGECANDYBAR
 	db GREAT_BALL
@@ -230,7 +232,7 @@ Mart16: ; 16170
 	db $ff
 ; 1617b
 
-Mart17: ; 1617b
+Mart17: ; 1617b - MART_BLACKTHORN
 	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -244,7 +246,7 @@ Mart17: ; 1617b
 	db $ff
 ; 16186
 
-Mart18: ; 16186
+Mart18: ; 16186 - MART_VIRIDIAN
 	db 9 ; # items
 	db ULTRA_BALL
 	db HYPER_POTION
@@ -258,7 +260,7 @@ Mart18: ; 16186
 	db $ff
 ; 16191
 
-Mart19: ; 16191
+Mart19: ; 16191 - MART_PEWTER
 	db 7 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -270,7 +272,7 @@ Mart19: ; 16191
 	db $ff
 ; 1619a
 
-Mart20: ; 1619a
+Mart20: ; 1619a - MART_CERULEAN
 	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -284,7 +286,7 @@ Mart20: ; 1619a
 	db $ff
 ; 161a5
 
-Mart21: ; 161a5
+Mart21: ; 161a5 - MART_LAVENDER
 	db 8 ; # items
 	db GREAT_BALL
 	db POTION
@@ -297,7 +299,7 @@ Mart21: ; 161a5
 	db $ff
 ; 161af
 
-Mart22: ; 161af
+Mart22: ; 161af - MART_VERMILION
 	db 8 ; # items
 	db ULTRA_BALL
 	db SUPER_POTION
@@ -310,7 +312,7 @@ Mart22: ; 161af
 	db $ff
 ; 161b9
 
-Mart23: ; 161b9
+Mart23: ; 161b9 - MART_CELADON_2F_1
 	db 7 ; # items
 	db POTION
 	db SUPER_POTION
@@ -322,7 +324,7 @@ Mart23: ; 161b9
 	db $ff
 ; 161c2
 
-Mart24: ; 161c2
+Mart24: ; 161c2 - MART_CELADON_2F_2
 	db 10 ; # items
 	db POKE_BALL
 	db GREAT_BALL
@@ -337,7 +339,7 @@ Mart24: ; 161c2
 	db $ff
 ; 161ce
 
-Mart25: ; 161ce
+Mart25: ; 161ce - MART_CELADON_3F
 	db 5 ; # items
 	db TM_HIDDEN_POWER
 	db TM_SUNNY_DAY
@@ -347,25 +349,33 @@ Mart25: ; 161ce
 	db $ff
 ; 161d5
 
-Mart26: ; 161d5
-	db 3 ; # items
+Mart26: ; 161d5 - MART_CELADON_4F
+	db 10 ; # items
 	db POKE_DOLL
 	db LOVELY_MAIL
 	db SURF_MAIL
+	db FIRE_STONE
+	db WATER_STONE
+	db THUNDERSTONE
+	db LEAF_STONE
+	db MOON_STONE
+	db SUN_STONE
+	db LINK_CABLE
 	db $ff
 ; 161da
 
-Mart27: ; 161da
-	db 5 ; # items
+Mart27: ; 161da - MART_CELADON_5F_1
+	db 6 ; # items
 	db HP_UP
 	db PROTEIN
 	db IRON
 	db CARBOS
 	db CALCIUM
+	db PP_UP
 	db $ff
 ; 161e1
 
-Mart28: ; 161e1
+Mart28: ; 161e1 - MART_CELADON_5F_2
 	db 7 ; # items
 	db X_ACCURACY
 	db GUARD_SPEC
@@ -377,7 +387,7 @@ Mart28: ; 161e1
 	db $ff
 ; 161ea
 
-Mart29: ; 161ea
+Mart29: ; 161ea - MART_FUCHSIA
 	db 7 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -389,8 +399,8 @@ Mart29: ; 161ea
 	db $ff
 ; 161f3
 
-Mart30: ; 161f3
-	db 8 ; # items
+Mart30: ; 161f3 - MART_SAFFRON
+	db 7 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db HYPER_POTION
@@ -398,11 +408,10 @@ Mart30: ; 161f3
 	db FULL_HEAL
 	db X_ATTACK
 	db X_DEFEND
-	db FLOWER_MAIL
 	db $ff
 ; 161fd
 
-Mart31: ; 161fd
+Mart31: ; 161fd - MART_MT_MOON
 	db 6 ; # items
 	db POKE_DOLL
 	db FRESH_WATER
@@ -413,7 +422,7 @@ Mart31: ; 161fd
 	db $ff
 ; 16205
 
-Mart32: ; 16205
+Mart32: ; 16205 - MART_INDIGO_PLATEAU
 	db 7 ; # items
 	db ULTRA_BALL
 	db MAX_REPEL
@@ -425,7 +434,7 @@ Mart32: ; 16205
 	db $ff
 ; 1620e
 
-Mart33: ; 1620e
+Mart33: ; 1620e - MART_UNDERGROUND
 	db 4 ; # items
 	db ENERGYPOWDER
 	db ENERGY_ROOT
