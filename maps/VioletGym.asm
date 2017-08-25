@@ -158,6 +158,9 @@ UnknownText_0x685c8:
 	line "raises the attack"
 	cont "power of #MON."
 
+	para "#MON up to L20"
+	line "will obey you."
+
 	para "It also enables"
 	line "#MON to use"
 
