@@ -883,15 +883,15 @@ wBackupDexListingPage::
 wc7e3:: ds 1
 wDexCurrentLocation::
 wc7e4:: ds 1
-IF DEF(CRYSTAL11)
+
 wPokedexStatus::
-ELSE
-wPokedexDataEnd::
-ENDC
+
+
+
 	ds 1
-IF DEF(CRYSTAL11)
+
 wPokedexDataEnd::
-ENDC
+
 	ds 2
 
 wMiscEnd::
@@ -1304,9 +1304,9 @@ wCardFlipCursorY::
 wCreditsBorderFrame::
 wDexEntryPrevJumptableIndex::
 wcf64:: ds 1
-IF !DEF(CRYSTAL11)
-wPokedexStatus::
-ENDC
+
+
+
 wCreditsBorderMon::
 wTitleScreenTimerLo::
 wUnownPuzzleCursorPosition::
@@ -2612,7 +2612,7 @@ wMountMoonSquareTrigger::                    ds 1 ; d9be
 wMobileTradeRoomMobileTrigger::              ds 1 ; d9bf
 wMobileBattleRoomTrigger::                   ds 1 ; d9c0
 
-	ds 49
+
 
 
 ;SECTION "Events", WRAMX, BANK [1]
@@ -2646,7 +2646,7 @@ wKenjiFightCount::   ds 1 ; unused
 wParryFightCount::   ds 1
 wErinFightCount::    ds 1
 ; da0e
-	ds 100
+
 
 EventFlags:: ; da72
 	flag_array NUM_EVENTS
@@ -2812,20 +2812,20 @@ SECTION "Party", WRAMX, BANK [1]
 
 wPokemonData::
 
-PartyCount:: ; dcd7
+PartyCount:: ; DC88
 	ds 1 ; number of Pokémon in party
-PartySpecies:: ; dcd8
+PartySpecies:: ; DC89
 	ds PARTY_LENGTH ; species of each Pokémon in party
-PartyEnd:: ; dcde
+PartyEnd:: ; DC8F
 	ds 1 ; legacy scripts don't check PartyCount
 
 PartyMons::
-PartyMon1:: party_struct PartyMon1 ; dcdf
-PartyMon2:: party_struct PartyMon2 ; dd0f
-PartyMon3:: party_struct PartyMon3 ; dd3f
-PartyMon4:: party_struct PartyMon4 ; dd6f
-PartyMon5:: party_struct PartyMon5 ; dd9f
-PartyMon6:: party_struct PartyMon6 ; ddcf
+PartyMon1:: party_struct PartyMon1 ; DC90
+PartyMon2:: party_struct PartyMon2 ; DCC0
+PartyMon3:: party_struct PartyMon3 ; DCF0
+PartyMon4:: party_struct PartyMon4 ; DC20
+PartyMon5:: party_struct PartyMon5 ; DC50
+PartyMon6:: party_struct PartyMon6 ; DC80
 
 PartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; ddff
 
