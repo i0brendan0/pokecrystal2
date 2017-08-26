@@ -199,7 +199,7 @@ _ResetWRAM: ; 5bae
 	ld [Coins], a
 	ld [Coins + 1], a
 
-START_MONEY EQU 3000
+START_MONEY EQU 5000
 
 IF START_MONEY / $10000
 	ld a, START_MONEY / $10000
