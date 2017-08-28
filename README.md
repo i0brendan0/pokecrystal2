@@ -30,6 +30,7 @@ List of changes
 * You will be able to find Link Cables for sale at both Department stores.
 * All evolutionary items are for sale at the Celadon Department store.
 * You will get 10 Poke Balls to start with.
+* Your Mom will get many more different items when she goes shopping. You will be able to get all of the decorations including the trophies. Something special is available to those who are super savers.
 
 List of things left to do
 * Update Pokemons' stats to the latest Gen.
