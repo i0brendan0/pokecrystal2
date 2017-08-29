@@ -262,3 +262,4 @@ ENDM
 	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   40, FIGHTING, 100, 15,  50
 	move WHIRLPOOL,    EFFECT_BIND,               35, WATER,     85, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,     100, 10,   0
+	move MAGNET_BOMB   EFFECT_ALWAYS_HIT          60, STEEL,    100, 20,   0
