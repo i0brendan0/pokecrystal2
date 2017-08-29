@@ -96,7 +96,7 @@ CheckBalance_MomItem2: ; fd044
 
 .exact
 	call .AddMoney
-	ld a, 5
+	ld a, 14 ;5
 	call RandomRange
 	inc a
 	ld [wWhichMomItemSet], a
