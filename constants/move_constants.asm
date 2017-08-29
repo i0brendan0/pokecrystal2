@@ -252,6 +252,7 @@
 	const ROCK_SMASH   ; $f9
 	const WHIRLPOOL    ; $fa
 	const BEAT_UP      ; $fb
+	const MAGNET_BOMB
 
 const_value SET const_value + -1
 
