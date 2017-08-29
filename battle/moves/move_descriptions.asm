@@ -250,14 +250,14 @@
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
+	dw MagnetBombDescription ; MoveFCDescription 
 	dw MoveFDDescription
 	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 ; 2cd52
 
-MoveFCDescription:
+;MoveFCDescription: ;comment out
 MoveFDDescription:
 MoveFEDescription:
 MoveFFDescription:
@@ -1267,4 +1267,8 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+	
+MagnetBombDescription
+	db   "A steel bomb that"
+	next "never misses.@"
 ; 2ed44
