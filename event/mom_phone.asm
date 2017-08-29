@@ -1,3 +1,6 @@
+MOM_ITEM_LIST_1 EQU 14 ;5 - how many are in list 1?
+MOM_ITEM_LIST_2 EQU 53 ;10 - how many are in list 2?
+
 MomTriesToBuySomething:: ; fcfec
 	ld a, [wMapReentryScriptQueueFlag]
 	and a
@@ -53,7 +56,7 @@ MomTriesToBuySomething:: ; fcfec
 
 CheckBalance_MomItem2: ; fd044
 	ld a, [wWhichMomItem]
-	cp 53 ;10
+	cp MOM_ITEM_LIST_2 ;10
 	jr nc, .nope
 	call GetItemFromMom
 	ld a, [hli]
@@ -96,7 +99,7 @@ CheckBalance_MomItem2: ; fd044
 
 .exact
 	call .AddMoney
-	ld a, 14 ;5
+	ld a, MOM_ITEM_LIST_1 ; 5
 	call RandomRange
 	inc a
 	ld [wWhichMomItemSet], a
@@ -191,7 +194,7 @@ GetItemFromMom: ; fd117
 
 .zero
 	ld a, [wWhichMomItem]
-	cp 53 ; length of MomItems_2
+	cp MOM_ITEM_LIST_2 ; length of MomItems_2
 	jr c, .ok
 	xor a
 
@@ -278,13 +281,13 @@ MomItems_2: ; fd15e
 	momitem 140000,  1700, MOM_DOLL, DECO_TENTACOOL_DOLL
 	momitem 200000, 50000, MOM_ITEM, NORMAL_BOX
 	momitem 250000, 99999, MOM_ITEM, GORGEOUS_BOX
-	momitem 400000, 99999, MOM_ITEM, $1
-	momitem 500000, 99999, MOM_ITEM, $1
-	momitem 600000, 99999, MOM_ITEM, $1
-	momitem 700000, 99999, MOM_ITEM, $1
-	momitem 800000, 99999, MOM_ITEM, $1
-	momitem 900000, 99999, MOM_ITEM, $1
-	momitem 999999, 99999, MOM_ITEM, $1
+	momitem 400000, 99999, MOM_ITEM, MASTER_BALL
+	momitem 500000, 99999, MOM_ITEM, MASTER_BALL
+	momitem 600000, 99999, MOM_ITEM, MASTER_BALL
+	momitem 700000, 99999, MOM_ITEM, MASTER_BALL
+	momitem 800000, 99999, MOM_ITEM, MASTER_BALL
+	momitem 900000, 99999, MOM_ITEM, MASTER_BALL
+	momitem 999999, 99999, MOM_ITEM, MASTER_BALL
 ; fd1ae
 
 	db 0, 0, 0 ; XXX
