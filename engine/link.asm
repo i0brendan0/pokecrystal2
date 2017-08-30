@@ -1134,7 +1134,7 @@ TimeCapsule_ReplaceTeruSama: ; 28771
 ; catch rate as an item. However, if the catch rate appears in this table, the
 ; item associated with the table entry is used instead.
 	db LINK_CABLE, LEFTOVERS
-	db ITEM_2D, BITTER_BERRY
+	db SWEET_HONEY, BITTER_BERRY
 	db ITEM_32, GOLD_BERRY
 	db ITEM_5A, BERRY
 	db ITEM_64, BERRY
