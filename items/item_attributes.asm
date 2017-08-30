@@ -16,7 +16,7 @@ Item2Attributes:
 	item_attribute  1200, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; BRIGHTPOWDER
-	item_attribute    10, HELD_BRIGHTPOWDER,   20,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
+	item_attribute    10, HELD_BRIGHTPOWDER, 20,            CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
 
 ; GREAT BALL
 	item_attribute   600, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
@@ -112,7 +112,7 @@ Item2Attributes:
 	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; METAL POWDER
-	item_attribute    10, HELD_METAL_POWDER,   10,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
+	item_attribute    10, HELD_METAL_POWDER, 10,            CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
 
 ; NUGGET
 	item_attribute 10000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
@@ -141,8 +141,8 @@ Item2Attributes:
 ; DIRE HIT
 	item_attribute   650, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
-; TERU-SAMA
-	item_attribute $9999, 0,                 0,                       0, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
+; SWEET HONEY
+	item_attribute     0, HELD_CATCH_CHANCE, 10,            CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
 
 ; FRESH WATER
 	item_attribute   200, 0,                50,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_PARTY
