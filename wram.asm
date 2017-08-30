@@ -102,7 +102,7 @@ MusicFadeIDLo:: ; c2a9
 wc2aa::
 MusicFadeIDHi:: ; c2aa
 	ds 1
-	ds 5
+;	ds 5
 CryPitch:: ; c2b0
 	ds 2
 CryLength:: ; c2b2
@@ -113,7 +113,7 @@ wc2b5:: ds 1
 SFXPriority:: ; c2b6
 ; if nonzero, turn off music when playing sfx
 	ds 1
-	ds 1
+;	ds 1
 Channel1JumpCondition:: ds 1
 Channel2JumpCondition:: ds 1
 Channel3JumpCondition:: ds 1
@@ -214,7 +214,7 @@ TilePermissions:: ; c2fe
 ; bit 0: right
 	ds 1
 
-	ds 1
+;	ds 1
 
 SECTION "wSpriteAnims", WRAM0 [$c300]
 ; wc300 - wc313 is a 10x2 dictionary.
@@ -381,7 +381,7 @@ wEnemyTrainerBaseReward:: ds 1 ; c652
 wEnemyTrainerAIFlags:: ds 3 ; c653
 OTClassName:: ds NAME_LENGTH ; c656
 
-	ds 2
+;	ds 2
 
 CurOTMon:: ; c663
 	ds 1
@@ -883,15 +883,9 @@ wBackupDexListingPage::
 wc7e3:: ds 1
 wDexCurrentLocation::
 wc7e4:: ds 1
-
 wPokedexStatus::
-
-
-
 	ds 1
-
 wPokedexDataEnd::
-
 	ds 2
 
 wMiscEnd::
@@ -1067,7 +1061,7 @@ wca50:: ds 16
 wca60:: ds 16
 wca70:: ds 16
 
-	ds 35
+;	ds 35
 
 wcaa3:: ds 2 ; caa3
 wcaa5:: ds 16
@@ -1096,7 +1090,7 @@ wcb84:: ds 100
 wcbe8:: dw
 wLinkOTPartyMonTypes::
 	ds 2 * PARTY_LENGTH
-	ds 84
+;	ds 84
 
 wcc4a:: ds 22
 wcc60:: ds 1
@@ -1304,9 +1298,6 @@ wCardFlipCursorY::
 wCreditsBorderFrame::
 wDexEntryPrevJumptableIndex::
 wcf64:: ds 1
-
-
-
 wCreditsBorderMon::
 wTitleScreenTimerLo::
 wUnownPuzzleCursorPosition::
@@ -2612,9 +2603,6 @@ wMountMoonSquareTrigger::                    ds 1 ; d9be
 wMobileTradeRoomMobileTrigger::              ds 1 ; d9bf
 wMobileBattleRoomTrigger::                   ds 1 ; d9c0
 
-
-
-
 ;SECTION "Events", WRAMX, BANK [1]
 
 wJackFightCount::    ds 1 ; d9f2
@@ -2646,7 +2634,6 @@ wKenjiFightCount::   ds 1 ; unused
 wParryFightCount::   ds 1
 wErinFightCount::    ds 1
 ; da0e
-
 
 EventFlags:: ; da72
 	flag_array NUM_EVENTS
@@ -2823,9 +2810,9 @@ PartyMons::
 PartyMon1:: party_struct PartyMon1 ; DC90
 PartyMon2:: party_struct PartyMon2 ; DCC0
 PartyMon3:: party_struct PartyMon3 ; DCF0
-PartyMon4:: party_struct PartyMon4 ; DC20
-PartyMon5:: party_struct PartyMon5 ; DC50
-PartyMon6:: party_struct PartyMon6 ; DC80
+PartyMon4:: party_struct PartyMon4 ; DD20
+PartyMon5:: party_struct PartyMon5 ; DD50
+PartyMon6:: party_struct PartyMon6 ; DD80
 
 PartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; ddff
 
