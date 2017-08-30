@@ -44,7 +44,7 @@
 	const SUPER_REPEL  ; $2A
 	const MAX_REPEL    ; $2B
 	const DIRE_HIT     ; $2C
-	const ITEM_2D      ; $2D
+	const SWEET_HONEY  ; $2D
 	const FRESH_WATER  ; $2E
 	const SODA_POP     ; $2F
 	const LEMONADE     ; $30
