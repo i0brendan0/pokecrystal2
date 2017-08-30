@@ -50,11 +50,13 @@ TeacherScript_0x62d63:
 	opentext
 	checkevent EVENT_FOREST_IS_RESTLESS
 	iftrue UnknownScript_0x62d84
+	checkevent EVENT_BEAT_RED
+	iftrue GetSweetHoney
 	checkevent EVENT_GOT_TM12_SWEET_SCENT
 	iftrue UnknownScript_0x62d7e
 	writetext UnknownText_0x62d9d
 	buttonsound
-	verbosegiveitem TM_SWEET_SCENT
+	verbosegiveitem TM_SWEET_SCENT, 10
 	iffalse UnknownScript_0x62d82
 	setevent EVENT_GOT_TM12_SWEET_SCENT
 UnknownScript_0x62d7e:
@@ -64,6 +66,25 @@ UnknownScript_0x62d82:
 	closetext
 	end
 
+GetSweetHoney:
+	checkevent EVENT_GOT_HONEY
+	iftrue UnknownScript_0x62d7e
+	writetext SweetHoneyText
+	buttonsound
+	verbosegiveitem SWEET_HONEY
+	iffalse CantGiveSweetHoney
+	setevent EVENT_GOT_HONEY
+	writetext SweetHoneyGiveText
+	waitbutton
+	closetext
+	end
+
+CantGiveSweetHoney:
+	writetext SweetHoneyBagFullText
+	waitbutton
+	closetext
+	end
+	
 UnknownScript_0x62d84:
 	writetext UnknownText_0x62e41
 	buttonsound
@@ -136,6 +157,33 @@ UnknownText_0x62e97:
 	para "I think that it"
 	line "must be a grass-"
 	cont "type #MON."
+	done
+
+SweetHoneyText:
+	text "My #MON is an"
+	line "expert at collect-"
+	cont "ing SWEET HONEY."
+
+	para "I'll share some"
+	line "with you."
+	done
+	
+SweetHoneyBagFullText: ; 0x557d6
+	text "I want to give you"
+	line "some SWEET HONEY,"
+
+	para "but you have no"
+	line "room for it."
+	done
+	
+SweetHoneyGiveText: ; 0x55819
+	text "Here you go! Have"
+	line "some SWEET HONEY!"
+	
+	para "Have a #MON"
+	line "hold it to make a"
+	cont "wild #MON"
+	cont "easier to catch."
 	done
 
 Route34IlexForestGate_MapEventHeader:
