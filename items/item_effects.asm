@@ -58,7 +58,7 @@ ItemEffects: ; e73c
 	dw SuperRepel
 	dw MaxRepel
 	dw DireHit
-	dw Item2D
+	dw SweetHoney
 	dw FreshWater
 	dw SodaPop
 	dw Lemonade
@@ -371,7 +371,10 @@ ParkBall: ; e8a2
 	callba GetItemHeldEffect
 	ld a, b
 	cp HELD_CATCH_CHANCE
+	jr z, .next
+	ld c, 0	
 
+.next
 	pop de
 	ld a, d
 
@@ -2835,7 +2838,7 @@ Brightpowder:
 LuckyPunch:
 MetalPowder:
 Nugget:
-Item2D:
+SweetHoney:
 Item32:
 ExpShare:
 SilverLeaf:
