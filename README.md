@@ -33,6 +33,7 @@ List of changes
 * Your Mom will get many more different items when she goes shopping. You will be able to get all of the decorations including the trophies. Something special is available to those who are super savers.
 * Sonic Boom will now show its Japanese animation in battle. Cause why would they change it in the first place...?
 * Magnet Bomb has been added to the available moves. Only Magnemite and Magneton learn it so far.
+* Sweet Honey has been added into the game. It now is a hold item that can be used to increase the chance of catching a Pokemon.
 
 List of things left to do
 * Update Pokemons' stats to the latest Gen.
