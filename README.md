@@ -40,3 +40,7 @@ List of things left to do
 * Add more Level Up moves.
 * Add more TM moves.
 * Add Gen 1 starters, Legendary Birds, Mew, and Mewtwo into the game to be caught.
+
+List of things I want to do but might not be able to
+* Add a Move Relearner
+* Change Unown's sprite code
