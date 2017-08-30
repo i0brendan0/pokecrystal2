@@ -1728,7 +1728,7 @@ BattleCommand_CheckHit: ; 34d32
 	jp z, .Miss
 
 	call .Protect
-	jp nz, .Miss
+	jp nz, .Failed2
 
 	call .DrainSub
 	jp z, .Miss
@@ -1789,6 +1789,11 @@ BattleCommand_CheckHit: ; 34d32
 .Hit:
 	ret
 
+
+.Failed2
+	ld a, 1
+	ld [EffectFailed], a
+	ret
 
 .Miss:
 ; Keep the damage value intact if we're using (Hi) Jump Kick.
@@ -9488,14 +9493,15 @@ BattleCommand_BellyDrum: ; 37c1a
 ; This command is buggy because it raises the user's attack
 ; before checking that it has enough HP to use the move.
 ; Swap the order of these two blocks to fix.
-	call BattleCommand_AttackUp2
-	ld a, [AttackMissed]
-	and a
-	jr nz, .failed
 
 	callab GetHalfMaxHP
 	callab CheckUserHasEnoughHP
 	jr nc, .failed
+
+	call BattleCommand_AttackUp2
+	ld a, [AttackMissed]
+	and a
+	jr nz, .failed
 
 	push bc
 	call AnimateCurrentMove
