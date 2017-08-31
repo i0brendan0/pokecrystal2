@@ -464,8 +464,8 @@ DireHitDesc:
 	next "ratio. (1 BTL)@"
 
 SweetHoneyDesc:
-	db   "Makes catching a"
-	next "#MON easier. (HOLD)"
+	db   "Makes catching"
+	next "easier. (HOLD)@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
