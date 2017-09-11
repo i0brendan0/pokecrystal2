@@ -34,7 +34,7 @@ List of changes
 * Sonic Boom will now show its Japanese animation in battle. Cause why would they change it in the first place...?
 * Magnet Bomb has been added to the available moves. Only Magnemite and Magneton learn it so far.
 * Sweet Honey has been added into the game. It now is a hold item that can be used to increase the chance of catching a Pokemon.
-* 10 TMs will be given out if they are picked up by the player or given to the player from an NPC.
+* The main pocket of the bag is increased to 50. Now you won't always have to run back to the PC to deposite items you don't need.
 
 List of things left to do
 * Update Pokemons' stats to the latest Gen.
@@ -44,6 +44,7 @@ List of things left to do
 * Add Gen 1 starters, Legendary Birds, Mew, and Mewtwo into the game to be caught.
 * Update all trainers' Pokemon with newly aquired moves.
 * Edit certain trainers' Pokemon to fit better with other edits.
+* 10 TMs will be given out if they are picked up by the player or given to the player from an NPC.
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
