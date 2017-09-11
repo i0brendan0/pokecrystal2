@@ -44,7 +44,7 @@ PryceScript_0x199a9e:
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
 	writetext UnknownText_0x199d55
 	buttonsound
-	verbosegiveitem TM_ICY_WIND
+	verbosegiveitem TM_ICY_WIND, 10
 	iffalse UnknownScript_0x199af4
 	setevent EVENT_GOT_TM16_ICY_WIND
 	writetext UnknownText_0x199def
