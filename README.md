@@ -42,6 +42,8 @@ List of things left to do
 * Add more Level Up moves.
 * Add more TM moves.
 * Add Gen 1 starters, Legendary Birds, Mew, and Mewtwo into the game to be caught.
+* Update all trainers' Pokemon with newly aquired moves.
+* Edit certain trainers' Pokemon to fit better with other edits.
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
