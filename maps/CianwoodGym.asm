@@ -60,7 +60,7 @@ ChuckScript_0x9d60f:
 	setevent EVENT_BEAT_BLACKBELT_LUNG
 	writetext ChuckExplainBadgeText
 	buttonsound
-	verbosegiveitem TM_DYNAMICPUNCH
+	verbosegiveitem TM_DYNAMICPUNCH, 10
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
 	writetext ChuckExplainTMText
