@@ -302,7 +302,7 @@ NationalParkParlyzHeal:
 	itemball PARLYZ_HEAL
 
 NationalParkTMDig:
-	itemball TM_DIG
+	itemball TM_DIG, 10
 
 NationalParkHiddenFullHeal:
 	dwb EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL, FULL_HEAL
