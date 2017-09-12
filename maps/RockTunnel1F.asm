@@ -13,7 +13,7 @@ RockTunnel1FElixer:
 	itemball ELIXER
 
 RockTunnel1FTMSteelWing:
-	itemball TM_STEEL_WING
+	itemball TM_PROTECT, 10
 
 RockTunnel1FHiddenXAccuracy:
 	dwb EVENT_ROCK_TUNNEL_1F_HIDDEN_X_ACCURACY, X_ACCURACY
