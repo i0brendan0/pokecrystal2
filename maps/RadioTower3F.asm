@@ -70,7 +70,7 @@ UnknownScript_0x5e584:
 UnknownScript_0x5e58a:
 	writetext UnknownText_0x5e7e2
 	buttonsound
-	verbosegiveitem TM_SUNNY_DAY
+	verbosegiveitem TM_SUNNY_DAY, 10
 	iffalse UnknownScript_0x5e5a1
 	writetext UnknownText_0x5e821
 	waitbutton
