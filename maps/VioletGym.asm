@@ -40,7 +40,7 @@ FalknerScript_0x683c2:
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext UnknownText_0x685c8
 	buttonsound
-	verbosegiveitem TM_MUD_SLAP
+	verbosegiveitem TM_MUD_SLAP, 10
 	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
 	writetext UnknownText_0x68648
