@@ -99,7 +99,7 @@ UnknownScript_0x7451f:
 	end
 
 VictoryRoadTMEarthquake:
-	itemball TM_EARTHQUAKE
+	itemball TM_EARTHQUAKE, 10
 
 VictoryRoadMaxRevive:
 	itemball MAX_REVIVE
