@@ -58,7 +58,7 @@ FisherScript_0x1a9a75:
 	iftrue UnknownScript_0x1a9a8a
 	writetext UnknownText_0x1a9cc4
 	buttonsound
-	verbosegiveitem TM_DREAM_EATER
+	verbosegiveitem TM_DREAM_EATER, 10
 	iffalse UnknownScript_0x1a9a8e
 	setevent EVENT_GOT_TM42_DREAM_EATER
 UnknownScript_0x1a9a8a:
