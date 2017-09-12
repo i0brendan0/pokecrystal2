@@ -95,7 +95,7 @@ UndergroundWarehouseMaxEther:
 	itemball MAX_ETHER
 
 UndergroundWarehouseTMSleepTalk:
-	itemball TM_SLEEP_TALK
+	itemball TM_SLEEP_TALK, 10
 
 UndergroundWarehouseUltraBall:
 	itemball ULTRA_BALL
