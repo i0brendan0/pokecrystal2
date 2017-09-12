@@ -80,7 +80,7 @@ PokefanFScript_0x9cf0e:
 UnknownScript_0x9cf22:
 	writetext UnknownText_0x9d156
 	buttonsound
-	verbosegiveitem TM_SNORE
+	verbosegiveitem TM_SNORE, 10
 	iffalse UnknownScript_0x9cf33
 	setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
 UnknownScript_0x9cf2f:
