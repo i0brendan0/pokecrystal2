@@ -360,7 +360,7 @@ UnknownScript_0x6d207:
 	end
 
 TeamRocketBaseB2FTMThief:
-	itemball TM_THIEF
+	itemball TM_THIEF, 10
 
 TeamRocketBaseB2FHiddenFullHeal:
 	dwb EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL, FULL_HEAL
