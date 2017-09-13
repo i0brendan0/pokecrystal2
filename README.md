@@ -45,6 +45,7 @@ List of things left to do
 * Add starters, Legendary Birds, Mew, and Mewtwo into the game to be caught.
 * Update all trainers' Pokemon with newly aquired moves.
 * Edit certain trainers' Pokemon to fit better with other edits.
+* Add a Dark type boost after beating Karen. 
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
