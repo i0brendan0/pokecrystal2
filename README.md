@@ -20,7 +20,7 @@ List of changes
 * The phone list size is increased to 20. 
 * The number at which Pokemon evolve by happiness is decreased to 200.
 * Some Pokemon have a second type.
-* All Pokemon will now be able to be obtained without trading. To do - Gen 1 starters, Legendary Birds, and Mews.
+* All Pokemon will now be able to be obtained without trading. To do - starters and Mews.
 * The Odd Egg Pokemon list has been reworked. All Pokemon have an equal chance of being shiny and a roughly equal chance at hatching. The DVs for each non-shiny Pokemon are maxed out, while the shiny versions are the max available, not including Tyrogue which has the same Attack and Defense DVs
 * Some trainers' Pokemon have been given different DVs. Special trainers now carry shiny Pokemon.
 * The password to reset the clock has been removed. Now it will reset when you hit Yes. 
@@ -42,7 +42,7 @@ List of things left to do
 * Add more Egg moves.
 * Add more Level Up moves.
 * Add more TM moves.
-* Add starters, Legendary Birds, Mew, and Mewtwo into the game to be caught.
+* Add starters, Mew, and Mewtwo into the game to be caught.
 * Update all trainers' Pokemon with newly aquired moves.
 * Edit certain trainers' Pokemon to fit better with other edits.
 * Add a Dark type boost after beating Karen. 
