@@ -38,7 +38,7 @@ Articuno:
 	closetext
 	setevent EVENT_FOUGHT_ARTICUNO
 	loadwildmon ARTICUNO, 50
-	starbattle
+	startbattle
 	disappear LEGENDARYBIRD_ARTICUNO
 	reloadmapafterbattle
 	end
