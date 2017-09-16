@@ -35,7 +35,7 @@ Moltres:
 	closetext
 	setevent EVENT_FOUGHT_MOLTRES
 	loadwildmon MOLTRES, 50
-	starbattle
+	startbattle
 	disappear LEGENDARYBIRD_MOLTRES
 	reloadmapafterbattle
 	end
