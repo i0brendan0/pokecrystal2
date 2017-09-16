@@ -34,7 +34,7 @@ Zapdos:
 	closetext
 	setevent EVENT_FOUGHT_ZAPDOS
 	loadwildmon ZAPDOS, 50
-	starbattle
+	startbattle
 	disappear LEGENDARYBIRD_ZAPDOS
 	reloadmapafterbattle
 	end
