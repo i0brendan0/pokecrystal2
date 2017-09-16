@@ -1,12 +1,48 @@
+const_value set 2
+	const LEGENDARYBIRD_MOLTRES
+
 SilverCaveOutside_MapScriptHeader:
 .MapTriggers:
 	db 0
 
 .MapCallbacks:
-	db 1
+	db 2
 
 	; callbacks
 	dbw MAPCALLBACK_NEWMAP, .FlyPoint
+	dbw MAPCALLBACK_OBJECTS, .Moltres
+
+.Moltres:
+	checkevent EVENT_FOUGHT_MOLTRES
+	iftrue .NoAppear
+	checkevent EVENT_BEAT_RED
+	iftrue .Appear
+	jump .NoAppear
+
+.Appear:
+	appear LEGENDARYBIRD_MOLTRES
+	return
+
+.NoAppear:
+	disappear LEGENDARYBIRD_MOLTRES
+	return
+
+Moltres:
+	opentext
+	writetext MoltresText
+	cry Moltres
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_MOLTRES
+	loadwildmon MOLTRES, 50
+	starbattle
+	disappear LEGENDARYBIRD_MOLTRES
+	reloadmapafterbattle
+	end
+
+MoltresText:
+	text "Gyaoo!"
+	done
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_SILVER_CAVE
@@ -44,4 +80,5 @@ SilverCaveOutside_MapEventHeader:
 	signpost 25, 9, SIGNPOST_ITEM, SilverCaveOutsideHiddenFullRestore
 
 .PersonEvents:
-	db 0
+	db 1
+	person_event SPRITE_MOLTRES, 25, 9, SPRITEMOVEDATA_POKEMON, 0, 0, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, Moltres, EVENT_LEGENDARY_BIRD_MOLTRES
