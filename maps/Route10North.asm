@@ -6,7 +6,6 @@ Route10North_MapScriptHeader:
 	db 0
 
 .MapCallbacks:
-	db 0
 	db 1
 
 	dbw MAPCALLBACK_OBJECTS, .Zapdos
@@ -72,4 +71,4 @@ Route10North_MapEventHeader:
 
 .PersonEvents:
 	db 1
-	person_event SPRITE_MOLTRES, 10, 7, SPRITEMOVEDATA_POKEMON, 0, 0, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, Zapdos, EVENT_LEGENDARY_BIRD_ZAPDOS
+	person_event SPRITE_MOLTRES, 10, 7, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, Zapdos, EVENT_LEGENDARY_BIRD_ZAPDOS
