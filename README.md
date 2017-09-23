@@ -42,10 +42,13 @@ List of things left to do
 * Add more Egg moves.
 * Add more Level Up moves.
 * Add more TM moves.
-* Add starters, Mew, and Mewtwo into the game to be caught.
+* Add starters and Mew into the game to be caught.
 * Update all trainers' Pokemon with newly aquired moves.
 * Edit certain trainers' Pokemon to fit better with other edits.
 * Add a Dark type boost after beating Karen. 
+* Add Cerulean Cave for Mewtwo.
+* Add Seafoam Islands for Articuno.
+* Add Mt Silver Cave Room for Moltres.
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
