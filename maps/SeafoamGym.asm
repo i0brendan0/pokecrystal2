@@ -194,22 +194,17 @@ SeafoamGymGuyWinText2:
 	line "for a building."
 	done
 
-SeafoamGym_MapEventHeader:
-	; filler
-	db 0, 0
+SeafoamGym_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 1
-	warp_def $5, $5, 1, ROUTE_20
+.Warps: db 1
+	warp_def 5, 5, 1, ROUTE_20
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 0
+.BGEvents: db 0
 
-.PersonEvents:
-	db 3
+.ObjectEvents: db 3
 	person_event SPRITE_BLAINE, 2, 5, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, BlaineScript_0x1ab4fb, -1
 	person_event SPRITE_GYM_GUY, 5, 6, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, SeafoamGymGuyScript, EVENT_SEAFOAM_GYM_GYM_GUY
-	person_event SPRITE_MOLTRES, 3, 2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, Articuno, EVENT_LEGENDARY_BIRD_ARTICUNO
+	person_event SPRITE_MOLTRES, 3, 3, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, Articuno, EVENT_LEGENDARY_BIRD_ARTICUNO
+
