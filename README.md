@@ -49,6 +49,7 @@ List of things left to do
 * Add Cerulean Cave for Mewtwo.
 * Add Seafoam Islands for Articuno.
 * Add Mt Silver Cave Room for Moltres.
+* Add Faraway Island for Mew.
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
