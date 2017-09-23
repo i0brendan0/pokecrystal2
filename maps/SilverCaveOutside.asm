@@ -11,6 +11,10 @@ SilverCaveOutside_MapScriptHeader:
 	; callbacks
 	dbw MAPCALLBACK_NEWMAP, .FlyPoint
 	dbw MAPCALLBACK_OBJECTS, .Moltres
+	
+.FlyPoint:
+	setflag ENGINE_FLYPOINT_SILVER_CAVE
+	return
 
 .Moltres:
 	checkevent EVENT_FOUGHT_MOLTRES
@@ -43,10 +47,6 @@ Moltres:
 MoltresText:
 	text "Gyaoo!"
 	done
-
-.FlyPoint:
-	setflag ENGINE_FLYPOINT_SILVER_CAVE
-	return
 
 MtSilverPokeCenterSign:
 	jumpstd pokecentersign
@@ -81,4 +81,4 @@ SilverCaveOutside_MapEventHeader:
 
 .PersonEvents:
 	db 1
-	person_event SPRITE_MOLTRES, 25, 9, SPRITEMOVEDATA_POKEMON, 0, 0, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, Moltres, EVENT_LEGENDARY_BIRD_MOLTRES
+	person_event SPRITE_MOLTRES, 25, 9, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, Moltres, EVENT_LEGENDARY_BIRD_MOLTRES
