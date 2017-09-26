@@ -20,7 +20,6 @@ before_script:
     }
 script:
   - make tools
-  - make crystal crystal11
-  - make compare
+  - make
 #  - check_status
 
