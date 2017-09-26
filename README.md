@@ -1,4 +1,4 @@
-# Pokémon Crystal 2
+# Pokémon Crystal 2 [![Build Status][travis-badge]][travis]
 
 This is the disassembly of my own hack of Pokémon Crystal called PokeCrystal2.
 
