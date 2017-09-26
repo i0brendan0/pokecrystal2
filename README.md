@@ -1,4 +1,4 @@
-# Pokémon Crystal 2
+# Pokémon Crystal 2 [![Build Status][travis-badge]][travis]
 
 This is the disassembly of my own hack of Pokémon Crystal called PokeCrystal2.
 
@@ -54,3 +54,6 @@ List of things left to do
 List of things I want to do but might not be able to
 * Add a Move Relearner
 * Change Unown's sprite code
+
+[travis]: https://travis-ci.org/i0brendan0/pokecrystal2
+[travis-badge]: https://travis-ci.org/i0brendan0/pokecrystal2.svg?branch=master
