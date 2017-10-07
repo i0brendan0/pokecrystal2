@@ -504,7 +504,9 @@
 	add_pic HoOhBackpic
 	add_pic CelebiFrontpic
 	add_pic CelebiBackpic
-	dbw -1, -1 ; unused
-	dbw -1, -1 ; unused
+	add_pic MissingNoFrontpic
+	add_pic MissingNoBackpic
+;	dbw -1, -1 ; unused
+;	dbw -1, -1 ; unused
 	add_pic EggPic
 	dbw -1, -1 ; unused
