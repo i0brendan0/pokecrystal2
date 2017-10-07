@@ -1126,7 +1126,7 @@ ConsumeHeldItem: ; 27192
 .ConsumableEffects: ; 271de
 ; Consumable items?
 	db HELD_BERRY
-	db HELD_2
+;	db HELD_2
 	db HELD_5
 	db HELD_HEAL_POISON
 	db HELD_HEAL_FREEZE
@@ -2662,7 +2662,7 @@ FlagPredef: ; 4d7c1
 
 GetTrademonFrontpic: ; 4d7fd
 	ld a, [wOTTrademonSpecies]
-	ld hl, wOTTrademonDVs
+	ld hl, wOTTrademonCaughtData
 	ld de, VTiles2
 	push de
 	push af
@@ -3121,6 +3121,15 @@ SetCaughtData: ; 4db49
 	ld hl, PartyMon1CaughtLevel
 	call GetPartyLocation
 SetBoxmonOrEggmonCaughtData: ; 4db53
+	ld a, [CurSpecies]
+	cp UNOWN
+	jr nz, .not_unown
+	
+	ld a, [EnemyMonCaughtData]
+	ld [hl], a
+	inc hl
+	jr .skip
+.not_unown:
 	ld a, [TimeOfDay]
 	inc a
 	rrca
@@ -3129,6 +3138,7 @@ SetBoxmonOrEggmonCaughtData: ; 4db53
 	ld a, [CurPartyLevel]
 	or b
 	ld [hli], a
+.skip:
 	ld a, [MapGroup]
 	ld b, a
 	ld a, [MapNumber]
