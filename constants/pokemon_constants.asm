@@ -252,6 +252,7 @@ const_value set 1
 	const LUGIA
 	const HO_OH
 	const CELEBI
+	const MISSINGNO
 
 const_value SET const_value + -1
 
