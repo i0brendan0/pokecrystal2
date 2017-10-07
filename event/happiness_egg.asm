@@ -100,10 +100,13 @@ ChangeHappiness: ; 71c2
 	jr .done
 	
 .increase:
-	pop af
-	ld b, [hl]
-	srl b
-	add b
+    pop af
+    ld b, [hl]
+    srl b
+    jr nc, .no_add
+    inc b
+.no_add:
+    add b
 	
 	jr nc, .done
 	ld a, -1
