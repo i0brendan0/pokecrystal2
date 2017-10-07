@@ -219,7 +219,7 @@ momitem: macro
 ENDM
 
 
-MomItems_1: ; fd136
+MomItems_1:: ; fd136
 	momitem      0,    90, MOM_ITEM, ANTIDOTE
 	momitem      0,   100, MOM_ITEM, AWAKENING
 	momitem      0,   150, MOM_ITEM, POTION
@@ -234,9 +234,9 @@ MomItems_1: ; fd136
 	momitem      0,  1000, MOM_ITEM, MAX_POTION
 	momitem      0,  1600, MOM_ITEM, FULL_RESTORE
 ;	momitem      0,  7000, MOM_ITEM, PP_UP
-MomItems_1End:
+MomItems_1End::
 
-MomItems_2: ; fd15e
+MomItems_2:: ; fd15e
 	momitem    900,   600, MOM_ITEM, SUPER_POTION
 	momitem   4000,   270, MOM_ITEM, REPEL
 	momitem   7000,  3600, MOM_DOLL, DECO_PIKACHU_POSTER
@@ -290,7 +290,7 @@ MomItems_2: ; fd15e
 	momitem 800000, 99999, MOM_ITEM, MASTER_BALL
 	momitem 900000, 99999, MOM_ITEM, MASTER_BALL
 	momitem 999999, 99999, MOM_ITEM, MASTER_BALL
-MomItems_2End:
+MomItems_2End::
 ; fd1ae
 
 	db 0, 0, 0 ; XXX
