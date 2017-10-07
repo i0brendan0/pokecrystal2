@@ -68,7 +68,7 @@ ScientistScript_0x591d1:
 	faceplayer
 	opentext
 	checkcode VAR_UNOWNCOUNT
-	if equal 32, UnknownScript_0x591df
+	if_equal 32, UnknownScript_0x591df
 	checkcode VAR_UNOWNCOUNT
 	if_equal 26, .Unlock_More_Unown
 	writetext UnknownText_0x59311
