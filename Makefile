@@ -30,10 +30,10 @@ gfx/pics.o
 crystal11_obj := $(crystal_obj:.o=11.o)
 
 
-roms := pokecrystal.gbc pokecrystal11.gbc
+roms := pokecrystal2.gbc pokecrystal11.gbc
 
 all: crystal
-crystal: pokecrystal.gbc
+crystal: pokecrystal2.gbc
 crystal11: pokecrystal11.gbc
 
 # Ensure that the tools are built when making the ROM
@@ -65,8 +65,8 @@ pokecrystal11.gbc: $(crystal11_obj)
 	rgblink -n pokecrystal11.sym -m pokecrystal11.map -o $@ $^
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
 
-pokecrystal.gbc: $(crystal_obj)
-	rgblink -n pokecrystal.sym -m pokecrystal.map -o $@ $^
+pokecrystal2.gbc: $(crystal_obj)
+	rgblink -n pokecrystal2.sym -m pokecrystal2.map -o $@ $^
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
 
 
