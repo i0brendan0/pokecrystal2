@@ -77,6 +77,12 @@ UnownWords: ; fba5a
 	dw UnownWord24
 	dw UnownWord25
 	dw UnownWord26
+	dw UnownWord27
+	dw UnownWord28
+	dw UnownWord29
+	dw UnownWord30
+	dw UnownWord31
+	dw UnownWord32
 ; fba90
 
 unownword: macro
@@ -112,7 +118,13 @@ UnownWord20: unownword "TELL"
 UnownWord21: unownword "UNDO"
 UnownWord22: unownword "VANISH"
 UnownWord23: unownword "WANT"
-UnownWord24: unownword "XXXXX"
+UnownWord24: unownword "X-RAY"
 UnownWord25: unownword "YIELD"
 UnownWord26: unownword "ZOOM"
+UnownWord27: unownword "!"
+UnownWord28: unownword "?"
+UnownWord29: unownword "."
+UnownWord30: unownword ","
+UnownWord31: unownword "-"
+UnownWord32: unownword "!?"
 ; fbb32
