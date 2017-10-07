@@ -125,7 +125,7 @@ _GetVarAction:: ; 80648 (20:4648)
 	ret z
 	inc b
 	ld a, b
-	cp 26
+	cp 32
 	jr c, .loop
 	ret
 ; 80715
