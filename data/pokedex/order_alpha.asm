@@ -251,3 +251,4 @@
 	db YANMA
 	db ZAPDOS
 	db ZUBAT
+	db MISSINGNO
