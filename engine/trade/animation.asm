@@ -185,11 +185,11 @@ RunTradeAnimScript: ; 28fa1
 	call EnableLCD
 	call LoadTradeBallAndCableGFX
 	ld a, [wPlayerTrademonSpecies]
-	ld hl, wPlayerTrademonDVs
+	ld hl, wPlayerTrademonCaughtData
 	ld de, VTiles0
 	call TradeAnim_GetFrontpic
 	ld a, [wOTTrademonSpecies]
-	ld hl, wOTTrademonDVs
+	ld hl, wOTTrademonCaughtData
 	ld de, VTiles0 tile $31
 	call TradeAnim_GetFrontpic
 	ld a, [wPlayerTrademonSpecies]
