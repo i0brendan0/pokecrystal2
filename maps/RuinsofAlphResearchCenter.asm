@@ -151,7 +151,7 @@ MapRuinsofAlphResearchCenterSignpost1Script:
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue UnknownScript_0x59241
 	checkcode VAR_UNOWNCOUNT
-	if_equal 32, .MoreUnown
+	if_equal 32, Give_More_Unown
 	checkcode VAR_UNOWNCOUNT
 	if_greater_than 25, UnknownScript_0x59247
 UnknownScript_0x59241:
@@ -166,7 +166,7 @@ UnknownScript_0x59247:
 	closetext
 	end
 	
-.MoreUnown:
+Give_More_Unown:
 	writetext MoreUnownText
 	waitbutton
 	closetext
