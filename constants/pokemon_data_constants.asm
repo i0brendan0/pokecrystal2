@@ -66,6 +66,7 @@ const_value SET 1
 	const ICON_SLOWPOKE
 	const ICON_SUDOWOODO
 	const ICON_BIGMON
+	const ICON_MISSINGNO
 
 
 ; evolution types
