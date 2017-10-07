@@ -49,7 +49,7 @@ ZapdosFrontpic:      INCBIN "gfx/pics/zapdos/front.animated.2bpp.lz"
 ArbokFrontpic:       INCBIN "gfx/pics/arbok/front.animated.2bpp.lz"
 MewtwoFrontpic:      INCBIN "gfx/pics/mewtwo/front.animated.2bpp.lz"
 FearowFrontpic:      INCBIN "gfx/pics/fearow/front.animated.2bpp.lz"
-CharizardFrontpic:   INCBIN "gfx/pics/charizard/front.animated.2bpp.lz"
+;CharizardFrontpic:   INCBIN "gfx/pics/charizard/front.animated.2bpp.lz"
 ;QuilavaFrontpic:     INCBIN "gfx/pics/quilava/front.animated.2bpp.lz"
 ; 127ffe
 
@@ -744,7 +744,7 @@ UnownHyphenBackpic: INCBIN "gfx/pics/unown_hyphen/back.2bpp.lz" ;INCBIN "gfx/pic
 UnownInterrobangFrontpic: INCBIN "gfx/pics/unown_interrobang/front.animated.2bpp.lz" ;INCBIN "gfx/pics/tauros/back.2bpp.lz"
 UnownInterrobangBackpic: INCBIN "gfx/pics/unown_interrobang/back.2bpp.lz" ;INCBIN "gfx/pics/unown_x/front.animated.2bpp.lz"
 QuilavaFrontpic:     INCBIN "gfx/pics/quilava/front.animated.2bpp.lz" ;INCBIN "gfx/pics/unown_n/front.animated.2bpp.lz"
-;INCBIN "gfx/pics/tangela/back.2bpp.lz"
+CharizardFrontpic:   INCBIN "gfx/pics/charizard/front.animated.2bpp.lz" ;INCBIN "gfx/pics/tangela/back.2bpp.lz"
 ;INCBIN "gfx/pics/voltorb/back.2bpp.lz"
 ;INCBIN "gfx/pics/unown_j/front.animated.2bpp.lz"
 ;INCBIN "gfx/pics/mantine/back.2bpp.lz"
