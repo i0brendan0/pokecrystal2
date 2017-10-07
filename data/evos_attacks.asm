@@ -6,6 +6,15 @@ SECTION "Evolutions and Attacks", ROMX, BANK[EVOS_ATTACKS]
 
 INCLUDE "data/evos_attacks_pointers.asm"
 
+; First, put every move from Gen I & II that it can learn in its level up list.
+; Second, remove duplicate levels for the same move, taking into account other
+; moves on the same level. No more than two similar moves on the same level.
+; Third, take away ROAR from SUICUNE as it may use the move during battles.
+; Fourth, check the moves from breeding to get rid of any it knows from level up
+; including egg moves for the unevolved form.
+
+; Last Pokemon checked - NONE
+
 EvosAttacks::
 
 BulbasaurEvosAttacks:
@@ -1096,6 +1105,7 @@ MagnemiteEvosAttacks:
 	db 16, SONICBOOM
 	db 21, THUNDER_WAVE
 	db 27, LOCK_ON
+	db 30, MAGNET_BOMB
 	db 33, SWIFT
 	db 39, SCREECH
 	db 45, ZAP_CANNON
@@ -1112,6 +1122,7 @@ MagnetonEvosAttacks:
 	db 16, SONICBOOM
 	db 21, THUNDER_WAVE
 	db 27, LOCK_ON
+	db 30, MAGNET_BOMB
 	db 35, TRI_ATTACK
 	db 35, SWIFT
 	db 43, SCREECH
@@ -2535,7 +2546,6 @@ HoppipEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SPLASH
 	db 1, SYNTHESIS
-	db 5, SYNTHESIS
 	db 5, TAIL_WHIP
 	db 10, TACKLE
 	db 13, POISONPOWDER
@@ -3370,3 +3380,8 @@ CelebiEvosAttacks:
 	db 40, BATON_PASS
 	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
+	
+MissingNoEvosAttacks:
+	db 0 ;No Evos
+	db 1, STRUGGLE
+	db 0 ;No more moves
