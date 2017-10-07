@@ -734,7 +734,7 @@ MissingNoBackpic:    INCBIN "gfx/pics/missingno/back.2bpp.lz" ;INCBIN "gfx/pics/
 UnownExclamationFrontpic: INCBIN "gfx/pics/unown_exclamation/front.animated.2bpp.lz" ;INCBIN "gfx/pics/houndour/back.2bpp.lz"
 UnownExclamationBackpic: INCBIN "gfx/pics/unown_exclamation/back.2bpp.lz" ;INCBIN "gfx/pics/poliwag/back.2bpp.lz"
 UnownQuestionFrontpic: INCBIN "gfx/pics/unown_question/front.animated.2bpp.lz" ;INCBIN "gfx/pics/squirtle/back.2bpp.lz"
-UnownQuesionBackpic: INCBIN "gfx/pics/unown_question/back.2bpp.lz" ;INCBIN "gfx/pics/shuckle/back.2bpp.lz"
+UnownQuestionBackpic: INCBIN "gfx/pics/unown_question/back.2bpp.lz" ;INCBIN "gfx/pics/shuckle/back.2bpp.lz"
 UnownPeriodFrontpic: INCBIN "gfx/pics/unown_period/front.animated.2bpp.lz" ;INCBIN "gfx/pics/dewgong/back.2bpp.lz"
 UnownPeriodBackpic: INCBIN "gfx/pics/unown_period/back.2bpp.lz" ;INCBIN "gfx/pics/unown_b/front.animated.2bpp.lz"
 UnownCommaFrontpic: INCBIN "gfx/pics/unown_comma/front.animated.2bpp.lz" ;INCBIN "gfx/pics/slowpoke/back.2bpp.lz"
