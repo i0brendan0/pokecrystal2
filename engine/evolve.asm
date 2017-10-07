@@ -119,7 +119,7 @@ EvolveAfterBattle_MasterLoop
 
 .happiness
 	ld a, [TempMonHappiness]
-	cp HAPPINESS_TO_EVOLVE ;220
+	cp HAPPINESS_TO_EVOLVE ;220 if this ends up not working
 	jp c, .dont_evolve_2
 
 	call IsMonHoldingEverstone
@@ -310,7 +310,7 @@ EvolveAfterBattle_MasterLoop
 	cp UNOWN
 	jr nz, .skip_unown
 
-	ld hl, TempMonDVs
+	ld hl, TempMonCaughtData
 	predef GetUnownLetter
 	callab UpdateUnownDex
 
