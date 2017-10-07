@@ -1135,7 +1135,7 @@ TimeCapsule_ReplaceTeruSama: ; 28771
 ; item associated with the table entry is used instead.
 	db LINK_CABLE, LEFTOVERS
 	db SWEET_HONEY, BITTER_BERRY
-	db ITEM_32, GOLD_BERRY
+	db FARAWAY_MAP, GOLD_BERRY
 	db ITEM_5A, BERRY
 	db ITEM_64, BERRY
 	db ITEM_78, BERRY
