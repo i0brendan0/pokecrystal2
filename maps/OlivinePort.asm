@@ -6,6 +6,7 @@ const_value set 2
 	const OLIVINEPORT_FISHING_GURU2
 	const OLIVINEPORT_YOUNGSTER
 	const OLIVINEPORT_COOLTRAINER_F
+	const OLIVINEPORT_MAP_SAILOR
 
 OlivinePort_MapScriptHeader:
 .MapTriggers:
@@ -17,6 +18,9 @@ OlivinePort_MapScriptHeader:
 
 .MapCallbacks:
 	db 0
+;	db 1
+	
+;	dbw MAPCALLBACK_OBJECTS, .ShowMapSailor
 
 UnknownScript_0x748ac:
 	end
@@ -24,6 +28,16 @@ UnknownScript_0x748ac:
 UnknownScript_0x748ad:
 	priorityjump UnknownScript_0x748b1
 	end
+	
+.ShowMapSailor:
+	checkevent EVENT_TOLD_ABOUT_FARAWAY_ISLAND
+	iffalse .NoAppear
+	appear OLIVINEPORT_MAP_SAILOR
+	return
+	
+.NoAppear:
+	disappear OLIVINEPORT_MAP_SAILOR
+	return
 
 UnknownScript_0x748b1:
 	applymovement PLAYER, MovementData_0x74a32
@@ -387,6 +401,96 @@ UnknownText_0x74cd7:
 	line "allowed in."
 	done
 
+MapSailor:
+	faceplayer
+	opentext
+	checkitem FARAWAY_MAP
+	iffalse .NoMap
+	checkevent EVENT_FOUGHT_MEW
+	iftrue .FoughtMew
+	writetext HasMapText
+	yesorno
+	iffalse .DidNotLeave
+	writetext LeavingText
+;	special FadeOutPalettes
+;	pause 15
+;	warp FARAWAY_ISLAND X, X
+	end
+	
+.NoMap:
+	writetext DoesNotHaveMapText
+	waitbutton
+	closetext
+	end
+	
+.FoughtMew:
+	writetext AlreadyWentText
+	waitbutton
+	closetext
+	end
+	
+.DidNotLeave
+	writetext DidNotLeaveText
+	waitbutton
+	closetext
+	end
+	
+HasMapText:
+	text "I see you are in"
+	line "possession of a"
+	cont "rare MAP."
+	
+	para "May I take a"
+	line "look at it?"
+	
+	para "Ah! This is some-"
+	line "thing I would be"
+	cont "very interested in."
+	
+	para "I can take you to"
+	line "this place shown"
+	
+	para "on the MAP here"
+	line "for free."
+	
+	para "Would you like to"
+	line "embark on a journey"
+	cont "to a new location?"
+	done
+
+LeavingText:
+	text "Alrighty. Let's get"
+	line "a move on, shall we?"
+	done
+
+DoesNotHaveMapText:
+	text "I am a collector"
+	line "of special items"
+	
+	para "related to the"
+	line "sea."
+	
+	para "If you find any-"
+	line "thing like that,"
+	cont "bring it to me."
+	done
+
+AlreadyWentText:
+	text "Looks like the trip"
+	line "was a bust."
+	
+	para "I hope you found"
+	line "something worthwhile."
+	done
+
+DidNotLeaveText:
+	text "Oh, OK..."
+	
+	para "If you change your"
+	line "mind I will be"
+	cont "waiting here."
+	done
+	
 OlivinePort_MapEventHeader:
 	; filler
 	db 0, 0
@@ -413,3 +517,5 @@ OlivinePort_MapEventHeader:
 	person_event SPRITE_FISHING_GURU, 14, 13, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, FishingGuruScript_0x74a0c, EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
 	person_event SPRITE_YOUNGSTER, 15, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x74a17, EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
 	person_event SPRITE_COOLTRAINER_F, 15, 11, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CooltrainerFScript_0x74a22, EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
+;	person_event SPRITE_SAILOR, X, X, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, Map_Sailor, EVENT_MAP_SAILOR
+	
