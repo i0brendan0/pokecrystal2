@@ -68,12 +68,21 @@ ScientistScript_0x591d1:
 	faceplayer
 	opentext
 	checkcode VAR_UNOWNCOUNT
-	if_equal 26, UnknownScript_0x591df
+	if equal 32, UnknownScript_0x591df
+	checkcode VAR_UNOWNCOUNT
+	if_equal 26, .Unlock_More_Unown
 	writetext UnknownText_0x59311
 	waitbutton
 	closetext
 	end
-
+	
+.Unlock_More_Unown:
+	writetext UnlockedMoreUnownText
+	waitbutton
+	closetext
+	setflag ENGINE_UNLOCKED_UNOWNS_5
+	end
+	
 UnknownScript_0x591df:
 	writetext UnknownText_0x5935f
 	waitbutton
@@ -84,7 +93,7 @@ ScientistScript_0x591e5:
 	faceplayer
 	opentext
 	checkcode VAR_UNOWNCOUNT
-	if_equal 26, UnknownScript_0x5920b
+	if_equal 32, UnknownScript_0x5920b
 	checkflag ENGINE_UNOWN_DEX
 	iftrue UnknownScript_0x59205
 	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
@@ -117,7 +126,7 @@ ScientistScript_0x59214:
 	faceplayer
 	opentext
 	checkcode VAR_UNOWNCOUNT
-	if_equal 26, UnknownScript_0x5922e
+	if_equal 32, UnknownScript_0x5922e
 	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
 	iftrue UnknownScript_0x59228
 	writetext UnknownText_0x5954f
@@ -142,7 +151,9 @@ MapRuinsofAlphResearchCenterSignpost1Script:
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue UnknownScript_0x59241
 	checkcode VAR_UNOWNCOUNT
-	if_equal 26, UnknownScript_0x59247
+	if_equal 32, .MoreUnown
+	checkcode VAR_UNOWNCOUNT
+	if_greater_than 25, UnknownScript_0x59247
 UnknownScript_0x59241:
 	writetext UnknownText_0x597b6
 	waitbutton
@@ -154,13 +165,19 @@ UnknownScript_0x59247:
 	waitbutton
 	closetext
 	end
+	
+.MoreUnown:
+	writetext MoreUnownText
+	waitbutton
+	closetext
+	end
 
 MapRuinsofAlphResearchCenterSignpost2Script:
 	opentext
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue UnknownScript_0x5925a
 	checkcode VAR_UNOWNCOUNT
-	if_equal 26, UnknownScript_0x59260
+	if_equal 32, UnknownScript_0x59260
 UnknownScript_0x5925a:
 	writetext UnknownText_0x5980e
 	waitbutton
@@ -369,6 +386,17 @@ UnknownText_0x597d9:
 	line "kinds found."
 	done
 
+MoreUnownText:
+	text "Mystery #MON"
+	line "Name: UNOWN"
+	
+	para "6 new kinds of"
+	line "UNOWN have been"
+	
+	para "found, bringing"
+	line "the total to 32."
+	done
+	
 UnknownText_0x5980e:
 	text "This doesn't seem"
 	line "to work yet."
@@ -397,6 +425,18 @@ UnknownText_0x59886:
 	cont "Ancients…"
 	done
 
+UnlockedMoreUnownText:
+	text "It seems you have"
+	line "all of the UNOWN,"
+	
+	para "but I believe that"
+	line "some new ones have"
+	cont "just appeared."
+	
+	para "You should try to"
+	line "catch the rest."
+	done
+	
 RuinsofAlphResearchCenter_MapEventHeader:
 	; filler
 	db 0, 0
