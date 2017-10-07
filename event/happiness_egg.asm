@@ -79,6 +79,32 @@ ChangeHappiness: ; 71c2
 	ld a, [de]
 	jr nc, .negative
 	add [hl]
+	
+	push af
+	push bc
+	push hl
+    ld hl, PartyMon1Item
+    ld bc, PARTYMON_STRUCT_LENGTH
+    ld a, [CurPartyMon]
+    call AddNTimes
+    pop bc
+
+    ld b, [hl]
+	pop hl
+	
+	callab GetItemHeldEffect
+	ld a, b
+	cp HELD_FRIENDSHIP_INCREASE
+	jr z, .increase
+	pop af
+	jr .done
+	
+.increase:
+	pop af
+	ld b, [hl]
+	srl b
+	add b
+	
 	jr nc, .done
 	ld a, -1
 	jr .done
@@ -101,6 +127,7 @@ ChangeHappiness: ; 71c2
 	ld a, [de]
 	ld [BattleMonHappiness], a
 	ret
+	
 
 .Actions:
 	db  +5,  +3,  +2 ; Gained a level
@@ -122,7 +149,7 @@ ChangeHappiness: ; 71c2
 	db -15, -15, -20 ; Used Revival Herb (bitter)
 	db  +3,  +3,  +1 ; Grooming
 	db +10,  +6,  +4 ; Gained a level in the place where it was caught
-
+	
 StepHappiness:: ; 725a
 ; Raise the party's happiness by 1 point every other step cycle.
 
