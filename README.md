@@ -52,6 +52,7 @@ List of things left to do
 * Add Seafoam Islands for Articuno.
 * Add Mt Silver Cave Room for Moltres.
 * Add Faraway Island for Mew.
+* Add a Soothe Bell item. (The code has already been made and will be used in Prism as well.)
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
