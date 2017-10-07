@@ -840,9 +840,9 @@ SometimesFleeMons: ; 3c59a
 
 OftenFleeMons: ; 3c5a8
 	db CUBONE
-	db ARTICUNO
-	db ZAPDOS
-	db MOLTRES
+;	db ARTICUNO
+;	db ZAPDOS
+;	db MOLTRES
 	db QUAGSIRE
 	db DELIBIRD
 	db PHANPY
@@ -3611,7 +3611,8 @@ LoadEnemyPkmnToSwitchTo: ; 3d6ca
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .skip_unown
-	ld hl, EnemyMonDVs
+;	ld hl, EnemyMonDVs
+	ld hl, EnemyMonCaughtData
 	predef GetUnownLetter
 	ld a, [UnownLetter]
 	ld [wFirstUnownSeen], a
@@ -4201,7 +4202,13 @@ SwitchPlayerMon: ; 3db32
 ; 3db5f
 
 SendOutPlayerMon: ; 3db5f
-	ld hl, BattleMonDVs
+;	ld hl, BattleMonDVs
+	push bc
+	ld hl, PartyMon1CaughtData
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld a, [CurPartyMon]
+	call AddNTimes
+	pop bc
 	predef GetUnownLetter
 	hlcoord 1, 5
 	ld b, 7
@@ -6393,14 +6400,20 @@ LoadEnemyMon: ; 3e8eb
 	ld a, [TempEnemyMonSpecies]
 	cp a, UNOWN
 	jr nz, .Magikarp
+	
+;set random caught data
+.random_number:
+	call Random
+	and %00011111
+	ld [EnemyMonCaughtData], a
 
 ; Get letter based on DVs
-	ld hl, EnemyMonDVs
+	ld hl, EnemyMonCaughtData
 	predef GetUnownLetter
 ; Can't use any letters that haven't been unlocked
 ; If combined with forced shiny battletype, causes an infinite loop
 	call CheckUnownLetter
-	jr c, .GenerateDVs ; try again
+	jr c, .random_number ; try again
 
 .Magikarp:
 ; Skimming this part recommended
@@ -6460,7 +6473,8 @@ LoadEnemyMon: ; 3e8eb
 ; Floor at length 1024
 	ld a, [MagikarpLength]
 	cp a, 1024 >> 8
-	jr c, .GenerateDVs ; try again
+	jp c, .GenerateDVs ; try again
+	
 
 ; Finally done with DVs
 
@@ -6776,6 +6790,7 @@ CheckUnownLetter: ; 3eb75
 	dw .Set2
 	dw .Set3
 	dw .Set4
+	dw .Set5
 
 .Set1:
 	;  A   B   C   D   E   F   G   H   I   J   K
@@ -6789,6 +6804,9 @@ CheckUnownLetter: ; 3eb75
 .Set4:
 	;  X   Y   Z
 	db 24, 25, 26, $ff
+.Set5
+	;  !   ?   .   ,   -   !?
+	db 27, 28, 29, 30, 31, 32, $ff
 
 ; 3ebc7
 
@@ -8316,7 +8334,13 @@ DropPlayerSub: ; 3f447
 	push af
 	ld a, [BattleMonSpecies]
 	ld [CurPartySpecies], a
-	ld hl, BattleMonDVs
+;	ld hl, BattleMonDVs
+	push bc
+	ld hl, PartyMon1CaughtData
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld a, [CurPartyMon]
+	call AddNTimes
+	pop bc
 	predef GetUnownLetter
 	ld de, VTiles2 tile $31
 	predef GetBackpic
@@ -8355,7 +8379,8 @@ DropEnemySub: ; 3f486
 	ld [CurSpecies], a
 	ld [CurPartySpecies], a
 	call GetBaseData
-	ld hl, EnemyMonDVs
+;	ld hl, EnemyMonDVs
+	ld hl, EnemyMonCaughtData
 	predef GetUnownLetter
 	ld de, VTiles2
 	predef FrontpicPredef
@@ -8552,7 +8577,8 @@ InitEnemyWildmon: ; 3f607
 	ld de, wWildMonPP
 	ld bc, NUM_MOVES
 	call CopyBytes
-	ld hl, EnemyMonDVs
+;	ld hl, EnemyMonDVs
+	ld hl, EnemyMonCaughtData
 	predef GetUnownLetter
 	ld a, [CurPartySpecies]
 	cp UNOWN
