@@ -306,7 +306,8 @@ endr
 	ld a, [CurPartySpecies]
 	cp UNOWN
 	jr nz, .done
-	ld hl, PartyMon1DVs
+;	ld hl, PartyMon1DVs
+	ld hl, PartyMon1CaughtData
 	ld a, [PartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
@@ -417,7 +418,8 @@ AddTempmonToParty: ; da96
 	ld a, [CurPartySpecies]
 	cp UNOWN
 	jr nz, .done
-	ld hl, PartyMon1DVs
+;	ld hl, PartyMon1DVs
+	ld hl, PartyMon1CaughtData
 	ld a, [PartyCount]
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
@@ -1009,7 +1011,8 @@ SentPkmnIntoBox: ; de6e
 	ld a, [CurPartySpecies]
 	cp UNOWN
 	jr nz, .not_unown
-	ld hl, sBoxMon1DVs
+;	ld hl, sBoxMon1DVs
+	ld hl, sBoxMon1CaughtData
 	predef GetUnownLetter
 	callab UpdateUnownDex
 
