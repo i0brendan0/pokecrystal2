@@ -371,7 +371,7 @@ BattleMonNick:: ds PKMN_NAME_LENGTH ; c621
 
 BattleMon:: battle_struct BattleMon ; c62c
 
-	ds 2
+	ds 1
 
 wWildMon:: ds 1 ; c64e
 	ds 1
@@ -379,7 +379,7 @@ wEnemyTrainerItem1:: ds 1 ; c650
 wEnemyTrainerItem2:: ds 1 ; c651
 wEnemyTrainerBaseReward:: ds 1 ; c652
 wEnemyTrainerAIFlags:: ds 3 ; c653
-OTClassName:: ds NAME_LENGTH ; c656
+OTClassName:: ds TRAINER_CLASS_NAME_LENGTH ; c656
 
 ;	ds 2
 
@@ -674,7 +674,9 @@ EnemyLightScreenCount:: ; c706
 	ds 1
 EnemyReflectCount:: ; c707
 	ds 1
-	ds 2
+	ds 1
+EnemyMonCaughtData::
+	ds 1
 Weather:: ; c70a
 ; 00 normal
 ; 01 rain
@@ -2820,7 +2822,7 @@ PartyMonNicknames:: ds PKMN_NAME_LENGTH * PARTY_LENGTH ; de41
 PartyMonNicknamesEnd::
 
 
-	ds 22
+	ds 16
 
 
 PokedexCaught:: ; de99
@@ -2832,7 +2834,7 @@ PokedexSeen:: ; deb9
 EndPokedexSeen::
 
 UnownDex:: ; ded9
-	ds 26
+	ds 32
 UnlockedUnowns:: ; def3
 	ds 1
 
