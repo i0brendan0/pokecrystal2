@@ -1,56 +1,14 @@
-GetUnownLetter: ; 51040
+GetUnownLetter: ; 51040 - prism changes unown
 ; Return Unown letter in UnownLetter based on DVs at hl
 
-; Take the middle 2 bits of each DV and place them in order:
-;	atk  def  spd  spc
-;	.ww..xx.  .yy..zz.
-
-	; atk
 	ld a, [hl]
-	and %01100000
-	sla a
-	ld b, a
-	; def
-	ld a, [hli]
-	and %00000110
-	swap a
-	srl a
-	or b
-	ld b, a
-
-	; spd
-	ld a, [hl]
-	and %01100000
-	swap a
-	sla a
-	or b
-	ld b, a
-	; spc
-	ld a, [hl]
-	and %00000110
-	srl a
-	or b
-
-; Divide by 10 to get 0-25
-	ld [hDividend + 3], a
-	xor a
-	ld [hDividend], a
-	ld [hDividend + 1], a
-	ld [hDividend + 2], a
-	ld a, 10
-	ld [hDivisor], a
-	ld b, 4
-	call Divide
-
-; Increment to get 1-26
-	ld a, [hQuotient + 2]
 	inc a
 	ld [UnownLetter], a
 	ret
 
-GetFrontpic: ; 51077
-	ld a, [CurPartySpecies]
-	ld [CurSpecies], a
+GetFrontpic:
+	ld a, [CurPartySpecies] ;naming convention
+	ld [CurSpecies], a ;naming convention
 	call IsAPokemon
 	ret c
 	ld a, [rSVBK]
@@ -75,12 +33,13 @@ FrontpicPredef: ; 5108b
 	ld [rSVBK], a
 	ret
 
-_GetFrontpic: ; 510a5
+_GetFrontpic:
 	push de
 	call GetBaseData
-	ld a, [BasePicSize]
+	ld a, [BasePicSize] ;naming
 	and $f
 	ld b, a
+
 	push bc
 	call GetFrontpicPointer
 	ld a, $6
@@ -94,7 +53,7 @@ _GetFrontpic: ; 510a5
 	call Function512ab
 	pop hl
 	push hl
-	ld de, wDecompressScratch
+	ld de, wDecompressScratch ;same thing i think
 	ld c, 7 * 7
 	ld a, [hROMBank]
 	ld b, a
@@ -102,7 +61,7 @@ _GetFrontpic: ; 510a5
 	pop hl
 	ret
 
-GetFrontpicPointer: ; 510d7
+GetFrontpicPointer: ; 510d7 - prism changes unown
 GLOBAL PicPointers, UnownPicPointers
 
 	ld a, [CurPartySpecies]
@@ -135,7 +94,7 @@ Function51103: ; 51103
 	ld a, $1
 	ld [rVBK], a
 	push hl
-	ld de, wDecompressScratch
+	ld de, wDecompressScratch ;same thing i think
 	ld c, 7 * 7
 	ld a, [hROMBank]
 	ld b, a
@@ -146,18 +105,18 @@ Function51103: ; 51103
 	push hl
 	ld a, $1
 	ld hl, BasePicSize
-	call GetFarWRAMByte
+	call GetFarWRAMByte 
 	pop hl
 	and $f
-	ld de, w6_d800 + 5 * 5 tiles
+	ld de, w6_d800 + 5 * 5 tiles ;same
 	ld c, 5 * 5
 	cp 5
 	jr z, .got_dims
-	ld de, w6_d800 + 6 * 6 tiles
+	ld de, w6_d800 + 6 * 6 tiles ;same
 	ld c, 6 * 6
 	cp 6
 	jr z, .got_dims
-	ld de, w6_d800 + 7 * 7 tiles
+	ld de, w6_d800 + 7 * 7 tiles ;same
 	ld c, 7 * 7
 .got_dims
 
@@ -184,15 +143,16 @@ Function5114f: ; 5114f
 	and $f0
 	ld c, a
 	push bc
-	call LoadFrontpic
+	call LoadOrientedFrontpic
 	pop bc
-.asm_51161
+.loop
 	push bc
 	ld c, $0
-	call LoadFrontpic
+	call LoadOrientedFrontpic
 	pop bc
+.handleLoop
 	dec b
-	jr nz, .asm_51161
+	jr nz, .loop
 	ret
 
 GetBackpic: ; 5116c
@@ -307,7 +267,7 @@ Function511ec: ; 511ec
 	call FarDecompress
 	ret
 
-GetTrainerPic: ; 5120d
+GetTrainerPic:
 	ld a, [TrainerClass]
 	and a
 	ret z
@@ -373,7 +333,7 @@ DecompressPredef: ; 5125d
 	ld [rSVBK], a
 	ret
 
-FixBackpicAlignment: ; 5127c
+FixBackpicAlignment: ; 5127c - compare screws this up
 	push de
 	push bc
 	ld a, [wBoxAlignment]
@@ -390,8 +350,7 @@ FixBackpicAlignment: ; 5127c
 
 .got_dims
 	ld a, [hl]
-	ld b, $0
-	ld c, $8
+	lb bc, 0, 8
 .loop
 	rra
 	rl b
@@ -409,16 +368,16 @@ FixBackpicAlignment: ; 5127c
 	pop de
 	ret
 
-Function512ab: ; 512ab
+Function512ab: ; 512ab - name change
 	ld a, b
-	cp 6
-	jr z, .six
-	cp 5
+	sub 5
 	jr z, .five
+	dec a
+	jr z, .six
 
 .seven_loop
 	ld c, $70
-	call LoadFrontpic
+	call LoadOrientedFrontpic
 	dec b
 	jr nz, .seven_loop
 	ret
@@ -432,7 +391,7 @@ Function512ab: ; 512ab
 	xor a
 	call .Fill
 	ld c, $60
-	call LoadFrontpic
+	call LoadOrientedFrontpic
 	dec b
 	jr nz, .six_loop
 	ret
@@ -446,21 +405,20 @@ Function512ab: ; 512ab
 	xor a
 	call .Fill
 	ld c, $50
-	call LoadFrontpic
+	call LoadOrientedFrontpic
 	dec b
 	jr nz, .five_loop
 	ld c, $70
 	xor a
-	call .Fill
-	ret
-
-.Fill:
+.Fill
 	ld [hli], a
 	dec c
 	jr nz, .Fill
 	ret
 
-LoadFrontpic: ; 512f2
+LoadOrientedFrontpic:
+; load fronpic from de to hl
+; x flipped if [wBoxAlignment] is nonzero
 	ld a, [wBoxAlignment]
 	and a
 	jr nz, .x_flip
