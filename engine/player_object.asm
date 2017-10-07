@@ -29,7 +29,7 @@ SpawnPlayer: ; 8029
 	call GetMapObject
 	ld hl, MAPOBJECT_COLOR
 	add hl, bc
-	ln e, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT
+	ln e, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT
 	ld a, [wPlayerSpriteSetupFlags]
 	bit 2, a
 	jr nz, .ok
