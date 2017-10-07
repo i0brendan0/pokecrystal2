@@ -154,6 +154,7 @@ DoWeatherModifiers: ; fbda4
 
 .WeatherMoveModifiers:
 	db WEATHER_RAIN, EFFECT_SOLARBEAM, 05
+	db WEATHER_SANDSTORM, EFFECT_SOLARBEAM, 05
 	db $ff
 ; fbe24
 
@@ -173,6 +174,10 @@ DoBadgeTypeBoosts: ; fbe24
 
 	push de
 	push bc
+	
+	ld a, [wd265]
+	cp DARK
+	jr z, .CheckBeatKaren
 
 	ld hl, .BadgeTypes
 
@@ -197,6 +202,12 @@ DoBadgeTypeBoosts: ; fbe24
 .NextBadge:
 	inc hl
 	jr .CheckBadge
+	
+.CheckBeatKaren:
+
+	ld hl, EventFlags + (EVENT_KAREN_DARK_BOOST >> 3)
+	bit (EVENT_KAREN_DARK_BOOST & $7), [hl]
+	jr nz, .done
 
 .ApplyBoost:
 	ld a, [CurDamage]
