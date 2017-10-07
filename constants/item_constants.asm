@@ -49,7 +49,7 @@
 	const SODA_POP     ; $2F
 	const LEMONADE     ; $30
 	const X_ATTACK     ; $31
-	const ITEM_32      ; $32
+	const FARAWAY_MAP  ; $32
 	const X_DEFEND     ; $33
 	const X_SPEED      ; $34
 	const X_SPECIAL    ; $35
@@ -284,7 +284,7 @@ CANT_TOSS   EQU 1 << 7
 
 	const HELD_NONE
 	const HELD_BERRY
-	const HELD_2
+	const HELD_FRIENDSHIP_INCREASE;2
 	const HELD_LEFTOVERS
 	const HELD_4
 	const HELD_5
