@@ -150,9 +150,10 @@ TeachTMHM: ; 2c867
 	ld a, [CurItem]
 	call IsHM
 	ret c
-
+	
 	ld c, HAPPINESS_LEARNMOVE
 	callab ChangeHappiness
+.next
 	call ConsumeTM
 	jr .learned_move
 
