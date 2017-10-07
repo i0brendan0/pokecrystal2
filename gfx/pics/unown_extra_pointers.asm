@@ -25,3 +25,9 @@ UnownAnimationExtraPointers:
 	dw UnownXAnimationExtra
 	dw UnownYAnimationExtra
 	dw UnownZAnimationExtra
+	dw UnownExclamationAnimationExtra
+	dw UnownQuestionAnimationExtra
+	dw UnownPeriodAnimationExtra
+	dw UnownCommaAnimationExtra
+	dw UnownHyphenAnimationExtra
+	dw UnownInterrobangAnimationExtra
