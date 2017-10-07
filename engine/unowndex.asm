@@ -1,7 +1,7 @@
 UpdateUnownDex: ; fba18
 	ld a, [UnownLetter]
 	ld c, a
-	ld b, 26
+	ld b, 32
 	ld hl, UnownDex
 .loop
 	ld a, [hli]
@@ -121,10 +121,10 @@ UnownWord23: unownword "WANT"
 UnownWord24: unownword "X-RAY"
 UnownWord25: unownword "YIELD"
 UnownWord26: unownword "ZOOM"
-UnownWord27: unownword "!"
-UnownWord28: unownword "?"
-UnownWord29: unownword "."
-UnownWord30: unownword ","
-UnownWord31: unownword "-"
-UnownWord32: unownword "!?"
+UnownWord27: unownword "ECLAIM"
+UnownWord28: unownword "QUESTION"
+UnownWord29: unownword "PERIOD"
+UnownWord30: unownword "COMMA"
+UnownWord31: unownword "HYPHEN"
+UnownWord32: unownword "WHAAAT!?"
 ; fbb32
