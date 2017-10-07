@@ -51,3 +51,15 @@
 	add_pic UnownYBackpic
 	add_pic UnownZFrontpic
 	add_pic UnownZBackpic
+	add_pic UnownExclamationFrontpic
+	add_pic UnownExclamationBackpic
+	add_pic UnownQuestionFrontpic
+	add_pic UnownQuestionBackpic
+	add_pic UnownPeriodFrontpic
+	add_pic UnownPeriodBackpic
+	add_pic UnownCommaFrontpic
+	add_pic UnownCommaBackpic
+	add_pic UnownHyphenFrontpic
+	add_pic UnownHyphenBackpic
+	add_pic UnownInterrobangFrontpic
+	add_pic UnownInterrobangBackpic
