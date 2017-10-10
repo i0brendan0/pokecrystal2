@@ -21,8 +21,8 @@ List of changes - Ones in **bold** are major changes
 * Some Pokemon have a second type.
 * **All Pokemon will now be able to be obtained without trading.** Legendary Pokemon listed below can only be found after beating Red for the first time. Bolded items are completed
   * **All Pokemon normally unavailable in Crystal will be found at routes that they are found on in other Gen 2 games.**
-  * All starter Pokemon will be found at the Safari Zone.
-  * Articuno will be found at the Seafoam Islands.
+  * **All starter Pokemon will be found at the Safari Zone.**
+  * **Articuno will be found at the Seafoam Islands.**
   * **Zapdos is found outside of the Kanto Power Plant.**
   * **Moltres is found in a new section of Mt. Silver Cave. Requires Surf and Waterfall.**
   * Mewtwo will be found in Cerulean Cave.
@@ -56,7 +56,6 @@ List of things left to do
 * Update all trainers' Pokemon with newly aquired moves.
 * Edit certain trainers' Pokemon to fit better with other edits.
 * Add Cerulean Cave for Mewtwo.
-* Add Seafoam Islands for Articuno.
 * Add Faraway Island for Mew.
 * Add a Soothe Bell item. (The code has already been made and will be used in Prism as well.)
 
