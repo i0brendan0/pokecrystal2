@@ -20,13 +20,13 @@ List of changes - Ones in **bold** are major changes
 * The number at which Pokemon evolve by happiness is decreased to 200.
 * Some Pokemon have a second type.
 * **All Pokemon will now be able to be obtained without trading.** Legendary Pokemon listed below can only be found after beating Red for the first time. Bolded items are completed
-  * **All Pokemon normally unavailable in Crystal will be found at routes that they are found on in other Gen 2 games.**
-  * **All starter Pokemon will be found at the Safari Zone.**
-  * **Articuno will be found at the Seafoam Islands.**
+  * **All Pokemon normally unavailable in Crystal are found at routes that they are found on in other Gen 2 games.**
+  * **All starter Pokemon are found at the Safari Zone.**
+  * **Articuno is found at the Seafoam Islands.**
   * **Zapdos is found outside of the Kanto Power Plant.**
   * **Moltres is found in a new section of Mt. Silver Cave. Requires Surf and Waterfall.**
-  * Mewtwo will be found in Cerulean Cave.
-  * Mew will be found at Faraway Island. You will need to get the Faraway Map before you are able to go there.
+  * **Mewtwo is found in Cerulean Cave.**
+  * **Mew is found at Faraway Island. You will need to get the Faraway Map before you are able to go there.**
   * **Celebi will be found through the event that was only released in Japan.** Able to start after beating Red.
 * **The Odd Egg Pokemon list has been reworked.** All Pokemon have an equal chance of being shiny and a roughly equal chance at hatching. The DVs for each non-shiny Pokemon are maxed out, while the shiny versions are the max available, not including Tyrogue which has the same Attack and Defense DVs
 * Some trainers' Pokemon have been given different DVs. Special trainers now carry shiny Pokemon.
@@ -46,17 +46,14 @@ List of changes - Ones in **bold** are major changes
 * **Unown now has a new way of getting it's letter.** Now every Unown can be shiny.
 * **6 new Unowns.** 2 of them are the exclamation point and the question mark. The other 4 are period, comma, hyphen, and interrobang (!?).
 * **There is now a dark type boost after beating Karen for the first time.** This means you can lose after Karen and still recieve the bonus, you just have to beat her once.
+* Update Pokemons' stats to the latest Gen.
 
 List of things left to do
-* Update Pokemons' stats to the latest Gen.
 * Add more Egg moves.
 * Add more Level Up moves.
 * Add more TM moves.
-* Add starters and Mew into the game to be caught.
 * Update all trainers' Pokemon with newly aquired moves.
 * Edit certain trainers' Pokemon to fit better with other edits.
-* Add Cerulean Cave for Mewtwo.
-* Add Faraway Island for Mew.
 * Add a Soothe Bell item. (The code has already been made and will be used in Prism as well.)
 
 List of things I want to do but might not be able to
