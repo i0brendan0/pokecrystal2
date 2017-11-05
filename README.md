@@ -14,6 +14,7 @@ List of changes - Ones in **bold** are major changes
 * Some moves have been given the correct name based on limits from Gen 2.
 * Steel is no longer resistant to Dark and Ghost.
 * Poison is now super-effective to Bug as in Gen 1.
+* Bug now resists Psychic. A balancing decision.
 * **Pokemon that evolve by trading now can be evolved using a Link Cable.**
 * **Pokemon that evolve by trading while holding a specific item now can evolve using that item.**
 * The phone list size is increased to 20. 
@@ -22,7 +23,7 @@ List of changes - Ones in **bold** are major changes
 * **All Pokemon will now be able to be obtained without trading.** Legendary Pokemon listed below can only be found after beating Red for the first time. Bolded items are completed
   * **All Pokemon normally unavailable in Crystal are found at routes that they are found on in other Gen 2 games.**
   * **All starter Pokemon are found at the Safari Zone.**
-  * **Articuno is found at the Seafoam Islands.**
+  * **Articuno is found at the Seafoam Islands. Requires Surf.**
   * **Zapdos is found outside of the Kanto Power Plant.**
   * **Moltres is found in a new section of Mt. Silver Cave. Requires Surf and Waterfall.**
   * **Mewtwo is found in Cerulean Cave.**
