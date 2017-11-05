@@ -63,7 +63,7 @@ ItemEffects: ; e73c
 	dw SodaPop
 	dw Lemonade
 	dw XAttack
-	dw Item32
+	dw FarawayMap
 	dw XDefend
 	dw XSpeed
 	dw XSpecial
@@ -2839,7 +2839,7 @@ LuckyPunch:
 MetalPowder:
 Nugget:
 SweetHoney:
-Item32:
+FarawayMap:
 ExpShare:
 SilverLeaf:
 RedScale:

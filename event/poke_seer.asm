@@ -27,6 +27,9 @@ SpecialPokeSeer: ; 4f0bc
 	ld a, [CurPartySpecies]
 	cp EGG
 	jr z, .egg
+	
+	cp UNOWN
+	jr z, SeerAction2
 
 	call IsAPokemon
 	jr c, .no_mon

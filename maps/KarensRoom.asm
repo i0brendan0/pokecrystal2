@@ -60,6 +60,7 @@ KarenScript_0x180bee:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
+	setevent EVENT_KAREN_DARK_BOOST
 	opentext
 	writetext UnknownText_0x180d29
 	waitbutton

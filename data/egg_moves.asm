@@ -26,10 +26,10 @@ INCLUDE "data/egg_move_pointers.asm"
 ; but does not learn it in Gen 2, give it the move. You will remove it later
 ; under certain circumstances.
 ; If the Pokemon would have learned a move through breeding, but learns it through 
-; level up, take away the move. You will remove it later.
+; level up, leave the move. You will remove it later.
 
 ;                              123456789ABCD;XXX
-EggMoves:: ; CURRENT MOVE -	db TELEPORT     ;100
+EggMoves:: ; CURRENT MOVE -	db SCREECH      ;103
 
 BulbasaurEggMoves:
 	db RAZOR_WIND	;013
@@ -45,6 +45,7 @@ BulbasaurEggMoves:
 	db STRING_SHOT  ;081
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db SKULL_BASH   ;130
 	db CHARM        ;204
@@ -72,6 +73,7 @@ CharmanderEggMoves:
 	db FISSURE      ;090
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db BELLY_DRUM   ;187
 	db OUTRAGE      ;200
@@ -97,6 +99,7 @@ SquirtleEggMoves:
 	db FISSURE      ;090
 	db CONFUSION    ;093
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db FLAIL        ;175
 	db FORESIGHT    ;193
@@ -110,6 +113,7 @@ PidgeyEggMoves:
 	db DOUBLE_EDGE  ;038
 	db HYPER_BEAM   ;063
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FAINT_ATTACK ;185
 	db FORESIGHT    ;193
 	db STEEL_WING   ;221
@@ -131,6 +135,7 @@ RattataEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db FURY_SWIPES  ;154
 	db FLAME_WHEEL  ;172
@@ -147,6 +152,7 @@ SpearowEggMoves:
 	db HYPER_BEAM   ;063
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db TRI_ATTACK   ;161
 	db SCARY_FACE   ;184
 	db FAINT_ATTACK ;185
@@ -164,6 +170,7 @@ EkansEggMoves:
 	db MEGA_DRAIN   ;072
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SPITE        ;180
 	db PURSUIT      ;228
 	db CRUNCH       ;242
@@ -181,6 +188,7 @@ SandshrewEggMoves:
 	db SEISMIC_TOSS ;069
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db SAFEGUARD    ;219
 	db RAPID_SPIN   ;229
@@ -214,6 +222,7 @@ NidoranFEggMoves:
 	db EARTHQUAKE   ;089
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FOCUS_ENERGY ;116
 	db CHARM        ;204
 	db BEAT_UP      ;251
@@ -247,6 +256,7 @@ NidoranMEggMoves:
 	db FISSURE      ;090
 	db CONFUSION    ;093
 	db RAGE         ;099
+	db MIMIC        ;102
 	db AMNESIA      ;133
 	db BEAT_UP      ;251
 	db $ff
@@ -262,6 +272,7 @@ VulpixEggMoves:
 	db HYPNOSIS     ;095
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db SPITE        ;180
 	db FAINT_ATTACK ;185
@@ -278,6 +289,7 @@ ZubatEggMoves:
 	db HYPNOSIS     ;095
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FAINT_ATTACK ;185
 	db PURSUIT      ;228
 	db $ff
@@ -292,6 +304,7 @@ OddishEggMoves:
 	db LEECH_SEED   ;073
 	db RAZOR_LEAF   ;075
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db CHARM        ;204
 	db SYNTHESIS    ;235
@@ -310,6 +323,7 @@ ParasEggMoves:
 	db STRING_SHOT  ;081
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db LIGHT_SCREEN ;113
 	db FLAIL        ;175
@@ -328,6 +342,8 @@ VenonatEggMoves:
 	db STRING_SHOT  ;081
 	db AGILITY      ;097
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db GIGA_DRAIN   ;202
 	db BATON_PASS   ;226
@@ -341,6 +357,7 @@ DiglettEggMoves:
 	db HYPER_BEAM   ;063
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db FAINT_ATTACK ;185
 	db PURSUIT      ;228
@@ -363,6 +380,7 @@ MeowthEggMoves:
 	db THUNDERBOLT  ;085
 	db HYPNOSIS     ;095
 	db RAGE         ;099
+	db MIMIC        ;102
 	db AMNESIA      ;133
 	db SPITE        ;180
 	db CHARM        ;204
@@ -388,6 +406,7 @@ PsyduckEggMoves:
 	db PSYCHIC_M    ;094
 	db HYPNOSIS     ;095
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db CROSS_CHOP   ;238
 	db FORESIGHT    ;193
@@ -409,6 +428,7 @@ MankeyEggMoves:
 	db THUNDERBOLT  ;085
 	db MEDITATE     ;096
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db REVERSAL     ;179
 	db FORESIGHT    ;193
@@ -428,6 +448,8 @@ GrowlitheEggMoves:
 	db DRAGON_RAGE  ;082
 	db FIRE_SPIN    ;083
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db SAFEGUARD    ;219
 	db CRUNCH       ;242
 	db $ff
@@ -453,6 +475,7 @@ PoliwagEggMoves:
 	db EARTHQUAKE   ;089
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db SPLASH       ;150
 	db MIND_READER  ;170
@@ -471,6 +494,8 @@ AbraEggMoves:
 	db THUNDER_WAVE ;086
 	db DIG          ;091
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db BARRIER      ;112
 	db LIGHT_SCREEN ;113
 	db ENCORE       ;227
@@ -493,6 +518,7 @@ MachopEggMoves:
 	db FISSURE      ;090
 	db MEDITATE     ;096
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db ENCORE       ;227
 	db $ff
@@ -506,6 +532,7 @@ BellsproutEggMoves:
 	db HYPER_BEAM   ;063
 	db MEGA_DRAIN   ;072
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REFLECT      ;115
 	db LEECH_LIFE   ;141
 	db SYNTHESIS    ;235
@@ -524,6 +551,7 @@ TentacoolEggMoves:
 	db HYPER_BEAM   ;063
 	db MEGA_DRAIN   ;072
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db SAFEGUARD    ;219
 	db RAPID_SPIN   ;229
@@ -547,6 +575,7 @@ GeodudeEggMoves:
 	db THUNDER      ;087
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db $ff
 
@@ -566,6 +595,7 @@ PonytaEggMoves:
 	db HYPNOSIS     ;095
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAME_WHEEL  ;172
 	db CHARM        ;204
 	db $ff
@@ -590,6 +620,8 @@ SlowpokeEggMoves:
 	db THUNDER_WAVE ;086
 	db FISSURE      ;090
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db BELLY_DRUM   ;187
 	db SAFEGUARD    ;219
 	db FUTURE_SIGHT ;248
@@ -606,6 +638,7 @@ FarfetchDEggMoves:
 	db AGILITY      ;097
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db MIRROR_MOVE  ;119
 	db FLAIL        ;175
 	db FORESIGHT    ;193
@@ -623,6 +656,7 @@ DoduoEggMoves:
 	db LOW_KICK     ;067
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db FLAIL        ;175
 	db FAINT_ATTACK ;185
@@ -643,6 +677,7 @@ SeelEggMoves:
 	db PECK         ;064
 	db STRENGTH     ;070
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LICK         ;122
 	db PERISH_SONG  ;195
 	db ENCORE       ;227
@@ -656,6 +691,7 @@ GrimerEggMoves:
 	db MEGA_DRAIN   ;072
 	db THUNDERBOLT  ;085
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db LICK         ;122
 	db MEAN_LOOK    ;212
@@ -670,6 +706,8 @@ ShellderEggMoves:
 	db BUBBLEBEAM   ;061
 	db HYPER_BEAM   ;063
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db BARRIER      ;112
 	db RAPID_SPIN   ;229
@@ -695,6 +733,7 @@ GastlyEggMoves:
 	db MEGA_DRAIN   ;072
 	db THUNDERBOLT  ;085
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db PSYWAVE      ;149
 	db PERISH_SONG  ;195
@@ -708,6 +747,7 @@ OnixEggMoves:
 	db HYPER_BEAM   ;063
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db FLAIL        ;175
 	db $ff
@@ -725,6 +765,8 @@ DrowzeeEggMoves:
 	db SEISMIC_TOSS ;069
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db BARRIER      ;112
 	db LIGHT_SCREEN ;113
 	db $ff
@@ -742,6 +784,7 @@ KrabbyEggMoves:
 	db DIG          ;091
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db AMNESIA      ;133
 	db FLAIL        ;175
@@ -757,6 +800,8 @@ ExeggcuteEggMoves:
 	db MEGA_DRAIN   ;072
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db REFLECT      ;115
 	db SYNTHESIS    ;235
 	db MOONLIGHT    ;236
@@ -788,6 +833,7 @@ CuboneEggMoves:
 	db THUNDER      ;087
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db SKULL_BASH   ;130
 	db ROCK_SLIDE   ;157
@@ -816,6 +862,7 @@ LickitungEggMoves:
 	db THUNDERBOLT  ;085
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db BELLY_DRUM   ;187
 	db MAGNITUDE    ;222
 	db $ff
@@ -826,6 +873,7 @@ KoffingEggMoves:
 	db HYPER_BEAM   ;063
 	db THUNDERBOLT  ;085
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db PSYWAVE      ;149
 	db DESTINY_BOND ;194
@@ -855,6 +903,7 @@ RhyhornEggMoves:
 	db THUNDERBOLT  ;085
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db REVERSAL     ;179
 	db MAGNITUDE    ;222
@@ -881,6 +930,8 @@ ChanseyEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db METRONOME    ;118
 	db HEAL_BELL    ;215
 	db PRESENT      ;217
@@ -898,6 +949,7 @@ TangelaEggMoves:
 	db SLEEP_POWDER ;079
 	db CONFUSION    ;093
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REFLECT      ;115
 	db AMNESIA      ;133
 	db FLAIL        ;175
@@ -924,6 +976,7 @@ KangaskhanEggMoves:
 	db THUNDERBOLT  ;085
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FOCUS_ENERGY ;116
 	db FORESIGHT    ;193
 	db SAFEGUARD    ;219
@@ -941,6 +994,7 @@ HorseaEggMoves:
 	db HYPER_BEAM   ;063
 	db DRAGON_RAGE  ;082
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SPLASH       ;150
 	db FLAIL        ;175
 	db OCTAZOOKA    ;190
@@ -958,6 +1012,7 @@ GoldeenEggMoves:
 	db BUBBLEBEAM   ;061
 	db HYPER_BEAM   ;063
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db $ff
 
@@ -975,6 +1030,7 @@ MrMimeEggMoves:
 	db THUNDER_WAVE ;086
 	db HYPNOSIS     ;095
 	db RAGE         ;099
+	db TELEPORT     ;100
 	db MIMIC        ;102
 	db FUTURE_SIGHT ;248
 	db $ff
@@ -988,6 +1044,7 @@ ScytherEggMoves:
 	db HYPER_BEAM   ;063
 	db COUNTER      ;068
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db REVERSAL     ;179
 	db SAFEGUARD    ;219
@@ -1008,6 +1065,7 @@ PinsirEggMoves:
 	db ROCK_THROW   ;088
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db $ff
 
@@ -1027,6 +1085,7 @@ LaprasEggMoves:
 	db THUNDERBOLT  ;085
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FORESIGHT    ;193
 	db $ff
 
@@ -1046,6 +1105,7 @@ EeveeEggMoves:
 	db THUNDER_WAVE ;086
 	db THUNDER      ;087
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db CHARM        ;204
 	db $ff
@@ -1068,6 +1128,7 @@ OmanyteEggMoves:
 	db SEISMIC_TOSS ;069
 	db ROCK_THROW   ;088
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db $ff
 
@@ -1090,6 +1151,7 @@ KabutoEggMoves:
 	db ROCK_THROW   ;088
 	db DIG          ;091
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db RAPID_SPIN   ;229
 	db $ff
@@ -1105,6 +1167,7 @@ AerodactylEggMoves:
 	db ROCK_THROW   ;088
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FORESIGHT    ;193
 	db STEEL_WING   ;221
 	db PURSUIT      ;228
@@ -1127,6 +1190,7 @@ SnorlaxEggMoves:
 	db THUNDERBOLT  ;085
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LICK         ;122
 	db CHARM        ;204
 	db $ff
@@ -1155,6 +1219,7 @@ DratiniEggMoves:
 	db THUNDER_WAVE ;086
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db HAZE         ;114
 	db $ff
@@ -1170,6 +1235,7 @@ ChikoritaEggMoves:
 	db PETAL_DANCE  ;080
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FLAIL        ;175
 	db ANCIENTPOWER ;246
 	db $ff
@@ -1194,6 +1260,7 @@ CyndaquilEggMoves:
 	db EARTHQUAKE   ;089
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FURY_SWIPES  ;154
 	db REVERSAL     ;179
 	db FORESIGHT    ;193
@@ -1218,6 +1285,7 @@ TotodileEggMoves:
 	db SEISMIC_TOSS ;069
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db CRUNCH       ;242
 	db ANCIENTPOWER ;246
@@ -1233,6 +1301,7 @@ SentretEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER      ;087
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FOCUS_ENERGY ;116
 	db SLASH        ;163
 	db REVERSAL     ;179
@@ -1247,6 +1316,8 @@ HoothootEggMoves:
 	db HYPER_BEAM   ;063
 	db AGILITY      ;097
 	db RAGE         ;099
+	db NIGHT_SHADE  ;101
+	db MIMIC        ;102
 	db MIRROR_MOVE  ;119
 	db SKY_ATTACK   ;143
 	db FAINT_ATTACK ;185
@@ -1261,6 +1332,7 @@ LedybaEggMoves:
 	db HYPER_BEAM   ;063
 	db STRING_SHOT  ;081
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db BIDE         ;117
 	db $ff
@@ -1277,6 +1349,7 @@ SpinarakEggMoves:
 	db GROWTH       ;074
 	db STRING_SHOT  ;081
 	db RAGE         ;099
+	db MIMIC        ;102
 	db BATON_PASS   ;226
 	db PURSUIT      ;228
 	db $ff
@@ -1293,6 +1366,7 @@ ChinchouEggMoves:
 	db THUNDER_WAVE ;086
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db FLAIL        ;175
 	db $ff
@@ -1320,6 +1394,7 @@ PichuEggMoves:
 	db PSYCHIC_M    ;094
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db BIDE         ;117
 	db REVERSAL     ;179
 	db PRESENT      ;217
@@ -1348,6 +1423,7 @@ CleffaEggMoves:
 	db THUNDER_WAVE ;086
 	db THUNDER      ;087
 	db RAGE         ;099
+	db TELEPORT     ;100
 	db MIMIC        ;102
 	db METRONOME    ;118
 	db AMNESIA      ;133
@@ -1378,6 +1454,8 @@ IgglybuffEggMoves:
 	db THUNDER_WAVE ;086
 	db THUNDER      ;087
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db FAINT_ATTACK ;185
 	db PERISH_SONG  ;195
 	db PRESENT      ;217
@@ -1408,6 +1486,7 @@ NatuEggMoves:
 	db THUNDER_WAVE ;086
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db FAINT_ATTACK ;185
 	db STEEL_WING   ;221
@@ -1428,6 +1507,7 @@ MareepEggMoves:
 	db THUNDER_WAVE ;086
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db REFLECT      ;115
 	db SAFEGUARD    ;219
@@ -1444,6 +1524,7 @@ MarillEggMoves:
 	db HYPER_BEAM   ;063
 	db SEISMIC_TOSS ;069
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db AMNESIA      ;133
 	db BELLY_DRUM   ;187
@@ -1462,6 +1543,7 @@ SudowoodoEggMoves:
 	db COUNTER      ;068
 	db SEISMIC_TOSS ;069
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SELFDESTRUCT ;120
 	db $ff
 
@@ -1474,6 +1556,7 @@ HoppipEggMoves:
 	db CONFUSION    ;093
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REFLECT      ;115
 	db AMNESIA      ;133
 	db ENCORE       ;227
@@ -1493,6 +1576,7 @@ AipomEggMoves:
 	db THUNDER_WAVE ;086
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db SPITE        ;180
 	db PURSUIT      ;228
@@ -1504,6 +1588,7 @@ YanmaEggMoves:
 	db DOUBLE_EDGE  ;038
 	db STRING_SHOT  ;081
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LEECH_LIFE   ;141
 	db REVERSAL     ;179
 	db $ff
@@ -1520,6 +1605,7 @@ WooperEggMoves:
 	db COUNTER      ;068
 	db SEISMIC_TOSS ;069
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SAFEGUARD    ;219
 	db ANCIENTPOWER ;246
 	db $ff
@@ -1532,6 +1618,7 @@ MurkrowEggMoves:
 	db THUNDER_WAVE ;086
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db MIRROR_MOVE  ;119
 	db SKY_ATTACK   ;143
 	db $ff
@@ -1542,6 +1629,7 @@ MisdreavusEggMoves:
 	db THUNDER_WAVE ;086
 	db HYPNOSIS     ;095
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db DESTINY_BOND ;194
 	db $ff
@@ -1555,6 +1643,7 @@ GirafarigEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db AMNESIA      ;133
 	db FORESIGHT    ;193
 	db FUTURE_SIGHT ;248
@@ -1569,6 +1658,7 @@ PinecoEggMoves:
 	db COUNTER      ;068
 	db STRING_SHOT  ;081
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REFLECT      ;115
 	db SWIFT        ;129
 	db FLAIL        ;175
@@ -1589,6 +1679,7 @@ DunsparceEggMoves:
 	db THUNDER_WAVE ;086
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db BIDE         ;117
 	db ROCK_SLIDE   ;157
 	db ANCIENTPOWER ;246
@@ -1602,6 +1693,7 @@ GligarEggMoves:
 	db COUNTER      ;068
 	db AGILITY      ;097
 	db RAGE         ;099
+	db MIMIC        ;102
 	db METAL_CLAW   ;232
 	db $ff
 
@@ -1619,13 +1711,14 @@ SnubbullEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REFLECT      ;115
+	db METRONOME    ;118
 	db LICK         ;122
 	db FAINT_ATTACK ;185
-	db CRUNCH       ;242
-	db METRONOME    ;118
 	db HEAL_BELL    ;215
 	db PRESENT      ;217
+	db CRUNCH       ;242
 	db $ff
 
 QwilfishEggMoves:
@@ -1635,6 +1728,7 @@ QwilfishEggMoves:
 	db BUBBLEBEAM   ;061
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db FLAIL        ;175
 	db $ff
@@ -1646,6 +1740,7 @@ ShuckleEggMoves:
 	db ACID         ;051
 	db STRING_SHOT  ;081
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SWEET_SCENT  ;230
 	db $ff
 
@@ -1657,6 +1752,7 @@ HeracrossEggMoves:
 	db COUNTER      ;068
 	db SEISMIC_TOSS ;069
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HARDEN       ;106
 	db BIDE         ;117
 	db FLAIL        ;175
@@ -1671,6 +1767,7 @@ SneaselEggMoves:
 	db LOW_KICK     ;067
 	db COUNTER      ;068
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REFLECT      ;115
 	db SPITE        ;180
 	db FORESIGHT    ;193
@@ -1689,6 +1786,7 @@ TeddiursaEggMoves:
 	db COUNTER      ;068
 	db SEISMIC_TOSS ;069
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FOCUS_ENERGY ;116
 	db METAL_CLAW   ;232
 	db CRUNCH       ;242
@@ -1702,6 +1800,7 @@ SlugmaEggMoves:
 	db SOLARBEAM    ;076
 	db EARTHQUAKE   ;089
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ACID_ARMOR   ;151
 	db $ff
 
@@ -1715,6 +1814,7 @@ SwinubEggMoves:
 	db HYPER_BEAM   ;063
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db ROCK_SLIDE   ;157
 	db ANCIENTPOWER ;246
 	db $ff
@@ -1726,6 +1826,7 @@ CorsolaEggMoves:
 	db ICE_BEAM     ;058
 	db BLIZZARD     ;059
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db AMNESIA      ;133
 	db ROCK_SLIDE   ;157
@@ -1745,6 +1846,7 @@ RemoraidEggMoves:
 	db STRING_SHOT  ;081
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db HAZE         ;114
 	db OCTAZOOKA    ;190
@@ -1763,6 +1865,7 @@ DelibirdEggMoves:
 	db SEISMIC_TOSS ;069
 	db QUICK_ATTACK ;098
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SPLASH       ;150
 	db RAPID_SPIN   ;229
 	db FUTURE_SIGHT ;248
@@ -1778,6 +1881,7 @@ MantineEggMoves:
 	db HYPER_BEAM   ;063
 	db STRING_SHOT  ;081
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HAZE         ;114
 	db TWISTER      ;239
 	db $ff
@@ -1790,6 +1894,7 @@ SkarmoryEggMoves:
 	db DRILL_PECK   ;065
 	db COUNTER      ;068
 	db RAGE         ;099
+	db MIMIC        ;102
 	db SKY_ATTACK   ;143
 	db PURSUIT      ;228
 	db $ff
@@ -1802,11 +1907,11 @@ HoundourEggMoves:
 	db COUNTER      ;068
 	db FIRE_SPIN    ;083
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REVERSAL     ;179
 	db SPITE        ;180
 	db PURSUIT      ;228
 	db BEAT_UP      ;251
-	db RAGE         ;099
 	db $ff
 
 PhanpyEggMoves:
@@ -1817,6 +1922,7 @@ PhanpyEggMoves:
 	db ABSORB       ;071
 	db FISSURE      ;090
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FOCUS_ENERGY ;116
 	db ANCIENTPOWER ;246
 	db WATER_GUN    ;055
@@ -1832,6 +1938,7 @@ StantlerEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db LIGHT_SCREEN ;113
 	db REFLECT      ;115
 	db SPITE        ;180
@@ -1850,6 +1957,7 @@ TyrogueEggMoves:
 	db COUNTER      ;068
 	db SEISMIC_TOSS ;069
 	db RAGE         ;099
+	db MIMIC        ;102
 	db HI_JUMP_KICK ;136
 	db MIND_READER  ;170
 	db MACH_PUNCH   ;183
@@ -1871,6 +1979,8 @@ SmoochumEggMoves:
 	db PETAL_DANCE  ;080
 	db MEDITATE     ;096
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db LOVELY_KISS  ;142
 	db $ff
 
@@ -1890,6 +2000,8 @@ ElekidEggMoves:
 	db EARTHQUAKE   ;089
 	db MEDITATE     ;096
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db BARRIER      ;112
 	db CROSS_CHOP   ;238
 	db $ff
@@ -1907,6 +2019,8 @@ MagbyEggMoves:
 	db SEISMIC_TOSS ;069
 	db SOLARBEAM    ;076
 	db RAGE         ;099
+	db TELEPORT     ;100
+	db MIMIC        ;102
 	db SCREECH      ;103
 	db BARRIER      ;112
 	db CROSS_CHOP   ;238
@@ -1924,6 +2038,7 @@ MiltankEggMoves:
 	db THUNDERBOLT  ;085
 	db THUNDER_WAVE ;086
 	db RAGE         ;099
+	db MIMIC        ;102
 	db REVERSAL     ;179
 	db PRESENT      ;217
 	db $ff
@@ -1947,6 +2062,7 @@ LarvitarEggMoves:
 	db THUNDER_WAVE ;086
 	db THUNDER      ;087
 	db RAGE         ;099
+	db MIMIC        ;102
 	db FOCUS_ENERGY ;116
 	db OUTRAGE      ;200
 	db PURSUIT      ;228

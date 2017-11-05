@@ -298,3 +298,4 @@ const_value SET const_value + -1
 	const BATTLEANIM_WOBBLE
 	const BATTLEANIM_SHAKE
 	const BATTLEANIM_HIT_CONFUSION
+	

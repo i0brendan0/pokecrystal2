@@ -281,7 +281,7 @@ BattleAnimations:: ; c906f
 ; c929b
 
 BattleAnim_0: ; c929b
-;BattleAnim_252: ; c929b ; comment out
+;BattleAnim_252: ; c929b 
 BattleAnim_253: ; c929b
 BattleAnim_254: ; c929b
 BattleAnim_MirrorMove: ; c929b
@@ -1414,7 +1414,7 @@ BattleAnim_Sonicboom: ; c9c00
 ; c9c36
 
 BattleAnim_Gust: ; c9c36
-;BattleAnim_Sonicboom: ; c9c36
+BattleAnim_Sonicboom_JP: ; c9c36
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 .loop
 	anim_sound 0, 1, SFX_RAZOR_WIND

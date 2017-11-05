@@ -142,7 +142,7 @@ UnknownText_0x9c354:
 	text "MINERALBADGE"
 	line "raises #MON's"
 	cont "DEFENSE."
-
+	
 	para "Since it's yours,"
 	line "#MON up to L70"
 	cont "will listen."

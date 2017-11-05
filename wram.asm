@@ -372,6 +372,7 @@ BattleMonNick:: ds PKMN_NAME_LENGTH ; c621
 BattleMon:: battle_struct BattleMon ; c62c
 
 	ds 1
+;	ds 2
 
 wWildMon:: ds 1 ; c64e
 	ds 1
@@ -2726,7 +2727,7 @@ wMobileOrCable_LastSelection:: ds 1
 wdc41:: ds 1
 wdc42:: ds 8
 wBuenasPassword:: ds 1
-wBlueCardBalance:: ds 1
+wBlueCardBalance:: ds 1 ;DBF2
 wDailyRematchFlags:: ds 4
 wDailyPhoneItemFlags:: ds 4
 wDailyPhoneTimeOfDayFlags:: ds 4

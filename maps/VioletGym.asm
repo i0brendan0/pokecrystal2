@@ -157,7 +157,7 @@ UnknownText_0x685c8:
 	text "ZEPHYRBADGE"
 	line "raises the attack"
 	cont "power of #MON."
-
+	
 	para "#MON up to L20"
 	line "will obey you."
 

@@ -265,6 +265,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_LUGIA        ; LUGIA
 	db ICON_HO_OH        ; HO_OH
 	db ICON_HUMANSHAPE   ; CELEBI
+	db ICON_MISSINGNO
 
 IconPointers:
 	dw NullIcon
@@ -306,6 +307,7 @@ IconPointers:
 	dw SlowpokeIcon
 	dw SudowoodoIcon
 	dw BigmonIcon
+	dw MissingNoIcon
 
 Icons:
 NullIcon:
@@ -347,3 +349,4 @@ GyaradosIcon:     INCBIN "gfx/icon/gyarados.2bpp" ; 0x8fd0d
 SlowpokeIcon:     INCBIN "gfx/icon/slowpoke.2bpp" ; 0x8fd8d
 SudowoodoIcon:    INCBIN "gfx/icon/sudowoodo.2bpp" ; 0x8fe0d
 BigmonIcon:       INCBIN "gfx/icon/bigmon.2bpp" ; 0x8fe8d
+MissingNoIcon:    INCBIN "gfx/icon/missingno.2bpp"
