@@ -87,7 +87,7 @@ MapCeladonMansion3FSignpost2Script:
 	callasm .MissingNoCaught
 	iftrue .NothingHappened
 	random 100
-	if_true .SeenMissingNo ; 99/100 - 99%
+	iftrue .SeenMissingNo ; 99/100 - 99%
 	writetext MissingNoCry
 	cry MISSINGNO
 	setevent EVENT_SAW_MISSINGNO
