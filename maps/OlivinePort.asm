@@ -401,7 +401,7 @@ MapSailor:
 	writetext LeavingText
 	special FadeOutPalettes
 	pause 15
-	warpfacing FARAWAY_ISLAND_OUTSIDE, UP, 24, 14
+	warpfacing UP, FARAWAY_ISLAND_OUTSIDE, 24, 14
 	end
 	
 .NoMap:
