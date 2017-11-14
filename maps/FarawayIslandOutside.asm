@@ -25,7 +25,7 @@ DoHomeScript:
 	writetext GoHomeText
 	special FadeOutPalettes
 	pause 15
-	warpfacing OLIVINE_PORT, 15, 15
+	warpfacing UP, OLIVINE_PORT, 15, 15
 	end
 
 .FightMew:
