@@ -188,7 +188,7 @@ MapCeladonMansion3FSignpost2Script:
 	closetext
 	end
 
-.TakePokeball:
+.TakePokeBall:
 	checkitem POKE_BALL
 	iffalse .NothingHappened
 	takeitem POKE_BALL
