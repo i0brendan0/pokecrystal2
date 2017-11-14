@@ -113,19 +113,19 @@ MapCeladonMansion3FSignpost2Script:
 	iftrue .NothingHappened
 
 .NotMissingNo: ;If MissingNo. does not show up, new random #
-	random
-	if_greater_than 100, .NothingHappened ;155/255 ~ 60.7%
-	if_greater_than 70, .GivePokeBall     ; 30/255 ~ 11.8%
-	if_greater_than 56, .Give2000Money    ; 14/255 ~ 05.5%
-	if_greater_than 50, .GivePotion       ;  6/255 ~ 02.4%
-	if_greater_than 40, .Take1000Money    ; 10/255 ~ 03.9%
-	if_greater_than 33, .GiveGreatBall    ;  7/255 ~ 02.7%
-	if_greater_than 20, .TakePokeBall     ; 13/255 ~ 05.1%
-	if_greater_than 17, .GiveUltraBall    ;  3/255 ~ 01.2%
-	if_greater_than 10, .Give100Coins     ;  7/255 ~ 02.7%
-	if_greater_than 5, .GiveLeftovers     ;  5/255 ~ 02.0%
-	if_greater_than 1, .Give1000Coins     ;  4/255 ~ 01.6%
-	verbosegiveitem MASTER_BALL           ;  1/255 ~ 00.4%
+	random 255
+	if_greater_than 100, .NothingHappened ;154/254 ~ 60.7%
+	if_greater_than 70, .GivePokeBall     ; 30/254 ~ 11.8%
+	if_greater_than 56, .Give2000Money    ; 14/254 ~ 05.5%
+	if_greater_than 50, .GivePotion       ;  6/254 ~ 02.4%
+	if_greater_than 40, .Take1000Money    ; 10/254 ~ 03.9%
+	if_greater_than 33, .GiveGreatBall    ;  7/254 ~ 02.7%
+	if_greater_than 20, .TakePokeBall     ; 13/254 ~ 05.1%
+	if_greater_than 16, .GiveUltraBall    ;  3/254 ~ 01.2%
+	if_greater_than 10, .Give100Coins     ;  6/254 ~ 02.7%
+	if_greater_than 5, .GiveLeftovers     ;  5/254 ~ 02.0%
+	if_greater_than 1, .Give1000Coins     ;  4/254 ~ 01.6%
+	verbosegiveitem MASTER_BALL           ;  1/254 ~ 00.4%
 	waitbutton
 	closetext
 	end
