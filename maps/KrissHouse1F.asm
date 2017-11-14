@@ -18,7 +18,7 @@ KrissHouse1F_MapScriptHeader:
 
 UnknownScript_0x7a4d6:
 	end
-
+ 
 UnknownScript_0x7a4d7:
 	end
 
@@ -386,6 +386,7 @@ TVText:
 	para "I'd better get"
 	line "rolling too!"
 	done
+	
 
 KrissHouse1F_MapEventHeader:
 	; filler

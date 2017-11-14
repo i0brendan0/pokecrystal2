@@ -5,54 +5,20 @@ const_value set 2
 	const CERULEANCITY_COOLTRAINER_F
 	const CERULEANCITY_FISHER
 	const CERULEANCITY_YOUNGSTER
-	const LEGENDARY_MEWTWO
 
 CeruleanCity_MapScriptHeader:
 .MapTriggers:
 	db 0
 
 .MapCallbacks:
-	db 2
+	db 1
 	
 	; callbacks
 	dbw MAPCALLBACK_NEWMAP, .FlyPoint
-	dbw MAPCALLBACK_OBJECTS, .Mewtwo
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CERULEAN
 	return
-	
-.Mewtwo:
-	checkevent EVENT_FOUGHT_MEWTWO
-	iftrue .NoAppear
-	checkevent EVENT_BEAT_RED
-	iftrue .Appear
-	jump .NoAppear
-
-.Appear:
-	appear LEGENDARY_MEWTWO
-	return
-
-.NoAppear:
-	disappear LEGENDARY_MEWTWO
-	return
-
-Mewtwo:
-	opentext
-	writetext MewtwoText
-	cry Mewtwo
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MEWTWO
-	loadwildmon MEWTWO, 50
-	startbattle
-	disappear LEGENDARY_MEWTWO
-	reloadmapafterbattle
-	end
-
-MewtwoText:
-	text "Gyaoo!"
-	done
 
 CooltrainerMScript_0x184009:
 	faceplayer
@@ -311,24 +277,20 @@ CeruleanLockedDoorText:
 	text "It's locked…"
 	done
 
-CeruleanCity_MapEventHeader:
-	; filler
-	db 0, 0
+CeruleanCity_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 6
-	warp_def $f, $7, 1, CERULEAN_GYM_BADGE_SPEECH_HOUSE
-	warp_def $11, $1c, 1, CERULEAN_POLICE_STATION
-	warp_def $13, $d, 1, CERULEAN_TRADE_SPEECH_HOUSE
-	warp_def $15, $13, 1, CERULEAN_POKECENTER_1F
-	warp_def $17, $1e, 1, CERULEAN_GYM
-	warp_def $1d, $19, 2, CERULEAN_MART
+.Warps: db 7
+	warp_def 15, 7, 1, CERULEAN_GYM_BADGE_SPEECH_HOUSE
+	warp_def 17, 28, 1, CERULEAN_POLICE_STATION
+	warp_def 19, 13, 1, CERULEAN_TRADE_SPEECH_HOUSE
+	warp_def 21, 19, 1, CERULEAN_POKECENTER_1F
+	warp_def 23, 30, 1, CERULEAN_GYM
+	warp_def 29, 25, 2, CERULEAN_MART
+	warp_def 13, 0, 1, CERULEAN_CAVE
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 9
+.BGEvents: db 8
 	signpost 23, 23, SIGNPOST_READ, CeruleanCitySign
 	signpost 25, 27, SIGNPOST_READ, CeruleanGymSign
 	signpost 29, 11, SIGNPOST_READ, CeruleanBikeShopSign
@@ -337,14 +299,12 @@ CeruleanCity_MapEventHeader:
 	signpost 29, 14, SIGNPOST_READ, CeruleanLockedDoor
 	signpost 21, 20, SIGNPOST_READ, CeruleanCityPokeCenterSign
 	signpost 29, 26, SIGNPOST_READ, CeruleanCityMartSign
-	signpost 12, 2, SIGNPOST_ITEM, CeruleanCityHiddenBerserkGene
 
-.PersonEvents:
-	db 7
+.ObjectEvents: db 6
 	person_event SPRITE_COOLTRAINER_M, 23, 15, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x184009, -1
 	person_event SPRITE_SUPER_NERD, 15, 23, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, SuperNerdScript_0x18401d, -1
 	person_event SPRITE_SLOWPOKE, 24, 20, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1
 	person_event SPRITE_COOLTRAINER_F, 24, 21, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, CooltrainerFScript_0x18402a, -1
 	person_event SPRITE_FISHER, 26, 30, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, FisherScript_0x18404a, -1
 	person_event SPRITE_YOUNGSTER, 12, 6, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x184064, -1
-	person_event SPRITE_CHARMANDER, 12, 2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, (1 << 3) | PAL_OW_PINK, PERSONTYPE_SCRIPT, 0, Mewtwo, EVENT_LEGENDARY_MEWTWO
+

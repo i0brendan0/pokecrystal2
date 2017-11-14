@@ -386,7 +386,6 @@
 	db 15, RATICATE
 	db 15, FEAROW
 	db 15, MANKEY
-			   
 	db 18, MAROWAK
 	db 18, PRIMEAPE
 	; day
@@ -394,7 +393,6 @@
 	db 15, SPEAROW
 	db 15, RATICATE
 	db 15, FEAROW
-			  
 	db 15, MANKEY
 	db 18, MAROWAK
 	db 18, PRIMEAPE
@@ -811,5 +809,86 @@
 	db 42, GOLBAT
 	db 42, GOLBAT
 	db 42, GOLBAT
+	
+	map SAFARI_ZONE_BETA
+	db 5 percent, 5 percent, 5 percent
+;	morn
+	db 5, BULBASAUR
+	db 5, CHIKORITA
+	db 5, BULBASAUR
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+;	day
+	db 5, BULBASAUR
+	db 5, CHIKORITA
+	db 5, BULBASAUR
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+;	night
+	db 5, BULBASAUR
+	db 5, CHIKORITA
+	db 5, BULBASAUR
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	db 5, CHIKORITA
+	
+	map SAFARI_ZONE_2
+	db 5 percent, 5 percent, 5 percent
+;	morn
+	db 5, CHARMANDER
+	db 5, CYNDAQUIL
+	db 5, CHARMANDER
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+;	day
+	db 5, CHARMANDER
+	db 5, CYNDAQUIL
+	db 5, CHARMANDER
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+;	night
+	db 5, CHARMANDER
+	db 5, CYNDAQUIL
+	db 5, CHARMANDER
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	db 5, CYNDAQUIL
+	
+	map SAFARI_ZONE_3
+	db 5 percent, 5 percent, 5 percent
+;	morn
+	db 5, SQUIRTLE
+	db 5, TOTODILE
+	db 5, SQUIRTLE
+	db 5, TOTODILE
+	db 5, TOTODILE
+	db 5, TOTODILE
+	db 5, TOTODILE
+;	day
+	db 5, SQUIRTLE
+	db 5, TOTODILE
+	db 5, SQUIRTLE
+	db 5, TOTODILE
+	db 5, TOTODILE
+	db 5, TOTODILE
+	db 5, TOTODILE
+;	night
+	db 5, SQUIRTLE
+	db 5, TOTODILE
+	db 5, SQUIRTLE
+	db 5, TOTODILE
+	db 5, TOTODILE
+	db 5, TOTODILE
+	db 5, TOTODILE
 
 	db -1 ; end

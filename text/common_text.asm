@@ -10,3 +10,6 @@ INCLUDE "text/common_3.asm"
 SECTION "Text 3", ROMX, BANK[$71]
 INCLUDE "text/common_4.asm"
 INCLUDE "text/common_5.asm"
+
+SECTION "Text 4", ROMX
+INCLUDE "text/common_6.asm"

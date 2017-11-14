@@ -156,8 +156,8 @@ Item2Attributes:
 ; X ATTACK
 	item_attribute   500, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
-; TERU-SAMA
-	item_attribute $9999, 0,                 0,                       0, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
+; FARAWAY_MAP
+	item_attribute     0, 0,                 0, CANT_SELECT | CANT_TOSS, KEY_ITEM, ITEMMENU_NOUSE,   ITEMMENU_NOUSE
 
 ; X DEFEND
 	item_attribute   550, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE

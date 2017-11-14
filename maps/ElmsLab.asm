@@ -96,6 +96,11 @@ ElmsLab_ElmGetsEmail:
 ProfElmScript:
 	faceplayer
 	opentext
+	checkevent EVENT_TOLD_ABOUT_FARAWAY_ISLAND
+	iftrue ElmSSTicket
+	checkcode VAR_DEXSEEN
+	if_greater_than 249, ElmTellAboutFarawayIsland
+ElmSSTicket:
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftrue ElmCheckMasterBall
 	checkevent EVENT_BEAT_ELITE_FOUR
@@ -122,7 +127,17 @@ ElmCheckEverstone:
 	waitbutton
 	closetext
 	end
-
+	
+ElmTellAboutFarawayIsland:
+	setevent EVENT_TOLD_ABOUT_FARAWAY_ISLAND
+	writetext FarawayIslandText
+	buttonsound
+	verbosegiveitem FARAWAY_MAP
+	writetext GaveMapText
+	waitbutton
+	closetext
+	end
+	
 ElmEggHatchedScript:
 	writebyte TOGEPI
 	special Special_FindThatSpeciesYourTrainerID
@@ -1375,6 +1390,40 @@ ElmsLabPCText:
 	line "screen…"
 	done
 
+FarawayIslandText:
+	text "Hey, <PLAYER>"
+	line "I was given this"
+	
+	para "MAP to look at"
+	line "but it doesn't"
+	
+	para "seem to have any"
+	line "significance."
+	
+	para "Would you take it"
+	line "and see if anyone"
+	
+	para "may have any use"
+	line "for it?"
+	done
+	
+GaveMapText:
+	text "Someone at OLIVINE"
+	line "CITY might be able"
+	
+	para "to offer you somet-"
+	line "thing for it."
+	
+	para "Try looking around"
+	line "the docks."
+	
+	para "I've heard sailors"
+	line "might have a use"
+	
+	para "for something like"
+	line "this."
+	done
+	
 ElmsLab_MapEventHeader:
 	; filler
 	db 0, 0

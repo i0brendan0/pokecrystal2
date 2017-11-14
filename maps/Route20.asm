@@ -115,23 +115,19 @@ CinnabarGymSignText:
 	line "LEADER: BLAINE"
 	done
 
-Route20_MapEventHeader:
-	; filler
-	db 0, 0
+Route20_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 1
-	warp_def $7, $26, 1, SEAFOAM_GYM
+.Warps: db 2
+	warp_def 7, 38, 1, SEAFOAM_GYM
+	warp_def 5, 28, 2, SEAFOAM_ISLAND_B1_F
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 1
+.BGEvents: db 1
 	signpost 11, 37, SIGNPOST_READ, CinnabarGymSign
 
-.PersonEvents:
-	db 3
+.ObjectEvents: db 3
 	person_event SPRITE_SWIMMER_GIRL, 8, 52, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 3, TrainerSwimmerfNicole, -1
-	person_event SPRITE_SWIMMER_GIRL, 13, 45, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 3, TrainerSwimmerfLori, -1
+	person_event SPRITE_SWIMMER_GIRL, 13, 46, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 3, TrainerSwimmerfLori, -1
 	person_event SPRITE_SWIMMER_GUY, 13, 12, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_TRAINER, 3, TrainerSwimmermCameron, -1
+

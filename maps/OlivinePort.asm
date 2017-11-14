@@ -18,9 +18,6 @@ OlivinePort_MapScriptHeader:
 
 .MapCallbacks:
 	db 0
-;	db 1
-	
-;	dbw MAPCALLBACK_OBJECTS, .ShowMapSailor
 
 UnknownScript_0x748ac:
 	end
@@ -28,16 +25,6 @@ UnknownScript_0x748ac:
 UnknownScript_0x748ad:
 	priorityjump UnknownScript_0x748b1
 	end
-	
-.ShowMapSailor:
-	checkevent EVENT_TOLD_ABOUT_FARAWAY_ISLAND
-	iffalse .NoAppear
-	appear OLIVINEPORT_MAP_SAILOR
-	return
-	
-.NoAppear:
-	disappear OLIVINEPORT_MAP_SAILOR
-	return
 
 UnknownScript_0x748b1:
 	applymovement PLAYER, MovementData_0x74a32
@@ -412,9 +399,9 @@ MapSailor:
 	yesorno
 	iffalse .DidNotLeave
 	writetext LeavingText
-;	special FadeOutPalettes
-;	pause 15
-;	warp FARAWAY_ISLAND X, X
+	special FadeOutPalettes
+	pause 15
+	warpfacing UP, FARAWAY_ISLAND_OUTSIDE, 24, 14
 	end
 	
 .NoMap:
@@ -491,31 +478,25 @@ DidNotLeaveText:
 	cont "waiting here."
 	done
 	
-OlivinePort_MapEventHeader:
-	; filler
-	db 0, 0
+OlivinePort_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 2
-	warp_def $7, $b, 5, OLIVINE_PORT_PASSAGE
-	warp_def $17, $7, 1, FAST_SHIP_1F
+.Warps: db 2
+	warp_def 7, 11, 5, OLIVINE_PORT_PASSAGE
+	warp_def 23, 7, 1, FAST_SHIP_1F
 
-.XYTriggers:
-	db 1
-	xy_trigger 0, $f, $7, $0, UnknownScript_0x7491f, $0, $0
+.CoordEvents: db 1
+	xy_trigger 0, 15, 7, 0, UnknownScript_0x7491f, 0, 0
 
-.Signposts:
-	db 1
+.BGEvents: db 1
 	signpost 22, 1, SIGNPOST_ITEM, OlivinePortHiddenProtein
 
-.PersonEvents:
-	db 7
+.ObjectEvents: db 8
 	person_event SPRITE_SAILOR, 23, 7, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, SailorScript_0x748c0, EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
-	person_event SPRITE_SAILOR, 15, 7, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, SailorScript_0x749fe, EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
-	person_event SPRITE_SAILOR, 15, 6, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, SailorScript_0x7499c, EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
+	person_event SPRITE_SAILOR, 15, 7, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, SailorScript_0x749fe, EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
+	person_event SPRITE_SAILOR, 15, 6, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, SailorScript_0x7499c, EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
 	person_event SPRITE_FISHING_GURU, 14, 4, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, FishingGuruScript_0x74a01, EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
 	person_event SPRITE_FISHING_GURU, 14, 13, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, FishingGuruScript_0x74a0c, EVENT_OLIVINE_PORT_SPRITES_BEFORE_HALL_OF_FAME
 	person_event SPRITE_YOUNGSTER, 15, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x74a17, EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
 	person_event SPRITE_COOLTRAINER_F, 15, 11, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CooltrainerFScript_0x74a22, EVENT_OLIVINE_PORT_SPRITES_AFTER_HALL_OF_FAME
-;	person_event SPRITE_SAILOR, X, X, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, Map_Sailor, EVENT_MAP_SAILOR
-	
+	person_event SPRITE_SAILOR, 16, 15, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, MapSailor, EVENT_OLIVINE_PORT_MAP_SAILOR
+

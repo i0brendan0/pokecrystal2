@@ -126,29 +126,24 @@ NoLitteringSignText:
 	line "waste with you."
 	done
 
-FuchsiaCity_MapEventHeader:
-	; filler
-	db 0, 0
+FuchsiaCity_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 11
-	warp_def $d, $5, 2, FUCHSIA_MART
-	warp_def $d, $16, 1, SAFARI_ZONE_MAIN_OFFICE
-	warp_def $1b, $8, 1, FUCHSIA_GYM
-	warp_def $1b, $b, 1, FUCHSIA_BILL_SPEECH_HOUSE
-	warp_def $1b, $13, 1, FUCHSIA_POKECENTER_1F
-	warp_def $1b, $1b, 1, SAFARI_ZONE_WARDENS_HOME
-	warp_def $3, $12, 3, SAFARI_ZONE_FUCHSIA_GATE_BETA
-	warp_def $16, $25, 1, ROUTE_15_FUCHSIA_GATE
-	warp_def $17, $25, 2, ROUTE_15_FUCHSIA_GATE
-	warp_def $23, $7, 1, ROUTE_19___FUCHSIA_GATE
-	warp_def $23, $8, 2, ROUTE_19___FUCHSIA_GATE
+.Warps: db 11
+	warp_def 13, 5, 2, FUCHSIA_MART
+	warp_def 13, 22, 1, SAFARI_ZONE_MAIN_OFFICE
+	warp_def 27, 8, 1, FUCHSIA_GYM
+	warp_def 27, 11, 1, FUCHSIA_BILL_SPEECH_HOUSE
+	warp_def 27, 19, 1, FUCHSIA_POKECENTER_1F
+	warp_def 27, 27, 1, SAFARI_ZONE_WARDENS_HOME
+	warp_def 3, 18, 3, SAFARI_ZONE_FUCHSIA_GATE_BETA
+	warp_def 22, 37, 1, ROUTE_15_FUCHSIA_GATE
+	warp_def 23, 37, 2, ROUTE_15_FUCHSIA_GATE
+	warp_def 35, 7, 1, ROUTE_19___FUCHSIA_GATE
+	warp_def 35, 8, 2, ROUTE_19___FUCHSIA_GATE
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 8
+.BGEvents: db 8
 	signpost 15, 21, SIGNPOST_READ, FuchsiaCitySign
 	signpost 29, 5, SIGNPOST_READ, FuchsiaGymSign
 	signpost 15, 25, SIGNPOST_READ, SafariZoneOfficeSign
@@ -158,9 +153,9 @@ FuchsiaCity_MapEventHeader:
 	signpost 27, 20, SIGNPOST_READ, FuchsiaCityPokeCenterSign
 	signpost 13, 6, SIGNPOST_READ, FuchsiaCityMartSign
 
-.PersonEvents:
-	db 4
+.ObjectEvents: db 4
 	person_event SPRITE_YOUNGSTER, 18, 23, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x194b22, -1
 	person_event SPRITE_POKEFAN_M, 8, 13, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, PokefanMScript_0x194b25, -1
 	person_event SPRITE_TEACHER, 14, 16, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, TeacherScript_0x194b28, -1
 	person_event SPRITE_FRUIT_TREE, 1, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, FruitTreeScript_0x194b43, -1
+

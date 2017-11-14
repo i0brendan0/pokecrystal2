@@ -49,7 +49,6 @@ GoldenrodPokeCenter1F_GSBallTriggerLeft:
 GoldenrodPokeCenter1F_GSBallTriggerRight:
 	checkevent EVENT_BEAT_RED
 	iftrue .gsballr
-																				 
 	end
 
 .gsballr

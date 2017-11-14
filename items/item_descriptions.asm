@@ -81,7 +81,7 @@ ItemDescriptions:
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw TeruSama4Desc
+	dw FarawayMapDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
@@ -483,8 +483,9 @@ XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
 
-TeruSama4Desc:
-	db   "?@"
+FarawayMapDesc:
+	db   "A mysterious"
+	next "MAP@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."

@@ -11,11 +11,11 @@ sprite_header: MACRO
 ENDM
 
 ChrisSprite: ; 14736
-	sprite_header ChrisSpriteGFX, 3, WALKING_SPRITE, PAL_OW_RED
+	sprite_header ChrisSpriteGFX, 3, WALKING_SPRITE, PAL_OW_GREEN
 ; 1473c
 
 ChrisBikeSprite: ; 1473c
-	sprite_header ChrisBikeSpriteGFX, 3, WALKING_SPRITE, PAL_OW_RED
+	sprite_header ChrisBikeSpriteGFX, 3, WALKING_SPRITE, PAL_OW_GREEN
 ; 14742
 
 GameboyKidSprite: ; 14742

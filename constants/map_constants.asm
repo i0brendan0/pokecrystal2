@@ -126,6 +126,9 @@ MAP_NONE   EQU 0
 	mapgroup SAFARI_ZONE_FUCHSIA_GATE_BETA,               4,  5 ; 89
 	mapgroup SAFARI_ZONE_BETA,                           18, 10 ; 90
 	mapgroup VICTORY_ROAD,                               36, 10 ; 91
+	mapgroup SILVER_CAVE_MOLTRES_ROOM,                   15,  8
+	mapgroup SAFARI_ZONE_2,                              10, 10
+	mapgroup SAFARI_ZONE_3,                              10, 10
 
 	newgroup                                                    ;  4
 
@@ -157,11 +160,12 @@ MAP_NONE   EQU 0
 	mapgroup CINNABAR_POKECENTER_1F,                      4,  5 ;  1
 	mapgroup CINNABAR_POKECENTER_2F_BETA,                 4,  8 ;  2
 	mapgroup ROUTE_19___FUCHSIA_GATE,                     4,  5 ;  3
-	mapgroup SEAFOAM_GYM,                                 4,  5 ;  4
+	mapgroup SEAFOAM_GYM,                                10,  5 ;  4
 	mapgroup ROUTE_19,                                   18, 10 ;  5
 	mapgroup ROUTE_20,                                    9, 30 ;  6
 	mapgroup ROUTE_21,                                   18, 10 ;  7
 	mapgroup CINNABAR_ISLAND,                             9, 10 ;  8
+	mapgroup SEAFOAM_ISLAND_B1_F,                        20, 20
 
 	newgroup                                                    ;  7
 
@@ -182,6 +186,9 @@ MAP_NONE   EQU 0
 	mapgroup ROUTE_24,                                    9, 10 ; 15
 	mapgroup ROUTE_25,                                    9, 30 ; 16
 	mapgroup CERULEAN_CITY,                              18, 20 ; 17
+	mapgroup CERULEAN_CAVE,                              20, 20
+;	mapgroup FARAWAY_ISLAND_OUTSIDE,                     16, 14
+;	mapgroup FARAWAY_ISLAND_CAVE,                         8,  8
 
 	newgroup                                                    ;  8
 
@@ -299,6 +306,8 @@ MAP_NONE   EQU 0
 	mapgroup MOUNT_MOON_SQUARE,                           9, 15 ; 10
 	mapgroup MOUNT_MOON_GIFT_SHOP,                        4,  4 ; 11
 	mapgroup TIN_TOWER_ROOF,                              9, 10 ; 12
+	mapgroup FARAWAY_ISLAND_OUTSIDE,                     16, 14
+	mapgroup FARAWAY_ISLAND_CAVE,                         8,  8
 
 	newgroup                                                    ; 16
 

@@ -510,3 +510,59 @@ SECTION "Map Scripts 25", ROMX, BANK[MAP_SCRIPTS_25]
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+
+
+SECTION "SilverCaveMoltresRoom", ROMX
+INCLUDE "maps/SilverCaveMoltresRoom.asm"
+
+SECTION "SilverCaveMoltresRoom_BlockData", ROMX
+SilverCaveMoltresRoom_BlockData:
+INCBIN "maps/SilverCaveMoltresRoom.blk"
+
+
+SECTION "SeafoamIslandB1F", ROMX
+INCLUDE "maps/SeafoamIslandB1F.asm"
+
+SECTION "SeafoamIslandB1F_BlockData", ROMX
+SeafoamIslandB1F_BlockData:
+INCBIN "maps/SeafoamIslandB1F.blk"
+
+
+SECTION "SafariZone2", ROMX
+INCLUDE "maps/SafariZone2.asm"
+
+SECTION "SafariZone2_BlockData", ROMX
+SafariZone2_BlockData:
+INCBIN "maps/SafariZone2.blk"
+
+
+SECTION "SafariZone3", ROMX
+INCLUDE "maps/SafariZone3.asm"
+
+SECTION "SafariZone3_BlockData", ROMX
+SafariZone3_BlockData:
+INCBIN "maps/SafariZone3.blk"
+
+
+SECTION "CeruleanCave", ROMX
+INCLUDE "maps/CeruleanCave.asm"
+
+SECTION "CeruleanCave_BlockData", ROMX
+CeruleanCave_BlockData:
+INCBIN "maps/CeruleanCave.blk"
+
+
+SECTION "FarawayIslandOutside", ROMX
+INCLUDE "maps/FarawayIslandOutside.asm"
+
+SECTION "FarawayIslandOutside_BlockData", ROMX
+FarawayIslandOutside_BlockData:
+INCBIN "maps/FarawayIslandOutside.blk"
+
+
+SECTION "FarawayIslandCave", ROMX
+INCLUDE "maps/FarawayIslandCave.asm"
+
+SECTION "FarawayIslandCave_BlockData", ROMX
+FarawayIslandCave_BlockData:
+INCBIN "maps/FarawayIslandCave.blk"
