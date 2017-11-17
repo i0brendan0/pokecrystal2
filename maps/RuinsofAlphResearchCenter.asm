@@ -70,17 +70,27 @@ ScientistScript_0x591d1:
 	checkcode VAR_UNOWNCOUNT
 	if_equal 32, UnknownScript_0x591df
 	checkcode VAR_UNOWNCOUNT
-	if_equal 26, .Unlock_More_Unown
+	if_less_than 26, .Not_More_Unlocked
+	
+.Unlock_More_Unown:
+	checkflag ENGINE_UNLOCKED_UNOWNS_5
+	if_true .Already_Unlocked_More_Unown
+	writetext UnlockedMoreUnownText
+	waitbutton
+	closetext
+	setflag ENGINE_UNLOCKED_UNOWNS_5
+	end
+	
+.Not_More_Unlocked:
 	writetext UnknownText_0x59311
 	waitbutton
 	closetext
 	end
 	
-.Unlock_More_Unown:
-	writetext UnlockedMoreUnownText
+.Already_Unlocked_More_Unown
+	writetext AlreadyUnlockedMoreUnownText
 	waitbutton
 	closetext
-	setflag ENGINE_UNLOCKED_UNOWNS_5
 	end
 	
 UnknownScript_0x591df:
@@ -435,6 +445,16 @@ UnlockedMoreUnownText:
 	
 	para "You should try to"
 	line "catch the rest."
+	done
+	
+AlreadyUnlockedMoreUnownText:
+	text "Have you caught all"
+	line "of the other new"
+	cont "UNOWNs yet?"
+	
+	para "You should get"
+	line "back there right"
+	cont "away."
 	done
 	
 RuinsofAlphResearchCenter_MapEventHeader:
