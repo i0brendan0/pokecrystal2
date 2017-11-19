@@ -74,7 +74,7 @@ ScientistScript_0x591d1:
 	
 .Unlock_More_Unown:
 	checkflag ENGINE_UNLOCKED_UNOWNS_5
-	if_true .Already_Unlocked_More_Unown
+	iftrue .Already_Unlocked_More_Unown
 	writetext UnlockedMoreUnownText
 	waitbutton
 	closetext
@@ -87,7 +87,7 @@ ScientistScript_0x591d1:
 	closetext
 	end
 	
-.Already_Unlocked_More_Unown
+.Already_Unlocked_More_Unown:
 	writetext AlreadyUnlockedMoreUnownText
 	waitbutton
 	closetext
