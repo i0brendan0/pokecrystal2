@@ -6268,19 +6268,19 @@ LoadEnemyMon: ; 3e8eb
 
 ; Failing that, it's all up to chance
 ;  Effective chances:
-;    75% None
-;    23% Item1
-;     2% Item2
+;    70% None
+;    24% Item1
+;     6% Item2
 
-; 25% chance of getting an item
+; 30% chance of getting an item
 	call BattleRandom
-	cp a, 1 + (75 percent)
+	cp a, 1 + (70 percent)
 	ld a, NO_ITEM
 	jr c, .UpdateItem
 
-; From there, an 8% chance for Item2
+; From there, an 20% chance for Item2
 	call BattleRandom
-	cp a, 8 percent ; 8% of 25% = 2% Item2
+	cp a, 20 percent ; 20% of 30% = 6% Item2
 	ld a, [BaseItems]
 	jr nc, .UpdateItem
 	ld a, [BaseItems+1]
@@ -6371,7 +6371,10 @@ LoadEnemyMon: ; 3e8eb
 	cp a, BATTLETYPE_SHINY
 	jr nz, .GenerateDVs
 
-	ld b, ATKDEFDV_SHINY ; $ea
+	call Random
+	and $f0
+	or $2a
+	ld b, a ; $Xa
 	ld c, SPDSPCDV_SHINY ; $aa
 	jr .UpdateDVs
 
