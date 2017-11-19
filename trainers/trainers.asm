@@ -11,13 +11,13 @@ Trainers:
 	; Party
 		; Up to six monsters following the data type
 	; $ff
-
+; - EDIT_TRAINER_MOVES - EDIT_TRAINER_PKMN_DVS
 
 FalknerGroup:
 ; ================================
 ; ================
 
-	; FALKNER (1)
+	; FALKNER (1) - EDIT_TRAINER_MOVES
 	db "FALKNER@"
 	db 1 ; moves
 
@@ -45,7 +45,7 @@ WhitneyGroup:
 ; ================================
 ; ================
 
-	; WHITNEY (1)
+	; WHITNEY (1) - EDIT_TRAINER_MOVES
 	db "WHITNEY@"
 	db 1 ; moves
 
@@ -73,7 +73,7 @@ BugsyGroup:
 ; ================================
 ; ================
 
-	; BUGSY (1)
+	; BUGSY (1) - EDIT_TRAINER_MOVES
 	db "BUGSY@"
 	db 1 ; moves
 
@@ -107,7 +107,7 @@ MortyGroup:
 ; ================================
 ; ================
 
-	; MORTY (1)
+	; MORTY (1) - EDIT_TRAINER_MOVES
 	db "MORTY@"
 	db 1 ; moves
 
@@ -147,7 +147,7 @@ PryceGroup:
 ; ================================
 ; ================
 
-	; PRYCE (1)
+	; PRYCE (1) - EDIT_TRAINER_MOVES
 	db "PRYCE@"
 	db 1 ; moves
 
@@ -181,7 +181,7 @@ JasmineGroup:
 ; ================================
 ; ================
 
-	; JASMINE (1)
+	; JASMINE (1) - EDIT_TRAINER_MOVES
 	db "JASMINE@"
 	db 1 ; moves
 
@@ -215,7 +215,7 @@ ChuckGroup:
 ; ================================
 ; ================
 
-	; CHUCK (1)
+	; CHUCK (1) - EDIT_TRAINER_MOVES
 	db "CHUCK@"
 	db 1 ; moves
 
@@ -243,7 +243,7 @@ ClairGroup:
 ; ================================
 ; ================
 
-	; CLAIR (1)
+	; CLAIR (1) - EDIT_TRAINER_MOVES
 	db "CLAIR@"
 	db 1 ; moves
 
@@ -355,7 +355,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (7)
+	; RIVAL1 (7) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -389,7 +389,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (8)
+	; RIVAL1 (8) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -423,7 +423,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (9)
+	; RIVAL1 (9) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -457,7 +457,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (10)
+	; RIVAL1 (10) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -497,7 +497,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (11)
+	; RIVAL1 (11) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -537,7 +537,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (12)
+	; RIVAL1 (12) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -577,7 +577,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (13)
+	; RIVAL1 (13) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -623,7 +623,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (14)
+	; RIVAL1 (14) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -669,7 +669,7 @@ Rival1Group:
 
 ; ================
 
-	; RIVAL1 (15)
+	; RIVAL1 (15) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -727,7 +727,7 @@ WillGroup:
 ; ================================
 ; ================
 
-	; WILL (1)
+	; WILL (1) - EDIT_TRAINER_MOVES
 	db "WILL@"
 	db 1 ; moves
 
@@ -818,7 +818,7 @@ BrunoGroup:
 ; ================================
 ; ================
 
-	; BRUNO (1)
+	; BRUNO (1) - EDIT_TRAINER_MOVES
 	db "BRUNO@"
 	db 1 ; moves
 
@@ -864,7 +864,7 @@ KarenGroup:
 ; ================================
 ; ================
 
-	; KAREN (1)
+	; KAREN (1) - EDIT_TRAINER_MOVES
 	db "KAREN@"
 	db 1 ; moves
 
@@ -910,7 +910,7 @@ KogaGroup:
 ; ================================
 ; ================
 
-	; KOGA (1)
+	; KOGA (1) - EDIT_TRAINER_MOVES
 	db "KOGA@"
 	db 1 ; moves
 
@@ -953,10 +953,10 @@ KogaGroup:
 
 
 ChampionGroup:
-; ================================
+; ================================ - EDIT_TRAINER_PKMN_DVS
 ; ================
 
-	; CHAMPION (1)
+	; CHAMPION (1) - EDIT_TRAINER_MOVES
 	db "LANCE@"
 	db 1 ; moves
 
@@ -1008,7 +1008,7 @@ BrockGroup:
 ; ================================
 ; ================
 
-	; BROCK (1)
+	; BROCK (1) - EDIT_TRAINER_MOVES
 	db "BROCK@"
 	db 1 ; moves
 
@@ -1054,7 +1054,7 @@ MistyGroup:
 ; ================================
 ; ================
 
-	; MISTY (1)
+	; MISTY (1) - EDIT_TRAINER_MOVES
 	db "MISTY@"
 	db 1 ; moves
 
@@ -1094,7 +1094,7 @@ LtSurgeGroup:
 ; ================================
 ; ================
 
-	; LT_SURGE (1)
+	; LT_SURGE (1) - EDIT_TRAINER_MOVES
 	db "LT.SURGE@"
 	db 1 ; moves
 
@@ -1189,7 +1189,7 @@ ScientistGroup:
 
 ; ================
 
-	; SCIENTIST (5)
+	; SCIENTIST (5) - EDIT_TRAINER_MOVES
 	db "RICH@"
 	db 1 ; moves
 
@@ -1211,7 +1211,7 @@ ErikaGroup:
 ; ================================
 ; ================
 
-	; ERIKA (1)
+	; ERIKA (1) - EDIT_TRAINER_MOVES
 	db "ERIKA@"
 	db 1 ; moves
 
@@ -1334,7 +1334,7 @@ YoungsterGroup:
 
 ; ================
 
-	; YOUNGSTER (8)
+	; YOUNGSTER (8) - EDIT_TRAINER_MOVES
 	db "JOEY@"
 	db 1 ; moves
 
@@ -1396,7 +1396,7 @@ YoungsterGroup:
 
 ; ================
 
-	; YOUNGSTER (13)
+	; YOUNGSTER (13) - EDIT_TRAINER_MOVES
 	db "JOEY@"
 	db 1 ; moves
 
@@ -1412,7 +1412,7 @@ YoungsterGroup:
 
 ; ================
 
-	; YOUNGSTER (14)
+	; YOUNGSTER (14) - EDIT_TRAINER_MOVES
 	db "JOEY@"
 	db 1 ; moves
 
@@ -1668,7 +1668,7 @@ SchoolboyGroup:
 
 ; ================
 
-	; SCHOOLBOY (20)
+	; SCHOOLBOY (20) - EDIT_TRAINER_MOVES
 	db "JACK@"
 	db 1 ; moves
 
@@ -1710,7 +1710,7 @@ SchoolboyGroup:
 
 ; ================
 
-	; SCHOOLBOY (22)
+	; SCHOOLBOY (22) - EDIT_TRAINER_MOVES
 	db "ALAN@"
 	db 1 ; moves
 
@@ -1756,7 +1756,7 @@ SchoolboyGroup:
 
 ; ================
 
-	; SCHOOLBOY (24)
+	; SCHOOLBOY (24) - EDIT_TRAINER_MOVES
 	db "CHAD@"
 	db 1 ; moves
 
@@ -1978,7 +1978,7 @@ BirdKeeperGroup:
 
 ; ================
 
-	; BIRD_KEEPER (17)
+	; BIRD_KEEPER (17) - EDIT_TRAINER_MOVES
 	db "JOSE@"
 	db 1 ; moves
 
@@ -2006,7 +2006,7 @@ BirdKeeperGroup:
 
 ; ================
 
-	; BIRD_KEEPER (19)
+	; BIRD_KEEPER (19) - EDIT_TRAINER_MOVES
 	db "VANCE@"
 	db 1 ; moves
 
@@ -2034,7 +2034,7 @@ LassGroup:
 ; ================================
 ; ================
 
-	; LASS (1)
+	; LASS (1) - EDIT_TRAINER_MOVES
 	db "CARRIE@"
 	db 1 ; moves
 
@@ -2151,7 +2151,7 @@ LassGroup:
 
 ; ================
 
-	; LASS (10)
+	; LASS (10) - EDIT_TRAINER_MOVES
 	db "DANA@"
 	db 1 ; moves
 
@@ -2207,7 +2207,7 @@ LassGroup:
 
 ; ================
 
-	; LASS (14)
+	; LASS (14) - EDIT_TRAINER_MOVES
 	db "DANA@"
 	db 1 ; moves
 
@@ -2229,7 +2229,7 @@ LassGroup:
 
 ; ================
 
-	; LASS (15)
+	; LASS (15) - EDIT_TRAINER_MOVES
 	db "DANA@"
 	db 1 ; moves
 
@@ -2251,7 +2251,7 @@ LassGroup:
 
 ; ================
 
-	; LASS (16)
+	; LASS (16) - EDIT_TRAINER_MOVES
 	db "DANA@"
 	db 1 ; moves
 
@@ -2273,7 +2273,7 @@ LassGroup:
 
 ; ================
 
-	; LASS (17)
+	; LASS (17) - EDIT_TRAINER_MOVES
 	db "DANA@"
 	db 1 ; moves
 
@@ -2301,7 +2301,7 @@ JanineGroup:
 ; ================================
 ; ================
 
-	; JANINE (1)
+	; JANINE (1) - EDIT_TRAINER_MOVES
 	db "JANINE@"
 	db 1 ; moves
 
@@ -2344,10 +2344,10 @@ JanineGroup:
 
 
 CooltrainerMGroup:
-; ================================
+; ================================ - EDIT_TRAINER_DVS
 ; ================
 
-	; COOLTRAINERM (1)
+	; COOLTRAINERM (1) - EDIT_TRAINER_MOVES
 	db "NICK@"
 	db 1 ; moves
 
@@ -2424,7 +2424,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (6)
+	; COOLTRAINERM (6) - EDIT_TRAINER_MOVES
 	db "GAVEN@"
 	db 1 ; moves
 
@@ -2452,7 +2452,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (7)
+	; COOLTRAINERM (7) - EDIT_TRAINER_MOVES
 	db "GAVEN@"
 	db 3 ; item + moves
 
@@ -2480,7 +2480,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (8)
+	; COOLTRAINERM (8) - EDIT_TRAINER_MOVES
 	db "RYAN@"
 	db 1 ; moves
 
@@ -2502,7 +2502,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (9)
+	; COOLTRAINERM (9) - EDIT_TRAINER_MOVES
 	db "JAKE@"
 	db 1 ; moves
 
@@ -2524,7 +2524,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (10)
+	; COOLTRAINERM (10) - EDIT_TRAINER_MOVES
 	db "GAVEN@"
 	db 1 ; moves
 
@@ -2552,7 +2552,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (11)
+	; COOLTRAINERM (11) - EDIT_TRAINER_MOVES
 	db "BLAKE@"
 	db 1 ; moves
 
@@ -2580,7 +2580,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (12)
+	; COOLTRAINERM (12) - EDIT_TRAINER_MOVES
 	db "BRIAN@"
 	db 1 ; moves
 
@@ -2674,7 +2674,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (19)
+	; COOLTRAINERM (19) - EDIT_TRAINER_MOVES
 	db "ALLEN@"
 	db 1 ; moves
 
@@ -2690,7 +2690,7 @@ CooltrainerMGroup:
 
 ; ================
 
-	; COOLTRAINERM (20)
+	; COOLTRAINERM (20) - EDIT_TRAINER_MOVES
 	db "DARIN@"
 	db 1 ; moves
 
@@ -2726,7 +2726,7 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (2)
+	; COOLTRAINERF (2) - EDIT_TRAINER_MOVES
 	db "LOIS@"
 	db 1 ; moves
 
@@ -2801,14 +2801,13 @@ CooltrainerFGroup:
 
 	; party
 	db 27, MARILL
-	db 24, WARTORTLE
-	db 24, WARTORTLE
+	db 28, WARTORTLE
 
 	db $ff ; end
 
 ; ================
 
-	; COOLTRAINERF (8)
+	; COOLTRAINERF (8) - EDIT_TRAINER_MOVES
 	db "JOYCE@"
 	db 1 ; moves
 
@@ -2830,7 +2829,7 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (9)
+	; COOLTRAINERF (9) - EDIT_TRAINER_MOVES
 	db "BETH@"
 	db 1 ; moves
 
@@ -2851,15 +2850,15 @@ CooltrainerFGroup:
 	db 0 ; normal
 
 	; party
-	db 31, STARMIE
+	db 29, STARYU
 	db 33, NIDOQUEEN
-	db 31, STARMIE
+	db 32, STARMIE
 
 	db $ff ; end
 
 ; ================
 
-	; COOLTRAINERF (11)
+	; COOLTRAINERF (11) - EDIT_TRAINER_MOVES
 	db "MEGAN@"
 	db 1 ; moves
 
@@ -2887,7 +2886,7 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (12)
+	; COOLTRAINERF (12) - EDIT_TRAINER_MOVES
 	db "BETH@"
 	db 1 ; moves
 
@@ -2939,7 +2938,7 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (16)
+	; COOLTRAINERF (16) - EDIT_TRAINER_MOVES
 	db "CYBIL@"
 	db 1 ; moves
 
@@ -2973,7 +2972,7 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (18)
+	; COOLTRAINERF (18) - EDIT_TRAINER_MOVES
 	db "BETH@"
 	db 3 ; item + moves
 
@@ -2994,7 +2993,7 @@ CooltrainerFGroup:
 	db 0 ; normal
 
 	; party
-	db 34, STARMIE
+	db 30, STARYU
 	db 36, NIDOQUEEN
 	db 34, STARMIE
 
@@ -3002,13 +3001,13 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (20)
+	; COOLTRAINERF (20) - EDIT_TRAINER_MOVES
 	db "REENA@"
 	db 3 ; item + moves
 
 	; party
 
-	db 38, STARMIE, NO_ITEM
+	db 34, STARYU, NO_ITEM
 		db DOUBLE_TEAM
 		db PSYCHIC_M
 		db WATERFALL
@@ -3030,25 +3029,19 @@ CooltrainerFGroup:
 
 ; ================
 
-	; COOLTRAINERF (21)
+	; COOLTRAINERF (21) - EDIT_TRAINER_MOVES
 	db "CARA@"
 	db 1 ; moves
 
 	; party
 
-	db 33, HORSEA
+	db 34, HORSEA
 		db SMOKESCREEN
 		db LEER
 		db WHIRLPOOL
 		db TWISTER
 
-	db 33, HORSEA
-		db SMOKESCREEN
-		db LEER
-		db WHIRLPOOL
-		db TWISTER
-
-	db 35, SEADRA
+	db 37, SEADRA
 		db SWIFT
 		db LEER
 		db WATERFALL
@@ -3077,7 +3070,7 @@ BeautyGroup:
 
 ; ================
 
-	; BEAUTY (2)
+	; BEAUTY (2) - EDIT_TRAINER_MOVES
 	db "SAMANTHA@"
 	db 1 ; moves
 
@@ -3247,7 +3240,7 @@ BeautyGroup:
 
 ; ================
 
-	; BEAUTY (16)
+	; BEAUTY (16) - EDIT_TRAINER_MOVES
 	db "VALERIE@"
 	db 1 ; moves
 
@@ -3388,7 +3381,7 @@ PokemaniacGroup:
 
 ; ================
 
-	; POKEMANIAC (10)
+	; POKEMANIAC (10) - EDIT_TRAINER_MOVES
 	db "BRENT@"
 	db 1 ; moves
 
@@ -3404,7 +3397,7 @@ PokemaniacGroup:
 
 ; ================
 
-	; POKEMANIAC (11)
+	; POKEMANIAC (11) - EDIT_TRAINER_MOVES
 	db "ISSAC@"
 	db 1 ; moves
 
@@ -3443,7 +3436,7 @@ PokemaniacGroup:
 
 ; ================
 
-	; POKEMANIAC (14)
+	; POKEMANIAC (14) - EDIT_TRAINER_MOVES
 	db "BRENT@"
 	db 1 ; moves
 
@@ -3990,7 +3983,7 @@ SabrinaGroup:
 ; ================================
 ; ================
 
-	; SABRINA (1)
+	; SABRINA (1) - EDIT_TRAINER_MOVES
 	db "SABRINA@"
 	db 1 ; moves
 
@@ -4184,7 +4177,7 @@ BugCatcherGroup:
 
 ; ================
 
-	; BUG_CATCHER (14)
+	; BUG_CATCHER (14) - EDIT_TRAINER_MOVES
 	db "ARNIE@"
 	db 1 ; moves
 
@@ -4200,7 +4193,7 @@ BugCatcherGroup:
 
 ; ================
 
-	; BUG_CATCHER (15)
+	; BUG_CATCHER (15) - EDIT_TRAINER_MOVES
 	db "WADE@"
 	db 1 ; moves
 
@@ -4234,7 +4227,7 @@ BugCatcherGroup:
 
 ; ================
 
-	; BUG_CATCHER (16)
+	; BUG_CATCHER (16) - EDIT_TRAINER_MOVES
 	db "WADE@"
 	db 1 ; moves
 
@@ -4268,7 +4261,7 @@ BugCatcherGroup:
 
 ; ================
 
-	; BUG_CATCHER (17)
+	; BUG_CATCHER (17) - EDIT_TRAINER_MOVES
 	db "ARNIE@"
 	db 1 ; moves
 
@@ -4284,7 +4277,7 @@ BugCatcherGroup:
 
 ; ================
 
-	; BUG_CATCHER (18)
+	; BUG_CATCHER (18) - EDIT_TRAINER_MOVES
 	db "ARNIE@"
 	db 1 ; moves
 
@@ -4442,7 +4435,7 @@ FisherGroup:
 
 ; ================
 
-	; FISHER (11)
+	; FISHER (11) - EDIT_TRAINER_MOVES
 	db "EDGAR@"
 	db 1 ; moves
 
@@ -4590,7 +4583,7 @@ FisherGroup:
 
 ; ================
 
-	; FISHER (22)
+	; FISHER (22) - EDIT_TRAINER_MOVES
 	db "WILTON@"
 	db 1 ; moves
 
@@ -4630,7 +4623,7 @@ FisherGroup:
 
 ; ================
 
-	; FISHER (24)
+	; FISHER (24) - EDIT_TRAINER_MOVES
 	db "RALPH@"
 	db 1 ; moves
 
@@ -4652,7 +4645,7 @@ FisherGroup:
 
 ; ================
 
-	; FISHER (25)
+	; FISHER (25) - EDIT_TRAINER_MOVES
 	db "TULLY@"
 	db 1 ; moves
 
@@ -4994,7 +4987,7 @@ SwimmerFGroup:
 
 ; ================
 
-	; SWIMMERF (4)
+	; SWIMMERF (4) - EDIT_TRAINER_MOVES
 	db "SUSIE@"
 	db 1 ; moves
 
@@ -5039,7 +5032,7 @@ SwimmerFGroup:
 
 ; ================
 
-	; SWIMMERF (7)
+	; SWIMMERF (7) - EDIT_TRAINER_MOVES
 	db "WENDY@"
 	db 1 ; moves
 
@@ -5163,7 +5156,7 @@ SwimmerFGroup:
 
 ; ================
 
-	; SWIMMERF (17)
+	; SWIMMERF (17) - EDIT_TRAINER_MOVES
 	db "NIKKI@"
 	db 0 ; normal
 
@@ -5242,7 +5235,7 @@ SailorGroup:
 
 ; ================
 
-	; SAILOR (4)
+	; SAILOR (4) - EDIT_TRAINER_MOVES
 	db "KENT@"
 	db 1 ; moves
 
@@ -5362,7 +5355,7 @@ SailorGroup:
 
 ; ================
 
-	; SAILOR (13)
+	; SAILOR (13) - EDIT_TRAINER_MOVES
 	db "HUEY@"
 	db 1 ; moves
 
@@ -5525,7 +5518,7 @@ SuperNerdGroup:
 
 ; ================
 
-	; SUPER_NERD (12)
+	; SUPER_NERD (12) - EDIT_TRAINER_MOVES
 	db "NORTON@"
 	db 1 ; moves
 
@@ -5541,7 +5534,7 @@ SuperNerdGroup:
 
 ; ================
 
-	; SUPER_NERD (13)
+	; SUPER_NERD (13) - EDIT_TRAINER_MOVES
 	db "HUGH@"
 	db 1 ; moves
 
@@ -5557,7 +5550,7 @@ SuperNerdGroup:
 
 ; ================
 
-	; SUPER_NERD (14)
+	; SUPER_NERD (14) - EDIT_TRAINER_MOVES
 	db "MARKUS@"
 	db 1 ; moves
 
@@ -5579,7 +5572,7 @@ Rival2Group:
 ; ================================
 ; ================
 
-	; RIVAL2 (1)
+	; RIVAL2 (1) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -5625,7 +5618,7 @@ Rival2Group:
 
 ; ================
 
-	; RIVAL2 (2)
+	; RIVAL2 (2) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -5671,7 +5664,7 @@ Rival2Group:
 
 ; ================
 
-	; RIVAL2 (3)
+	; RIVAL2 (3) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -5717,7 +5710,7 @@ Rival2Group:
 
 ; ================
 
-	; RIVAL2 (4)
+	; RIVAL2 (4) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -5763,7 +5756,7 @@ Rival2Group:
 
 ; ================
 
-	; RIVAL2 (5)
+	; RIVAL2 (5) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -5809,7 +5802,7 @@ Rival2Group:
 
 ; ================
 
-	; RIVAL2 (6)
+	; RIVAL2 (6) - EDIT_TRAINER_MOVES
 	db "?@"
 	db 1 ; moves
 
@@ -6005,7 +5998,7 @@ HikerGroup:
 
 ; ================
 
-	; HIKER (10)
+	; HIKER (10) - EDIT_TRAINER_MOVES
 	db "TIMOTHY@"
 	db 1 ; moves
 
@@ -6128,7 +6121,7 @@ HikerGroup:
 
 ; ================
 
-	; HIKER (19)
+	; HIKER (19) - EDIT_TRAINER_MOVES
 	db "PARRY@"
 	db 1 ; moves
 
@@ -6180,7 +6173,7 @@ HikerGroup:
 
 ; ================
 
-	; HIKER (22)
+	; HIKER (22) - EDIT_TRAINER_MOVES
 	db "ANTHONY@"
 	db 1 ; moves
 
@@ -6332,7 +6325,7 @@ BlaineGroup:
 ; ================================
 ; ================
 
-	; BLAINE (1)
+	; BLAINE (1) - EDIT_TRAINER_MOVES
 	db "BLAINE@"
 	db 1 ; moves
 
@@ -6379,7 +6372,7 @@ BurglarGroup:
 
 ; ================
 
-	; BURGLAR (2)
+	; BURGLAR (2) - EDIT_TRAINER_MOVES
 	db "EDDIE@"
 	db 1 ; moves
 
@@ -6627,7 +6620,7 @@ BlackbeltGroup:
 
 ; ================
 
-	; BLACKBELT_T (2)
+	; BLACKBELT_T (2) - EDIT_TRAINER_MOVES
 	db "YOSHI@"
 	db 1 ; moves
 
@@ -6643,7 +6636,7 @@ BlackbeltGroup:
 
 ; ================
 
-	; BLACKBELT_T (3)
+	; BLACKBELT_T (3) - EDIT_TRAINER_MOVES
 	db "KENJI@"
 	db 1 ; moves
 
@@ -6677,7 +6670,7 @@ BlackbeltGroup:
 
 ; ================
 
-	; BLACKBELT_T (4)
+	; BLACKBELT_T (4) - EDIT_TRAINER_MOVES
 	db "LAO@"
 	db 1 ; moves
 
@@ -6693,7 +6686,7 @@ BlackbeltGroup:
 
 ; ================
 
-	; BLACKBELT_T (5)
+	; BLACKBELT_T (5) - EDIT_TRAINER_MOVES
 	db "NOB@"
 	db 1 ; moves
 
@@ -6770,7 +6763,7 @@ ExecutiveMGroup:
 ; ================================
 ; ================
 
-	; EXECUTIVEM (1)
+	; EXECUTIVEM (1) - EDIT_TRAINER_MOVES
 	db "EXECUTIVE@"
 	db 1 ; moves
 
@@ -6798,7 +6791,7 @@ ExecutiveMGroup:
 
 ; ================
 
-	; EXECUTIVEM (2)
+	; EXECUTIVEM (2) - EDIT_TRAINER_MOVES
 	db "EXECUTIVE@"
 	db 1 ; moves
 
@@ -6814,43 +6807,25 @@ ExecutiveMGroup:
 
 ; ================
 
-	; EXECUTIVEM (3)
+	; EXECUTIVEM (3) - EDIT_TRAINER_MOVES
 	db "EXECUTIVE@"
 	db 1 ; moves
 
 	; party
 
-	db 30, KOFFING
+	db 31, KOFFING
 		db TACKLE
 		db SELFDESTRUCT
 		db SLUDGE
 		db SMOKESCREEN
 
-	db 30, KOFFING
-		db TACKLE
-		db SELFDESTRUCT
-		db SLUDGE
-		db SMOKESCREEN
-
-	db 30, KOFFING
-		db TACKLE
-		db SELFDESTRUCT
-		db SLUDGE
-		db SMOKESCREEN
-
-	db 32, WEEZING
+	db 35, WEEZING
 		db TACKLE
 		db EXPLOSION
 		db SLUDGE
 		db SMOKESCREEN
 
-	db 30, KOFFING
-		db TACKLE
-		db SELFDESTRUCT
-		db SLUDGE
-		db SMOKESCREEN
-
-	db 30, KOFFING
+	db 31, KOFFING
 		db TACKLE
 		db SMOG
 		db SLUDGE
@@ -6925,7 +6900,7 @@ PsychicGroup:
 
 ; ================
 
-	; PSYCHIC_T (5)
+	; PSYCHIC_T (5) - EDIT_TRAINER_MOVES
 	db "GREG@"
 	db 1 ; moves
 
@@ -6941,7 +6916,7 @@ PsychicGroup:
 
 ; ================
 
-	; PSYCHIC_T (6)
+	; PSYCHIC_T (6) - EDIT_TRAINER_MOVES
 	db "NORMAN@"
 	db 1 ; moves
 
@@ -6963,7 +6938,7 @@ PsychicGroup:
 
 ; ================
 
-	; PSYCHIC_T (7)
+	; PSYCHIC_T (7) - EDIT_TRAINER_MOVES
 	db "MARK@"
 	db 1 ; moves
 
@@ -6991,7 +6966,7 @@ PsychicGroup:
 
 ; ================
 
-	; PSYCHIC_T (8)
+	; PSYCHIC_T (8) - EDIT_TRAINER_MOVES
 	db "PHIL@"
 	db 1 ; moves
 
@@ -7092,7 +7067,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (3)
+	; PICNICKER (3) - EDIT_TRAINER_MOVES
 	db "BROOKE@"
 	db 1 ; moves
 
@@ -7251,7 +7226,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (16)
+	; PICNICKER (16) - EDIT_TRAINER_MOVES
 	db "TIFFANY@"
 	db 1 ; moves
 
@@ -7267,7 +7242,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (17)
+	; PICNICKER (17) - EDIT_TRAINER_MOVES
 	db "TIFFANY@"
 	db 1 ; moves
 
@@ -7306,7 +7281,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (20)
+	; PICNICKER (20) - EDIT_TRAINER_MOVES
 	db "TIFFANY@"
 	db 1 ; moves
 
@@ -7322,7 +7297,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (21)
+	; PICNICKER (21) - EDIT_TRAINER_MOVES
 	db "ERIN@"
 	db 1 ; moves
 
@@ -7363,7 +7338,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (23)
+	; PICNICKER (23) - EDIT_TRAINER_MOVES
 	db "LIZ@"
 	db 1 ; moves
 
@@ -7404,7 +7379,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (25)
+	; PICNICKER (25) - EDIT_TRAINER_MOVES
 	db "GINA@"
 	db 1 ; moves
 
@@ -7432,7 +7407,7 @@ PicnickerGroup:
 
 ; ================
 
-	; PICNICKER (26)
+	; PICNICKER (26) - EDIT_TRAINER_MOVES
 	db "TIFFANY@"
 	db 1 ; moves
 
@@ -7701,7 +7676,7 @@ CamperGroup:
 
 ; ================
 
-	; CAMPER (21)
+	; CAMPER (21) - EDIT_TRAINER_MOVES
 	db "TODD@"
 	db 1 ; moves
 
@@ -7754,7 +7729,7 @@ ExecutiveFGroup:
 ; ================================
 ; ================
 
-	; EXECUTIVEF (1)
+	; EXECUTIVEF (1) - EDIT_TRAINER_MOVES
 	db "EXECUTIVE@"
 	db 1 ; moves
 
@@ -7782,7 +7757,7 @@ ExecutiveFGroup:
 
 ; ================
 
-	; EXECUTIVEF (2)
+	; EXECUTIVEF (2) - EDIT_TRAINER_MOVES
 	db "EXECUTIVE@"
 	db 1 ; moves
 
@@ -8359,7 +8334,7 @@ TwinsGroup:
 
 ; ================
 
-	; TWINS (2)
+	; TWINS (2) - EDIT_TRAINER_MOVES
 	db "ANN & ANNE@"
 	db 1 ; moves
 
@@ -8381,7 +8356,7 @@ TwinsGroup:
 
 ; ================
 
-	; TWINS (3)
+	; TWINS (3) - EDIT_TRAINER_MOVES
 	db "ANN & ANNE@"
 	db 1 ; moves
 
@@ -8463,7 +8438,7 @@ TwinsGroup:
 
 ; ================
 
-	; TWINS (9)
+	; TWINS (9) - EDIT_TRAINER_MOVES
 	db "LEA & PIA@"
 	db 1 ; moves
 
@@ -8485,7 +8460,7 @@ TwinsGroup:
 
 ; ================
 
-	; TWINS (10)
+	; TWINS (10) - EDIT_TRAINER_MOVES
 	db "LEA & PIA@"
 	db 1 ; moves
 
@@ -8589,7 +8564,7 @@ RedGroup:
 ; ================================
 ; ================
 
-	; RED (1)
+	; RED (1) - EDIT_TRAINER_MOVES
 	db "RED@"
 	db 1 ; moves
 
@@ -8641,7 +8616,7 @@ BlueGroup:
 ; ================================
 ; ================
 
-	; BLUE (1)
+	; BLUE (1) - EDIT_TRAINER_MOVES
 	db "BLUE@"
 	db 1 ; moves
 
@@ -8771,7 +8746,7 @@ GruntFGroup:
 
 ; ================
 
-	; GRUNTF (5)
+	; GRUNTF (5) - EDIT_TRAINER_MOVES
 	db "GRUNT@"
 	db 1 ; moves
 
@@ -8799,7 +8774,7 @@ MysticalmanGroup:
 ; ================================
 ; ================
 
-	; MYSTICALMAN (1)
+	; MYSTICALMAN (1) - EDIT_TRAINER_MOVES
 	db "EUSINE@"
 	db 1 ; moves
 
