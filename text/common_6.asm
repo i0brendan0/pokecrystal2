@@ -52,7 +52,7 @@ MoveRelearner_NoMovesToLearnText::
 	cont "from me."
 	done
 	
-UnknownText_0x1c1474::
+AccessedSomeonesPCText::
 	text "SOMEONE's PC"
 	line "accessed."
 
