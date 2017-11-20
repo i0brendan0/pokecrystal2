@@ -46,14 +46,21 @@ PokemonCenterPC: ; 1559a
 	dw OaksPC, .String_OaksPC
 	dw HallOfFamePC, .String_HallOfFame
 	dw TurnOffPC, .String_TurnOff
+	dw SomeonesPC, .String_SomeonesPC
 
 .String_PlayersPC:  db "<PLAYER>'s PC@"
 .String_BillsPC:    db "BILL's PC@"
 .String_OaksPC:     db "PROF.OAK's PC@"
 .String_HallOfFame: db "HALL OF FAME@"
 .String_TurnOff:    db "TURN OFF@"
+.String_SomeonesPC:	db "SOMEONE's PC@"
 
 .WhichPC:
+	; before Bill
+	db  3
+	db  5, 0, 4 ; someone's, player's, turn off
+	db -1
+	
 	; before pokedex
 	db  3 ; items
 	db  1, 0, 4 ; bill's, player's, turn off
@@ -70,17 +77,25 @@ PokemonCenterPC: ; 1559a
 	db -1
 
 .ChooseWhichPCListToUse:
+	ld de, ENGINE_TIME_CAPSULE
+    ld b, CHECK_FLAG
+    call EventFlagAction
+	jr nz, .check_got_dex
+	ld a, $0
+	ret
+	
+.check_got_dex
 	call CheckReceivedDex
 	jr nz, .got_dex
-	ld a, $0
+	ld a, $1
 	ret
 
 .got_dex
 	ld a, [wHallOfFameCount]
 	and a
-	ld a, $1
-	ret z
 	ld a, $2
+	ret z
+	ld a, $3
 	ret
 ; 15650
 
