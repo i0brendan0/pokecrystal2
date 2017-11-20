@@ -119,6 +119,16 @@ PC_CheckPartyForPokemon: ; 15650
 BillsPC: ; 15668
 	call PC_PlayChoosePCSound
 	ld hl, PokeCenterPCText_AccessedBillsPC
+	push de
+	push bc
+	ld de, ENGINE_TIME_CAPSULE
+    ld b, CHECK_FLAG
+    call EventFlagAction
+	jr nz, .met_bill
+	ld hl, PokeCenterPCText_AccessedSomeonesPC	
+.met_bill
+	pop bc
+	pop de
 	call PC_DisplayText
 	callba _BillsPC
 	and a
@@ -673,6 +683,10 @@ PokeCenterPCText_AccessedBillsPC: ; 0x15a31
 	text_jump UnknownText_0x1c1474
 	db "@"
 ; 0x15a36
+
+PokeCenterPCText_AccessedSomeonesPC:
+	text_jump AccessedSomeonesPCText
+	db "@"
 
 PokeCenterPCText_AccessedOwnPC: ; 0x15a36
 	; Accessed own PC. Item Storage System opened.
