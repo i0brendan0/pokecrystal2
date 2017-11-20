@@ -116,19 +116,17 @@ PC_CheckPartyForPokemon: ; 15650
 	db "@"
 ; 0x15668
 
+SomeonesPC:
+	call PC_PlayChoosePCSound
+	ld hl, PokeCenterPCText_AccessedSomeonesPC
+	call PC_DisplayText
+	callba _BillsPC
+	and a
+	ret
+
 BillsPC: ; 15668
 	call PC_PlayChoosePCSound
 	ld hl, PokeCenterPCText_AccessedBillsPC
-	push de
-	push bc
-	ld de, ENGINE_TIME_CAPSULE
-    ld b, CHECK_FLAG
-    call EventFlagAction
-	jr nz, .met_bill
-	ld hl, PokeCenterPCText_AccessedSomeonesPC	
-.met_bill
-	pop bc
-	pop de
 	call PC_DisplayText
 	callba _BillsPC
 	and a
