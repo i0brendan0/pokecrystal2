@@ -51,3 +51,11 @@ MoveRelearner_NoMovesToLearnText::
 	line "learn any moves"
 	cont "from me."
 	done
+	
+UnknownText_0x1c1474::
+	text "SOMEONE's PC"
+	line "accessed."
+
+	para "#MON Storage"
+	line "System opened."
+	prompt
