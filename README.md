@@ -53,12 +53,15 @@ List of minor changes
 * Pokemon Trainers which have been given shiny Pokemon have edited parties.
 * The chances to have a wild Pokemon with a held item has been increased to 24% and 6%.
 
-List of things left to do
+List of minor things left to do
 * Add more Egg moves.
 * Add more Level Up moves.
 * Add more TM moves.
-* Update all trainers' Pokemon with newly aquired moves.
 * Add a Soothe Bell item. (The code has already been made and will be used in Prism as well.)
+
+List of major things left to do
+* Update all trainers' Pokemon with newly aquired moves.
+* Add rematches for all Pokemon Gym Leaders.
 
 List of things I want to do but might not be able to
 * Add a Move Relearner
