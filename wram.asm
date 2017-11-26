@@ -350,6 +350,7 @@ TileMapEnd::
 
 
 SECTION "Battle", WRAM0
+UNION
 wc608::
 wOddEgg:: party_struct OddEgg
 wOddEggName:: ds PKMN_NAME_LENGTH
