@@ -5,7 +5,7 @@ SHA1 := sha1sum
 endif
 
 .SUFFIXES:
-.PHONY: all clean tools compare crystal crystal11
+.PHONY: all clean tools compare crystal
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
@@ -27,14 +27,11 @@ misc/crystal_misc.o \
 text/common_text.o \
 gfx/pics.o
 
-crystal11_obj := $(crystal_obj:.o=11.o)
 
-
-roms := pokecrystal2.gbc pokecrystal11.gbc
+roms := pokecrystal2.gbc
 
 all: crystal
 crystal: pokecrystal2.gbc
-crystal11: pokecrystal11.gbc
 
 # Ensure that the tools are built when making the ROM
 ifneq ($(MAKECMDGOALS),clean)
@@ -44,7 +41,7 @@ endif
 endif
 
 clean:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(crystal_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -53,21 +50,14 @@ compare: $(roms)
 tools:
 	$(MAKE) -C tools/
 
-%11.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
-%11.o: %.asm $$(dep)
-	rgbasm -D CRYSTAL11 -o $@ $<
-
 %.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
 %.o: %.asm $$(dep)
 	rgbasm -o $@ $<
 
-pokecrystal11.gbc: $(crystal11_obj)
-	rgblink -n pokecrystal11.sym -m pokecrystal11.map -o $@ $^
-	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
-
-pokecrystal2.gbc: $(crystal_obj)
-	rgblink -n pokecrystal2.sym -m pokecrystal2.map -o $@ $^
+pokecrystal2.gbc: $(crystal_obj) pokecrystal.ld
+	rgblink -n pokecrystal2.sym -m pokecrystal2.map -l pokecrystal.ld -o $@ $(crystal_obj)
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
+	sort pokecrystal11.sym -o pokecrystal11.sym
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
