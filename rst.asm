@@ -7,7 +7,7 @@ SECTION "rst0",ROM0
 SECTION "rst8",ROM0
 	jp FarCall_hl
 
-SECTION "rst10",ROM0[Bankswitch]
+SECTION "rst10",ROM0
 	ld [hROMBank], a
 	ld [MBC3RomBank], a
 	ret
