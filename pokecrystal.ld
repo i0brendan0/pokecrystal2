@@ -47,7 +47,6 @@ ROMX $07
 ROMX $08
 	"bank8"
 	"Tileset Data 3"
-	"Egg Moves"
 ROMX $09
 	"bank9"
 ROMX $0a
@@ -107,7 +106,6 @@ ROMX $24
 	"bank24"
 ROMX $25
 	"Map Headers"
-	"Events"
 ROMX $26
 	"Map Scripts 11"
 ROMX $27
