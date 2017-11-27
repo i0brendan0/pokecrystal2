@@ -57,7 +57,6 @@ tools:
 pokecrystal2.gbc: $(crystal_obj) pokecrystal.ld
 	rgblink -n pokecrystal2.sym -m pokecrystal2.map -l pokecrystal.ld -o $@ $(crystal_obj)
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	sort pokecrystal11.sym -o pokecrystal11.sym
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
