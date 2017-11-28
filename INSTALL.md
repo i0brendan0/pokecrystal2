@@ -11,7 +11,6 @@ sudo apt-get install make gcc bison git libpng-dev
 
 git clone https://github.com/rednex/rgbds
 cd rgbds
-git checkout v0.2.5
 sudo make install
 cd ..
 
@@ -30,7 +29,6 @@ xcode-select --install
 
 git clone https://github.com/rednex/rgbds
 cd rgbds
-git checkout v0.2.5
 sudo make install
 cd ..
 
@@ -47,7 +45,7 @@ To build on Windows, install [**Cygwin**](http://cygwin.com/install.html) with t
 In the installer, select the following packages: `make` `git` `gettext` `gcc-core`
 You may need to search for them as the installer has many packages. The ones you need are exactly as written.
 
-Then get [**rgbds 0.2.5**](https://github.com/rednex/rgbds/releases/). Versions 0.3.0 and later are not compatible.
+Then get [**rgbds**](https://github.com/rednex/rgbds/releases/). Version 0.3.3 and later are compatible.
 Extract the archive and put all the `exe` and `dll` files individually in `C:\cygwin64\usr\local\bin`.
 
 In the **Cygwin terminal**:
