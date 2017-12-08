@@ -669,7 +669,8 @@ PokeAnim_ConvertAndApplyBitmask: ; d036b
 	ld hl, wPokeAnimGraphicStartTile
 	add [hl]
 	pop hl
-	ld [hl], a	cp $7f ; Skip 7f as that's used for a blank tile
+	ld [hl], a
+	cp $7f ; Skip 7f as that's used for a blank tile
 	ret c
 	inc [hl]
 	ret

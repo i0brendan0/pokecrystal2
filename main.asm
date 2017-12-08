@@ -1852,7 +1852,7 @@ DisplayDexEntry: ; 4424d
 	jr z, .skip_height
 	push hl
 	push de
-	ld hl, [sp+$0]
+	ld hl, sp+$0
 	ld d, h
 	ld e, l
 	hlcoord 12, 7
@@ -1876,7 +1876,7 @@ DisplayDexEntry: ; 4424d
 	or d
 	jr z, .skip_weight
 	push de
-	ld hl, [sp+$0]
+	ld hl, sp+$0
 	ld d, h
 	ld e, l
 	hlcoord 11, 9
