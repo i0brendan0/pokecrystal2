@@ -16,7 +16,7 @@ GetFrontpic:
 	call _GetFrontpic
 	pop af
 	ld [rSVBK], a
-	ret
+	jp CloseSRAM
 
 FrontpicPredef: ; 5108b
 	ld a, [CurPartySpecies]
@@ -28,32 +28,47 @@ FrontpicPredef: ; 5108b
 	xor a
 	ld [hBGMapMode], a
 	call _GetFrontpic
-	call Function51103
+	ld a, BANK(VTiles3)
+	ld [rVBK], a
+	call GetAnimatedFrontpic
+	xor a
+	ld [rVBK], a
 	pop af
 	ld [rSVBK], a
-	ret
+	jp CloseSRAM
 
 _GetFrontpic:
+	ld a, BANK(sScratch)
+	call GetSRAMBank
 	push de
 	call GetBaseData
 	ld a, [BasePicSize] ;naming
 	and $f
 	ld b, a
-
 	push bc
 	call GetFrontpicPointer
-	ld a, $6
+	ld a, BANK(wDecompressScratch)
+
 	ld [rSVBK], a
 	ld a, b
-	ld de, wDecompressScratch + $800
+	ld de, wDecompressScratch
 	call FarDecompress
+	
+	; Save decompressed size
+	swap e
+	swap d
+	ld a, d
+	and $f0
+	or e
+	ld [sScratch], a
+
 	pop bc
-	ld hl, wDecompressScratch
-	ld de, wDecompressScratch + $800
-	call Function512ab
+	ld hl, sScratch + $10
+	ld de, wDecompressScratch
+	call PadFrontpic
 	pop hl
 	push hl
-	ld de, wDecompressScratch ;same thing i think
+	ld de, sScratch + $10
 	ld c, 7 * 7
 	ld a, [hROMBank]
 	ld b, a
@@ -82,7 +97,6 @@ GLOBAL PicPointers, UnownPicPointers
 	call AddNTimes
 	ld a, d
 	call GetFarByte
-	call FixPicBank
 	push af
 	inc hl
 	ld a, d
@@ -90,11 +104,9 @@ GLOBAL PicPointers, UnownPicPointers
 	pop bc
 	ret
 
-Function51103: ; 51103
-	ld a, $1
-	ld [rVBK], a
+GetAnimatedFrontpic: ; 51103
 	push hl
-	ld de, wDecompressScratch ;same thing i think
+	ld de, sScratch + $10
 	ld c, 7 * 7
 	ld a, [hROMBank]
 	ld b, a
@@ -103,37 +115,58 @@ Function51103: ; 51103
 	ld de, 7 * 7 tiles
 	add hl, de
 	push hl
-	ld a, $1
+	ld a, BANK(BasePicSize)
 	ld hl, BasePicSize
 	call GetFarWRAMByte 
 	pop hl
 	and $f
-	ld de, w6_d800 + 5 * 5 tiles ;same
+	ld de, wDecompressScratch + 5 * 5 tiles
 	ld c, 5 * 5
 	cp 5
 	jr z, .got_dims
-	ld de, w6_d800 + 6 * 6 tiles ;same
+	ld de, wDecompressScratch + 6 * 6 tiles
 	ld c, 6 * 6
 	cp 6
 	jr z, .got_dims
-	ld de, w6_d800 + 7 * 7 tiles ;same
+	ld de, wDecompressScratch + 7 * 7 tiles
 	ld c, 7 * 7
 .got_dims
 
+	; Get animation size (total - base sprite size)
+	ld a, [sScratch]
+	sub c
+	ret z ; Return if there's no animation
+	ld c, a
+
 	push hl
 	push bc
-	call Function5114f
+	call LoadOrientedFrontpicTiles
 	pop bc
 	pop hl
 	ld de, wDecompressScratch
 	ld a, [hROMBank]
-	ld b, a
-	call Get2bpp
-	xor a
-	ld [rVBK], a
-	ret
+	ld b, a	
+	; If we can load it in a single pass, just do it
+	ld a, c
+	sub (128 - 7 * 7)
+	jr c, .copy_and_finish
 
-Function5114f: ; 5114f
+	; Otherwise, we load the first part...
+	inc a
+	ld [sScratch], a
+	ld c, (127 - 7 * 7)
+	call Get2bpp	; Then move up a bit and load the rest
+	ld de, wDecompressScratch + (127 - 7 * 7) tiles
+	ld hl, VTiles4
+	ld a, [hROMBank]
+	ld b, a
+	ld a, [sScratch]
+	ld c, a
+
+.copy_and_finish
+	jp Get2bpp
+
+LoadOrientedFrontpicTiles: ; 5114f
 	ld hl, wDecompressScratch
 	swap c
 	ld a, c
@@ -188,7 +221,6 @@ GetBackpic: ; 5116c
 	add hl, bc
 	ld a, d
 	call GetFarByte
-	call FixPicBank
 	push af
 	inc hl
 	ld a, d
@@ -206,69 +238,6 @@ GetBackpic: ; 5116c
 	call Get2bpp
 	pop af
 	ld [rSVBK], a
-	ret
-
-FixPicBank: ; 511c5
-; This is a thing for some reason.
-
-PICS_FIX EQU $36
-GLOBAL PICS_FIX
-
-	push hl
-	push bc
-	sub BANK(Pics_1) - PICS_FIX
-	ld c, a
-	ld b, 0
-	ld hl, .PicsBanks
-	add hl, bc
-	ld a, [hl]
-	pop bc
-	pop hl
-	ret
-
-.PicsBanks: ; 511d4
-	db BANK(Pics_1) + 0
-	db BANK(Pics_1) + 1
-	db BANK(Pics_1) + 2
-	db BANK(Pics_1) + 3
-	db BANK(Pics_1) + 4
-	db BANK(Pics_1) + 5
-	db BANK(Pics_1) + 6
-	db BANK(Pics_1) + 7
-	db BANK(Pics_1) + 8
-	db BANK(Pics_1) + 9
-	db BANK(Pics_1) + 10
-	db BANK(Pics_1) + 11
-	db BANK(Pics_1) + 12
-	db BANK(Pics_1) + 13
-	db BANK(Pics_1) + 14
-	db BANK(Pics_1) + 15
-	db BANK(Pics_1) + 16
-	db BANK(Pics_1) + 17
-	db BANK(Pics_1) + 18
-	db BANK(Pics_1) + 19
-	db BANK(Pics_1) + 20
-	db BANK(Pics_1) + 21
-	db BANK(Pics_1) + 22
-	db BANK(Pics_1) + 23
-
-Function511ec: ; 511ec
-	ld a, c
-	push de
-	ld hl, PicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld a, BANK(PicPointers)
-	call GetFarByte
-	call FixPicBank
-	push af
-	inc hl
-	ld a, BANK(PicPointers)
-	call GetFarHalfword
-	pop af
-	pop de
-	call FarDecompress
 	ret
 
 GetTrainerPic:
@@ -292,7 +261,6 @@ GetTrainerPic:
 	push de
 	ld a, BANK(TrainerPicPointers)
 	call GetFarByte
-	call FixPicBank
 	push af
 	inc hl
 	ld a, BANK(TrainerPicPointers)
@@ -372,7 +340,7 @@ FixBackpicAlignment: ; 5127c - compare screws this up
 	pop de
 	ret
 
-Function512ab: ; 512ab - name change
+PadFrontpic:
 	ld a, b
 	sub 5
 	jr z, .five

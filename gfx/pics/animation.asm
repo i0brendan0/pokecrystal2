@@ -313,7 +313,7 @@ AnimateMon_CheckIfPokemon: ; d01c6
 PokeAnim_InitPicAttributes: ; d01d6
 	ld a, [rSVBK]
 	push af
-	ld a, $2
+	ld a, BANK(wPokeAnimSceneIndex)
 	ld [rSVBK], a
 
 	push bc
@@ -670,6 +670,9 @@ PokeAnim_ConvertAndApplyBitmask: ; d036b
 	add [hl]
 	pop hl
 	ld [hl], a
+	cp $7f ; Skip 7f as that's used for a blank tile
+	ret c
+	inc [hl]
 	ret
 ; d03cd
 
@@ -1007,7 +1010,7 @@ GetMonAnimPointer: ; d055c
 PokeAnim_GetFrontpicDims: ; d05b4
 	ld a, [rSVBK]
 	push af
-	ld a, $1
+	ld a, BANK(CurPartySpecies)
 	ld [rSVBK], a
 	ld a, [CurPartySpecies]
 	ld [CurSpecies], a
