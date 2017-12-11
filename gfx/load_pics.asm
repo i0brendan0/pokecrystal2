@@ -42,7 +42,7 @@ _GetFrontpic:
 
 	push bc
 	call GetFrontpicPointer
-	ld a, $6
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 	ld a, b
 	ld de, wDecompressScratch + $800
@@ -166,7 +166,7 @@ GetBackpic: ; 5116c
 	ld c, a
 	ld a, [rSVBK]
 	push af
-	ld a, $6
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 	push de
 
@@ -287,7 +287,7 @@ GetTrainerPic:
 	call AddNTimes
 	ld a, [rSVBK]
 	push af
-	ld a, $6
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 	push de
 	ld a, BANK(TrainerPicPointers)
@@ -318,7 +318,7 @@ DecompressPredef: ; 5125d
 
 	ld a, [rSVBK]
 	push af
-	ld a, 6
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 
 	push de

@@ -8491,7 +8491,7 @@ InitEnemy: ; 3f55e
 BackUpVBGMap2: ; 3f568
 	ld a, [rSVBK]
 	push af
-	ld a, $6 ; BANK(wDecompressScratch)
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 	ld hl, wDecompressScratch
 	ld bc, $40 tiles ; VBGMap3 - VBGMap2
@@ -9372,7 +9372,7 @@ InitBattleDisplay: ; 3fb6c
 .BlankBGMap: ; 3fbd6
 	ld a, [rSVBK]
 	push af
-	ld a, $6
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 
 	ld hl, wDecompressScratch
@@ -9433,7 +9433,7 @@ GetTrainerBackpic: ; 3fbff
 CopyBackpic: ; 3fc30
 	ld a, [rSVBK]
 	push af
-	ld a, $6
+	ld a, $6 ;BANK(???) may have to do with call Get2bpp
 	ld [rSVBK], a
 	ld hl, VTiles0
 	ld de, VTiles2 tile $31

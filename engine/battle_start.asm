@@ -116,7 +116,7 @@ LoadTrainerBattlePokeballTiles:
 ConvertTrainerBattlePokeballTilesTo2bpp: ; 8c2cf
 	ld a, [rSVBK]
 	push af
-	ld a, $6
+	ld a, BANK(wDecompressScratch)
 	ld [rSVBK], a
 	push hl
 	ld hl, wDecompressScratch

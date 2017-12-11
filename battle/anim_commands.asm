@@ -1054,7 +1054,7 @@ GetSubstitutePic: ; cc64c
 BattleAnimCmd_MinimizeOpp: ; cc6cf (33:46cf)
 	ld a, [rSVBK]
 	push af
-	ld a, $1
+	ld a, $1 ;BANK(???)
 	ld [rSVBK], a
 	xor a
 	call GetSRAMBank
@@ -1110,7 +1110,7 @@ INCBIN "gfx/battle/minimize.2bpp"
 BattleAnimCmd_Minimize: ; cc735 (33:4735)
 	ld a, [rSVBK]
 	push af
-	ld a, $1
+	ld a, $1 ;BANK(???)
 	ld [rSVBK], a
 	xor a
 	call GetSRAMBank
@@ -1125,7 +1125,7 @@ BattleAnimCmd_Minimize: ; cc735 (33:4735)
 BattleAnimCmd_DropSub: ; cc750 (33:4750)
 	ld a, [rSVBK]
 	push af
-	ld a, $1
+	ld a, $1 ;BANK(???)
 	ld [rSVBK], a
 
 	ld a, [CurPartySpecies] ; CurPartySpecies
@@ -1150,7 +1150,7 @@ BattleAnimCmd_DropSub: ; cc750 (33:4750)
 BattleAnimCmd_BeatUp: ; cc776 (33:4776)
 	ld a, [rSVBK]
 	push af
-	ld a, $1
+	ld a, $1 ; BANK(???)
 	ld [rSVBK], a
 	ld a, [CurPartySpecies] ; CurPartySpecies
 	push af
@@ -1268,7 +1268,7 @@ endr
 
 	ld a, [rSVBK]
 	push af
-	ld a, 1
+	ld a, 1 ; BANK(???)
 	ld [rSVBK], a
 
 	ld a, [hBattleTurn]
@@ -1445,7 +1445,7 @@ BattleAnim_SetBGPals: ; cc91a
 	ret z
 	ld a, [rSVBK]
 	push af
-	ld a, $5
+	ld a, $5 ; BANK(???)
 	ld [rSVBK], a
 	ld hl, BGPals
 	ld de, UnknBGPals
@@ -1473,7 +1473,7 @@ BattleAnim_SetOBPals: ; cc94b
 	ret z
 	ld a, [rSVBK]
 	push af
-	ld a, $5
+	ld a, $5 ; BANK(???)
 	ld [rSVBK], a
 	ld hl, OBPals + $10
 	ld de, UnknOBPals + $10
