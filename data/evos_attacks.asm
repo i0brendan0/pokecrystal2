@@ -3384,4 +3384,4 @@ CelebiEvosAttacks:
 MissingNoEvosAttacks:
 	db 0 ;No Evos
 	db 1, STRUGGLE
-	db 0 ;No more moves
+	db 0 ; no more level-up moves

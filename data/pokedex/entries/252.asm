@@ -1,6 +1,6 @@
 ; MissingNo.PokedexEntry: ; 0x1d18cc
 	db "UNKNOWN@" ; species name
-	dw 100, 100 ; height, width
+	dw 1000, 35072 ; height, width
 
 	db   "Nothing is"
 	next "known about this"
