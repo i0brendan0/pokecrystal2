@@ -178,6 +178,11 @@ LoadOrientedFrontpicTiles: ; 5114f
 	push bc
 	call LoadOrientedFrontpic
 	pop bc
+    ld a, c
+    and a
+    jr z, .handleLoop
+    inc b
+    jr .handleLoop
 .loop
 	push bc
 	ld c, $0
