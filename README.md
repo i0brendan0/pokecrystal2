@@ -52,6 +52,7 @@ List of minor changes
 * Updated Pokemons' stats to the latest Gen.
 * Pokemon Trainers which have been given shiny Pokemon have edited parties.
 * The chances to have a wild Pokemon with a held item has been increased to 24% and 6%.
+* The Unown that you can catch from each puzzle have been changed
 
 List of minor things left to do
 * Add more Egg moves.
@@ -61,10 +62,14 @@ List of minor things left to do
 
 List of major things left to do
 * Update all trainers' Pokemon with newly aquired moves.
-* Add rematches for all Pokemon Gym Leaders.
+* Add rematches for all Pokemon Gym Leaders. - **IN PROGRESS**
 
 List of things I want to do but might not be able to
-* Add a Move Relearner
+* Add a Move Relearner - **IN PROGRESS**
+
+List of current bugs
+* The check Unown caught code does not seem to work with this new system.
+* Unown Interrobang has too many tiles and its animation doesn't completely work. 
 
 [travis]: https://travis-ci.org/i0brendan0/pokecrystal2
 [travis-badge]: https://travis-ci.org/i0brendan0/pokecrystal2.svg?branch=master
