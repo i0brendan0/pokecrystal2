@@ -131,7 +131,7 @@ SpecialsPointers:: ; c029
 	add_special PrintDiploma
 
 	; Crystal
-	add_special Function11ac3e
+	add_special MoveRelearner
 	add_special Function11b444
 	add_special Function11b5e8
 	add_special Function11b7e5

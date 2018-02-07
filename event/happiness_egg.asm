@@ -159,7 +159,7 @@ StepHappiness:: ; 725a
 	inc a
 	and 1
 	ld [hl], a
-	jr nz, SootheBell
+	jp nz, SootheBell
 
 	ld de, PartyCount
 	ld a, [de]
@@ -265,13 +265,13 @@ DaycareStep:: ; 7282
 	set 6, [hl]
 	ret
 
-SootheBell:
-    ld a, [wPartyCount]
+SootheBell::
+    ld a, [PartyCount]
     and a
     ret z
     ld c, a
-    ld hl, wPartyMon1Item
-    ld de, wPartyMon1Happiness
+    ld hl, PartyMon1Item
+    ld de, PartyMon1Happiness
 .loop
     push bc
     ld b, [hl]

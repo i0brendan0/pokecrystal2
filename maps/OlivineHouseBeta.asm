@@ -1,6 +1,6 @@
 const_value set 2
 	const OLIVINEHOUSEBETA_TEACHER
-	const OLIVINEHOUSEBETA_RHYDON
+;	const OLIVINEHOUSEBETA_RHYDON
 
 OlivineHouseBeta_MapScriptHeader:
 .MapTriggers:
@@ -10,7 +10,33 @@ OlivineHouseBeta_MapScriptHeader:
 	db 0
 
 TeacherScript_0x9c58f:
-	jumptextfaceplayer UnknownText_0x9c5a2
+;	jumptextfaceplayer UnknownText_0x9c5a2
+    faceplayer
+    opentext
+    checkevent EVENT_MET_MOVE_RELEARNER
+    iftrue .met_relearner
+    writetext .intro_text
+    setevent EVENT_MET_MOVE_RELEARNER
+.met_relearner:
+    special MoveRelearner
+    end    
+    
+.intro_text:
+	text "Hello! I'm the"
+	line "Move Relearner!"
+
+	para "I can help your"
+	line "#mon remember"
+	para "moves that they"
+	line "have forgotten."
+
+	para "I can do this for"
+	line "you, in exchange"
+	cont "for a Heart Scale."
+
+	para "I collect them,"
+	line "you see."
+	prompt
 
 RhydonScript_0x9c592:
 	opentext
@@ -57,6 +83,6 @@ OlivineHouseBeta_MapEventHeader:
 	signpost 1, 1, SIGNPOST_READ, OlivineHouseBetaBookshelf2
 
 .PersonEvents:
-	db 2
+	db 1;2
 	person_event SPRITE_TEACHER, 3, 2, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TeacherScript_0x9c58f, -1
-	person_event SPRITE_RHYDON, 4, 6, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, RhydonScript_0x9c592, -1
+;	person_event SPRITE_RHYDON, 4, 6, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, RhydonScript_0x9c592, -1
