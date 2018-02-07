@@ -20,7 +20,7 @@ FalknerScript_0x683c2:
 	waitbutton
 	closetext
 	winlosstext UnknownText_0x6854a, 0
-	loadtrainer FALKNER, 1
+	loadtrainer FALKNER, FALKNER1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
@@ -109,7 +109,7 @@ VioletGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext FALKNER, 1, $1
+	trainertotext FALKNER, FALKNER1, $1
 	jumpstd gymstatue2
 
 UnknownText_0x68473:

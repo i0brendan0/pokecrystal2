@@ -69,7 +69,7 @@ MistyScript_0x188432:
 	waitbutton
 	closetext
 	winlosstext UnknownText_0x18870c, 0
-	loadtrainer MISTY, 1
+	loadtrainer MISTY, MISTY1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY
@@ -163,7 +163,7 @@ CeruleanGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext MISTY, 1, $1
+	trainertotext MISTY, MISTY1, $1
 	jumpstd gymstatue2
 
 MovementData_0x1884e3:

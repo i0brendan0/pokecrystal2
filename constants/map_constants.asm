@@ -14,7 +14,7 @@ MAP_NONE   EQU 0
 	mapgroup OLIVINE_HOUSE_BETA,                          4,  4 ;  4
 	mapgroup OLIVINE_PUNISHMENT_SPEECH_HOUSE,             4,  4 ;  5
 	mapgroup OLIVINE_GOOD_ROD_HOUSE,                      4,  4 ;  6
-	mapgroup OLIVINE_CAFE,                                4,  4 ;  7
+	mapgroup OLIVINE_CAFE, 4, 7
 	mapgroup OLIVINE_MART,                                4,  6 ;  8
 	mapgroup ROUTE_38_ECRUTEAK_GATE,                      4,  5 ;  9
 	mapgroup ROUTE_39_BARN,                               4,  4 ; 10
@@ -392,7 +392,7 @@ MAP_NONE   EQU 0
 	mapgroup CELADON_GAME_CORNER,                         7, 10 ; 19
 	mapgroup CELADON_GAME_CORNER_PRIZE_ROOM,              3,  3 ; 20
 	mapgroup CELADON_GYM,                                 9,  5 ; 21
-	mapgroup CELADON_CAFE,                                4,  6 ; 22
+	mapgroup CELADON_CAFE, 4, 8
 	mapgroup ROUTE_16_FUCHSIA_SPEECH_HOUSE,               4,  4 ; 23
 	mapgroup ROUTE_16_GATE,                               4,  5 ; 24
 	mapgroup ROUTE_7_SAFFRON_GATE,                        4,  5 ; 25

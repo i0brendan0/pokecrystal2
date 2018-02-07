@@ -38,6 +38,20 @@ FalknerGroup:
 	db $ff ; end
 
 ; ================
+
+    ; FALKNER (2) - EDIT_TRAINER_MOVES
+    db "FALKNER@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, PIDGEOT
+    db 100, DODRIO
+    db 100, FEAROW
+    db 100, MURKROW
+    db 100, XATU
+    db 100, NOCTOWL
+    
 ; ================================
 
 
@@ -66,6 +80,20 @@ WhitneyGroup:
 	db $ff ; end
 
 ; ================
+
+    ; WHITNEY (2) - EDIT_TRAINER_MOVES
+    db "WHITNEY@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, CLEFABLE
+    db 100, WIGGLYTUFF
+    db 100, MILTANK
+    db 100, GRANBULL
+    db 100, PORYGON2
+    db 100, FURRET
+    
 ; ================================
 
 
@@ -100,6 +128,20 @@ BugsyGroup:
 	db $ff ; end
 
 ; ================
+
+    ; BUGSY (2) - EDIT_TRAINER_MOVES
+    db "BUGSY@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, SCIZOR
+    db 100, VENOMOTH
+    db 100, BUTTERFREE
+    db 100, BEEDRILL
+    db 100, PARASECT
+    db 100, YANMA
+    
 ; ================================
 
 
@@ -140,6 +182,20 @@ MortyGroup:
 	db $ff ; end
 
 ; ================
+
+    ; MORTY (2) - EDIT_TRAINER_MOVES
+    db "MORTY@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, GENGAR
+    db 100, MAROWAK
+    db 100, GENGAR
+    db 100, MISDREAVUS
+    db 100, NINETALES
+    db 100, GENGAR
+    
 ; ================================
 
 
@@ -174,6 +230,20 @@ PryceGroup:
 	db $ff ; end
 
 ; ================
+
+    ; PRYCE (2) - EDIT_TRAINER_MOVES
+    db "PRYCE@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, JYNX
+    db 100, PILOSWINE
+    db 100, CLOYSTER
+    db 100, DEWGONG
+    db 100, SNEASEL
+    db 100, LAPRAS
+    
 ; ================================
 
 
@@ -208,6 +278,20 @@ JasmineGroup:
 	db $ff ; end
 
 ; ================
+
+    ; JASMINE (2) - EDIT_TRAINER_MOVES
+    db "JASMINE@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, MAGNETON
+    db 100, SKARMORY
+    db 100, STEELIX
+    db 100, FORRETRESS
+    db 100, SCIZOR
+    db 100, DUNSPARCE
+    
 ; ================================
 
 
@@ -236,6 +320,20 @@ ChuckGroup:
 	db $ff ; end
 
 ; ================
+
+    ; CHUCK (2) - EDIT_TRAINER_MOVES
+    db "CHUCK@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, PRIMEAPE
+    db 100, POLIWRATH
+    db 100, HITMONTOP
+    db 100, HITMONCHAN
+    db 100, HITMONLEE
+    db 100, MACHAMP
+    
 ; ================================
 
 
@@ -276,6 +374,20 @@ ClairGroup:
 	db $ff ; end
 
 ; ================
+
+    ; CLAIR (2) - EDIT_TRAINER_MOVES
+    db "CLAIR@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, KINGDRA
+    db 100, DRAGONITE
+    db 100, GYARADOS
+    db 100, DRAGONITE
+    db 100, KINGDRA
+    db 100, GYARADOS
+    
 ; ================================
 
 
@@ -774,39 +886,120 @@ PKMNTrainerGroup:
 ; ================
 
 	; CAL (1)
-	db "CAL@"
-	db 0 ; normal
+	db "BRENDAN@"
+	db 1 ; moves
 
 	; party
-	db 10, CHIKORITA
-	db 10, CYNDAQUIL
-	db 10, TOTODILE
+	db 100, URSARING
+        db DOUBLE_EDGE
+        db FAINT_ATTACK
+        db REST
+        db ROCK_SMASH
+	db 100, MAROWAK
+        db BONE_RUSH
+        db BONEMERANG
+        db FLAMETHROWER
+        db DOUBLE_KICK
+	db 100, GYARADOS
+        db EXTREMESPEED
+        db HYDRO_PUMP
+        db RAIN_DANCE
+        db WATERFALL
+	db 100, MR__MIME
+        db PSYCHIC_M
+        db SAFEGUARD
+        db SUBSTITUTE
+        db DOUBLESLAP
+	db 100, MAGNETON
+        db ZAP_CANNON
+        db TRI_ATTACK
+        db LOCK_ON
+        db MAGNET_BOMB
+	db 100, CROBAT
+        db LEECH_LIFE
+        db FLY
+        db CONFUSE_RAY
+        db MEAN_LOOK
 
 	db $ff ; end
 
 ; ================
 
 	; CAL (2)
-	db "CAL@"
-	db 0 ; normal
+	db "BRENDAN@"
+	db 1 ; moves
 
 	; party
-	db 30, BAYLEEF
-	db 30, QUILAVA
-	db 30, CROCONAW
+	db 100, GENGAR
+        db HYPNOSIS
+        db DREAM_EATER
+        db SHADOW_BALL
+        db METRONOME
+	db 100, RATICATE
+        db SUPER_FANG
+        db PURSUIT
+        db SCARY_FACE
+        db STRENGTH
+	db 100, GOLEM
+        db EARTHQUAKE
+        db ROLLOUT
+        db DEFENSE_CURL
+        db FISSURE
+	db 100, SLOWKING
+        db HEADBUTT
+        db PSYCHIC_M
+        db CURSE
+        db BUBBLEBEAM
+	db 100, SKARMORY
+        db STEEL_WING
+        db SWIFT
+        db AGILITY
+        db FLY
+	db 100, SUNFLORA
+        db GIGA_DRAIN
+        db SYNTHESIS
+        db SUNNY_DAY
+        db SOLARBEAM
 
 	db $ff ; end
 
 ; ================
 
 	; CAL (3)
-	db "CAL@"
-	db 0 ; normal
+	db "BRENDAN@"
+	db 1 ; moves
 
 	; party
-	db 50, MEGANIUM
-	db 50, TYPHLOSION
-	db 50, FERALIGATR
+	db 100, WEEZING
+        db SLUDGE
+        db SMOKESCREEN
+        db PAIN_SPLIT
+        db PSYWAVE
+	db 100, NINETALES
+        db FLAMETHROWER
+        db SAFEGUARD
+        db HYPER_BEAM
+        db SKULL_BASH
+	db 100, PRIMEAPE
+        db THRASH
+        db CROSS_CHOP
+        db RAGE
+        db FOCUS_ENERGY
+	db 100, DODRIO
+        db DRILL_PECK
+        db TRI_ATTACK
+        db AGILITY
+        db FAINT_ATTACK
+	db 100, CLOYSTER
+        db AURORA_BEAM
+        db SPIKE_CANNON
+        db CLAMP
+        db BUBBLEBEAM
+	db 100, SNEASEL
+        db METAL_CLAW
+        db SLASH
+        db BEAT_UP
+        db ICE_PUNCH
 
 	db $ff ; end
 
@@ -1047,6 +1240,20 @@ BrockGroup:
 	db $ff ; end
 
 ; ================
+
+    ; BROCK (2) - EDIT_TRAINER_MOVES
+    db "BROCK@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, GOLEM
+    db 100, OMASTAR
+    db 100, KABUTOPS
+    db 100, RHYDON
+    db 100, SUDOWOODO
+    db 100, AERODACTYL
+    
 ; ================================
 
 
@@ -1087,6 +1294,20 @@ MistyGroup:
 	db $ff ; end
 
 ; ================
+
+    ; MISTY (2) - EDIT_TRAINER_MOVES
+    db "MISTY@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, GOLDUCK
+    db 100, QUAGSIRE
+    db 100, LAPRAS
+    db 100, STARMIE
+    db 100, OCTILLERY
+    db 100, KINGLER
+    
 ; ================================
 
 
@@ -1133,6 +1354,20 @@ LtSurgeGroup:
 	db $ff ; end
 
 ; ================
+
+    ; LT_SURGE (2) - EDIT_TRAINER_MOVES
+    db "LT.SURGE@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, ELECTABUZZ
+    db 100, ELECTRODE
+    db 100, MAGNETON
+    db 100, RAICHU
+    db 100, AMPHAROS
+    db 100, LANTURN
+    
 ; ================================
 
 
@@ -1244,6 +1479,20 @@ ErikaGroup:
 	db $ff ; end
 
 ; ================
+
+    ; ERIKA (2) - EDIT_TRAINER_MOVES
+    db "ERIKA@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, BELLOSSOM
+    db 100, VICTREEBEL
+    db 100, JUMPLUFF
+    db 100, TANGELA
+    db 100, GLOOM
+    db 100, SUNFLORA
+    
 ; ================================
 
 
@@ -2340,6 +2589,20 @@ JanineGroup:
 	db $ff ; end
 
 ; ================
+
+    ; JANINE (2) - EDIT_TRAINER_MOVES
+    db "JANINE@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, VENOMOTH
+    db 100, ARIADOS
+    db 100, WEEZING
+    db 100, CROBAT
+    db 100, ARBOK
+    db 100, MUK
+    
 ; ================================
 
 
@@ -4010,6 +4273,20 @@ SabrinaGroup:
 	db $ff ; end
 
 ; ================
+
+    ; SABRINA (2) - EDIT_TRAINER_MOVES
+    db "SABRINA@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, ALAKAZAM
+    db 100, MR__MIME
+    db 100, HYPNO
+    db 100, SLOWKING
+    db 100, SLOWBRO
+    db 100, WOBBUFFET
+    
 ; ================================
 
 
@@ -6352,6 +6629,20 @@ BlaineGroup:
 	db $ff ; end
 
 ; ================
+
+    ; BLAINE (2) - EDIT_TRAINER_MOVES
+    db "BLAINE@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, MAGMAR
+    db 100, RAPIDASH
+    db 100, MAGCARGO
+    db 100, ARCANINE
+    db 100, HOUNDOOM
+    db 100, NINETALES
+    
 ; ================================
 
 
@@ -8613,7 +8904,7 @@ RedGroup:
 
 
 BlueGroup:
-; ================================
+; ================================ - EDIT_TRAINER_POKEMON!!!!!!!!!!!!!!!!!!!!!!!!
 ; ================
 
 	; BLUE (1) - EDIT_TRAINER_MOVES
@@ -8622,13 +8913,13 @@ BlueGroup:
 
 	; party
 
-	db 56, PIDGEOT
+	db 56, PIDGEOT ; DUGTRIO
 		db QUICK_ATTACK
 		db WHIRLWIND
 		db WING_ATTACK
 		db MIRROR_MOVE
 
-	db 54, ALAKAZAM
+	db 54, ALAKAZAM ; DONPHAN
 		db DISABLE
 		db RECOVER
 		db PSYCHIC_M
@@ -8640,19 +8931,19 @@ BlueGroup:
 		db ROCK_SLIDE
 		db EARTHQUAKE
 
-	db 58, GYARADOS
+	db 58, GYARADOS ; NIDOQUEEN
 		db TWISTER
 		db HYDRO_PUMP
 		db RAIN_DANCE
 		db HYPER_BEAM
 
-	db 58, EXEGGUTOR
+	db 58, EXEGGUTOR ; NIDOKING
 		db SUNNY_DAY
 		db LEECH_SEED
 		db EGG_BOMB
 		db SOLARBEAM
 
-	db 58, ARCANINE
+	db 58, ARCANINE ; SANDSLASH
 		db ROAR
 		db SWIFT
 		db FLAMETHROWER
@@ -8661,6 +8952,20 @@ BlueGroup:
 	db $ff ; end
 
 ; ================
+
+    ; ERIKA (2) - EDIT_TRAINER_MOVES
+    db "ERIKA@"
+	db 0 ; 3 ; item + moves
+    
+    ; party
+    
+    db 100, DUGTRIO
+    db 100, DONPHAN
+    db 100, RHYDON
+    db 100, NIDOQUEEN
+    db 100, NIDOKING
+    db 100, SANDSLASH
+    
 ; ================================
 
 

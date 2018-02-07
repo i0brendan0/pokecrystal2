@@ -81,8 +81,8 @@ ChangeHappiness: ; 71c2
 	add [hl]
 	
 	push af
-	push bc
 	push hl
+	push bc
     ld hl, PartyMon1Item
     ld bc, PARTYMON_STRUCT_LENGTH
     ld a, [CurPartyMon]
