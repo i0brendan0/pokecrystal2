@@ -82,12 +82,10 @@ ChangeHappiness: ; 71c2
 	
 	push af
 	push hl
-	push bc
     ld hl, PartyMon1Item
     ld bc, PARTYMON_STRUCT_LENGTH
     ld a, [CurPartyMon]
     call AddNTimes
-    pop bc
 
     ld b, [hl]
 	pop hl
@@ -161,7 +159,7 @@ StepHappiness:: ; 725a
 	inc a
 	and 1
 	ld [hl], a
-	ret nz
+	jr nz, SootheBell
 
 	ld de, PartyCount
 	ld a, [de]
@@ -266,3 +264,36 @@ DaycareStep:: ; 7282
 	res 5, [hl]
 	set 6, [hl]
 	ret
+
+SootheBell:
+    ld a, [wPartyCount]
+    and a
+    ret z
+    ld c, a
+    ld hl, wPartyMon1Item
+    ld de, wPartyMon1Happiness
+.loop
+    push bc
+    ld b, [hl]
+    call GetItemHeldEffect
+    ld a, b
+    ld bc, PARTYMON_STRUCT_LENGTH
+    add hl, bc
+    pop bc
+    cp HELD_FRIENDSHIP_BOOST
+    jr nz, .no_change
+    ld a, [de]
+    inc a
+    jr nz, .no_change
+    ld a, $ff
+.no_change
+    ld [de], a
+    ld a, e
+    add PARTYMON_STRUCT_LENGTH
+    ld e, a
+    jr nc, .no_carry
+    inc d
+.no_carry
+    dec c
+    jr nz, .loop
+    ret

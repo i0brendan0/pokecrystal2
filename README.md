@@ -23,6 +23,7 @@ List of major changes
 * **Unown now has a new way of getting it's letter.** Now every Unown can be shiny.
 * **6 new Unowns.** 2 of them are the exclamation point and the question mark. The other 4 are period, comma, hyphen, and interrobang (!?).
 * **There is now a dark type boost after beating Karen for the first time.** This means you can lose after Karen and still recieve the bonus, you just have to beat her once.
+* **Add rematches for all Pokemon Gym Leaders.** Johto leaders are located at the Olivine Cafe. Kanto leaders are located at the Celadon Cafe. - This has not been extensively tested yet.
 
 List of minor changes
 * Moves are updated to the latest Gen stats with a couple changing type. No fairy type.
@@ -58,11 +59,10 @@ List of minor things left to do
 * Add more Egg moves.
 * Add more Level Up moves.
 * Add more TM moves.
-* Add a Soothe Bell item. (The code has already been made and will be used in Prism as well.)
+* Add a Soothe Bell item. The code has been extensively tested and ready for implementation. 
 
 List of major things left to do
 * Update all trainers' Pokemon with newly aquired moves.
-* Add rematches for all Pokemon Gym Leaders. - **IN PROGRESS**
 
 List of things I want to do but might not be able to
 * Add a Move Relearner - **IN PROGRESS**
