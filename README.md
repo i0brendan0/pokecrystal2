@@ -20,13 +20,14 @@ List of major changes
   * **Celebi will be found through the event that was only released in Japan.** Able to start after beating Red.
 * **The Odd Egg Pokemon list has been reworked.** All Pokemon have an equal chance of being shiny and a roughly equal chance at hatching. The DVs for each non-shiny Pokemon are maxed out, while the shiny versions are the max available, not including Tyrogue which has the same Attack and Defense DVs.
 * **Your Mom will get many more different items when she goes shopping.** You will be able to get all of the decorations including the trophies. Something special is available to those who are super savers.
-* **Unown now has a new way of getting it's letter.** Now every Unown can be shiny.
-* **6 new Unowns.** 2 of them are the exclamation point and the question mark. The other 4 are period, comma, hyphen, and interrobang (!?).
-* **There is now a dark type boost after beating Karen for the first time.** This means you can lose after Karen and still recieve the bonus, you just have to beat her once.
+* **Unown now has a new way of getting it's letter.** Now every Unown can be shiny. - PokeSeer cannot read caught data for Unown due to this.
+* **6 new Unowns.** 2 of them are the exclamation point and the question mark. The other 4 are period, comma, hyphen, and interrobang (!?). - Current unavailable due to a bug.
+* **There is now a dark type boost after beating Karen for the first time.** This means you can lose after Karen and still receive the bonus, you just have to beat her once. - This has not been extensively tested yet.
 * **Add rematches for all Pokemon Gym Leaders.** Johto leaders are located at the Olivine Cafe. Kanto leaders are located at the Celadon Cafe. - This has not been extensively tested yet.
+* Add a Move Relearner. - This has not been extensively tested yet.
 
 List of minor changes
-* Moves are updated to the latest Gen stats with a couple changing type. No fairy type.
+* Moves are updated to the latest Gen stats with a couple changing type. No fairy type.... Yet. Maybe some new types.
 * Ghost-type is now Special, while Dark-type is now Physical.
 * Many bugs left from Gen 2 are fixed. Even some that weren't widely known about.
 * Each Johto badge increases the level that traded Pokemon obey. Kanto badges are not taken into account.
@@ -62,14 +63,15 @@ List of minor things left to do
 * Add a Soothe Bell item. The code has been extensively tested and ready for implementation. 
 
 List of major things left to do
-* Update all trainers' Pokemon with newly aquired moves.
+* Update all trainers' Pokemon with newly acquired moves.
 
 List of things I want to do but might not be able to
-* Add a Move Relearner - **IN PROGRESS**
+* Nothing yet.
 
 List of current bugs
 * The check Unown caught code does not seem to work with this new system.
-* Unown Interrobang has too many tiles and its animation doesn't completely work. 
+
+**If you find a bug with a change that I've added or something that isn't known about, please open an issue and provide as much information as possible.**
 
 [travis]: https://travis-ci.org/i0brendan0/pokecrystal2
 [travis-badge]: https://travis-ci.org/i0brendan0/pokecrystal2.svg?branch=master
