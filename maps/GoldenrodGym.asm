@@ -32,7 +32,7 @@ WhitneyScript_0x5400c:
 	waitbutton
 	closetext
 	winlosstext UnknownText_0x541a5, 0
-	loadtrainer WHITNEY, 1
+	loadtrainer WHITNEY, WHITNEY1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
@@ -173,7 +173,7 @@ GoldenrodGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext WHITNEY, 1, $1
+	trainertotext WHITNEY, WHITNEY1, $1
 	jumpstd gymstatue2
 
 BridgetWalksUpMovement:

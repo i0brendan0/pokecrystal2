@@ -1143,7 +1143,7 @@ ConsumeHeldItem: ; 27192
 	db HELD_ACCURACY_UP
 	db HELD_EVASION_UP
 	db HELD_38
-	db HELD_71
+;	db HELD_71
 	db HELD_ESCAPE
 	db HELD_CRITICAL_UP
 	db -1
@@ -6094,6 +6094,8 @@ INCLUDE "data/battle_tower.asm"
 INCLUDE "data/odd_eggs.asm"
 
 SECTION "bank7F", ROMX
+
+INCLUDE "event/move_relearner.asm"
 
 SECTION "stadium2", ROMX
 

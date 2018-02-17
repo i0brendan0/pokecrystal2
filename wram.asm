@@ -318,7 +318,8 @@ wc3fa:: ds 1
 wc3fb:: ds 1
 wc3fc:: ds 1
 
-	ds 3
+wRematchLeaders:: db
+	ds 2
 
 
 SECTION "Sprites", WRAM0

@@ -33,7 +33,7 @@ TrainerClassDVs: ; 270d6
 	db $DD, $DD ; rival1
 	db $FA, $AA ; pokemon prof
 	db $DC, $DD ; will
-	db $FA, $AA ; cal
+	db $FF, $FF ; cal
 	db $DC, $DD ; bruno
 	db $7F, $DF ; karen
 	db $DC, $DD ; koga

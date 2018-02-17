@@ -23,7 +23,7 @@ JanineScript_0x195db9:
 	waitbutton
 	closetext
 	winlosstext UnknownText_0x195fa1, 0
-	loadtrainer JANINE, 1
+	loadtrainer JANINE, JANINE1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JANINE
@@ -216,7 +216,7 @@ FuchsiaGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext JANINE, 1, $1
+	trainertotext JANINE, JANINE1, $1
 	jumpstd gymstatue2
 
 MovementData_0x195f27:

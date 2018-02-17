@@ -6018,7 +6018,7 @@ CheckPlayerHasUsableMoves: ; 3e786
 	jr .loop
 
 .done
-	and a ; This is probably a bug, and will result in a move with PP Up confusing the game.
+	and $3f ; This is probably a bug, and will result in a move with PP Up confusing the game.
 	ret nz
 
 .force_struggle
@@ -6796,17 +6796,17 @@ CheckUnownLetter: ; 3eb75
 	dw .Set5
 
 .Set1:
-	;  A   B   C   D   E   F   G   H   I   J   K
-	db 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, $ff
+	;  A   B   C   D   E   F   G   
+	db 01, 02, 03, 04, 05, 06, 07, $ff
 .Set2:
-	;  L   M   N   O   P   Q   R
-	db 12, 13, 14, 15, 16, 17, 18, $ff
+	;  H   I   J   K   L   M   N   
+	db 08, 09, 10, 11, 12, 13, 14, $ff
 .Set3:
-	;  S   T   U   V   W
-	db 19, 20, 21, 22, 23, $ff
+	;  O   P   Q   R   S   T   
+	db 15, 16, 17, 18, 19, 20, $ff
 .Set4:
-	;  X   Y   Z
-	db 24, 25, 26, $ff
+	;  U   V   W   X   Y   Z
+	db 21, 22, 23, 24, 25, 26, $ff
 .Set5
 	;  !   ?   .   ,   -   !?
 	db 27, 28, 29, 30, 31, 32, $ff

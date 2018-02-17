@@ -34,7 +34,7 @@ MortyScript_0x99d58:
 	waitbutton
 	closetext
 	winlosstext UnknownText_0x9a00a, 0
-	loadtrainer MORTY, 1
+	loadtrainer MORTY, MORTY1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MORTY
@@ -164,7 +164,7 @@ EcruteakGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext MORTY, 1, $1
+	trainertotext MORTY, MORTY1, $1
 	jumpstd gymstatue2
 
 MovementData_0x99e5d:

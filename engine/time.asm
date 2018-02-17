@@ -100,6 +100,7 @@ CheckDailyResetTimer:: ; 11452
 	ld hl, wDailyResetTimer
 	call CheckDayDependentEventHL
 	ret nc
+    call ResetRematchLeaders
 	xor a
 	ld hl, DailyFlags
 	ld [hli], a
@@ -129,6 +130,16 @@ endr
 .DontRestartKenjiBreakCountdown:
 	jr RestartDailyResetTimer
 ; 11485
+
+ResetRematchLeaders:
+    call Random
+    and %01110111
+    ld [wRematchLeaders], a
+    ld hl, EventFlags + (EVENT_BEAT_JOHTO_LEADER >> 3)
+    res EVENT_BEAT_JOHTO_LEADER & 7, [hl]
+    ld hl, EventFlags + (EVENT_BEAT_KANTO_LEADER >> 3)
+    res EVENT_BEAT_KANTO_LEADER & 7, [hl]
+    ret
 
 Special_SampleKenjiBreakCountdown: ; 11485
 ; Generate a random number between 3 and 6

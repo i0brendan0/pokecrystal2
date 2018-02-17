@@ -346,7 +346,7 @@ const_value SET 50
 
 const_value SET 70
 	const HELD_CATCH_CHANCE
-	const HELD_71
+	const HELD_FRIENDSHIP_BOOST
 	const HELD_ESCAPE
 	const HELD_CRITICAL_UP
 	const HELD_QUICK_CLAW

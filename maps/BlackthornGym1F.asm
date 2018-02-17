@@ -41,7 +41,7 @@ BlackthornGymClairScript:
 	waitbutton
 	closetext
 	winlosstext ClairWinText, 0
-	loadtrainer CLAIR, 1
+	loadtrainer CLAIR, CLAIR1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR
@@ -148,7 +148,7 @@ BlackthornGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	trainertotext CLAIR, 1, $1
+	trainertotext CLAIR, CLAIR1, $1
 	jumpstd gymstatue2
 
 ClairIntroText:
