@@ -3028,7 +3028,8 @@ ThickClubBoost: ; 353b5
 	push de
 	ld b, CUBONE
 	ld c, MAROWAK
-	ld d, THICK_CLUB
+    ld d, MAROWAK
+	ld e, THICK_CLUB
 	call SpeciesItemBoost
 	pop de
 	pop bc
@@ -3044,9 +3045,10 @@ LightBallBoost: ; 353c3
 ; holding a Light Ball, double it.
 	push bc
 	push de
-	ld b, PIKACHU
+	ld b, PICHU
 	ld c, PIKACHU
-	ld d, LIGHT_BALL
+    ld d, RAICHU
+	ld e, LIGHT_BALL
 	call SpeciesItemBoost
 	pop de
 	pop bc
@@ -3058,8 +3060,8 @@ LightBallBoost: ; 353c3
 SpeciesItemBoost: ; 353d1
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is species b or c and
-; it's holding item d, double it.
+; If the attacking monster is species b or c or d and
+; it's holding item e, double it.
 
 	ld a, [hli]
 	ld l, [hl]
@@ -3080,6 +3082,8 @@ SpeciesItemBoost: ; 353d1
 	cp b
 	jr z, .GetItemHeldEffect
 	cp c
+	jr z, .GetItemHeldEffect
+	cp d
 	ret nz
 
 .GetItemHeldEffect:
@@ -3087,7 +3091,7 @@ SpeciesItemBoost: ; 353d1
 	call GetUserItem
 	ld a, [hl]
 	pop hl
-	cp d
+	cp e
 	ret nz
 
 ; Double the stat

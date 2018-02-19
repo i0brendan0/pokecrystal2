@@ -55,6 +55,7 @@ List of minor changes
 * Pokemon Trainers which have been given shiny Pokemon have edited parties.
 * The chances to have a wild Pokemon with a held item has been increased to 24% and 6%.
 * The Unown that you can catch from each puzzle have been changed
+* The Light Ball will increase Special Attack for Pichu, Pikachu, and Raichu.
 
 List of minor things left to do
 * Add more Egg moves.
@@ -66,7 +67,7 @@ List of major things left to do
 * Update all trainers' Pokemon with newly acquired moves.
 
 List of things I want to do but might not be able to
-* Nothing yet.
+* Add a password checker to create in-game Pokemon events.
 
 List of current bugs
 * The check Unown caught code does not seem to work with this new system.
